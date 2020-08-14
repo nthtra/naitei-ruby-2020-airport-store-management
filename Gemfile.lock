@@ -77,6 +77,9 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    io-console (0.5.6)
+    irb (1.2.4)
+      reline (>= 0.0.1)
     json (2.3.1)
     kwalify (0.7.2)
     listen (3.2.1)
@@ -155,6 +158,8 @@ GEM
       psych (~> 3.1.0)
       rainbow (>= 2.0, < 4.0)
     regexp_parser (1.7.1)
+    reline (0.1.4)
+      io-console (~> 0.5)
     require_all (3.0.0)
     rexml (3.2.4)
     rspec-core (3.9.2)
@@ -221,6 +226,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   factory_bot_rails
+  irb
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
   puma (~> 4.1)

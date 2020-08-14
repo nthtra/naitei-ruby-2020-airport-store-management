@@ -8,6 +8,7 @@ gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "webpacker", "~> 4.0"
 
 group :development do
+  gem "irb", require: false
   gem "listen", "~> 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
