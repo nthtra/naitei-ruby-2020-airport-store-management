@@ -1,0 +1,23 @@
+vi:
+  hello: Xin chào
+  test: Test
+  home: Trang chủ
+  layouts:
+    footer:
+      version: Phiên bản
+      copyright: Bản quyền
+    navbar:
+      home: Trang chủ
+      contact: Liên hệ
+      search: Tìm kiếm
+      notifications: Thông báo
+      messages: tin nhắn
+      see_all_notifications: Xem tất cả thông báo
+      profile: Hồ sơ
+      languages: Ngôn ngữ
+      settings: Cài đặt
+    sidebar:
+      contracts: Hợp đồng
+      slots: Khu vực
+    application:
+      store_management: Quản lý cửa hàng

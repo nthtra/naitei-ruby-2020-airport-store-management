@@ -5,6 +5,8 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
+gem "rails-i18n"
+gem "sass-rails", ">= 6"
 gem "webpacker", "~> 4.0"
 
 group :development do
