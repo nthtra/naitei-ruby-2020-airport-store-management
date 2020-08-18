@@ -1,4 +1,11 @@
 vi:
+  views:
+    pagination:
+      first: "&laquo; Đầu tiên"
+      last: "Cuối cùng &raquo;"
+      previous: "&lsaquo; Trước"
+      next: "Tiếp &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     footer:
       version: Phiên bản
@@ -17,6 +24,15 @@ vi:
       login: Đăng nhập
       english_html: '<i class="flag-icon flag-icon-us mr-2"></i> Tiếng Anh'
       vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
+    user_navbar:
+      logo: Sân bay
+      profile: Hồ sơ
+      my_stores: Cửa hàng
+      references: Tham khảo
+      english_html: Tiếng Anh
+      vietnamese_html: Tiếng Việt
+      login: Đăng nhập
+      logout: Đăng xuát
     sidebar:
       contracts: Hợp đồng
       slots: Khu vực
@@ -44,15 +60,21 @@ vi:
       vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
   static_pages:
     home:
-      title: "Trang chủ"
-      welcome: "Chào mừng đến với hệ thống quản lý cửa hàng sân bay!"
-      home_breadcrumb: "Trang chủ"
-      welcome_breadcrumb: "Chào mừng"
-      view_more: "Xem thêm..."
-      airport_name: "Sân bay Nội bài"
-      content_html: |
-        Sân bay Quốc tế Nội Bài,<br>
-        sân bay lớn nhất miền bắc Việt Nam, phục vụ thủ đô Hà Nội.
+      title: "Home"
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      content_title: Việt Nam
+      all_terminal: Tất cả sảnh bay
+      terminal_dropdown: Sảnh bay
+      question: Bạn không tìm được khu vực bán hàng ưng ý?
+      answer: Không gì là không thể khi chúng ta cùng nhau trao đổi. Hãy gọi chúng tôi và cùng tìm ra giải pháp phù hợp với bạn.
+      description_title: Tìm kiếm Không gian Hợp tác ở Việt Nam
+      description_content: |
+                            Với nét văn hóa kinh doanh năng động, không gian hợp tác của chúng tôi ở Việt Nam là
+                            lựa chọn hoàn hảo để nhân thành công của tất cả các nhóm lớn nhỏ lên nhiều lần. Với sự tiện dụng và
+                            linh hoạt không đâu sánh bằng, không gian hợp tác, các văn phòng riêng tuyệt đẹp, và các phòng họp
+                            rộng rãi của chúng tôi là sự đảm bảo cho năng suất của bạn. Ngoài ra, các sự kiện tại chỗ đa dạng
+                            và phong phú của chúng tôi giúp bạn dễ dàng mở rộng mạng lưới quan hệ của mình và tăng cường hợp tác.
+                            Để có được một văn phòng tuyệt đẹp với bạn là trung tâm của mọi hoạt động, hãy tham gia WeWork ngay hôm nay.
   users:
     new:
       title: "Đăng ký"
@@ -90,3 +112,22 @@ vi:
       invalid_login: "Email hoặc mật khẩu không hợp lệ."
     destroy:
       logout_success: "Đăng xuất thành công!"
+  terminals: 
+    show:
+      title: Sảnh bay
+      terminal: Sảnh bay-
+      overview: Giới thiệu
+      area: Diện tích
+      slots: Cửa hàng
+      stores: Cửa hàng
+      contact: Liên hệ
+      manager: Người quản lý
+      phone_number: Số điện thoại
+      email: Mail
+      description: Mô tả
+      stt: STT
+      slot_name: Mã cửa hàng
+      status: Trạng thái
+      area: Diện tích
+      empty: Còn trống
+      used: Đã được sử dụng

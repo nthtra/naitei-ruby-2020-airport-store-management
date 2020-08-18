@@ -6,11 +6,10 @@
     <%= render "layouts/rails_default" %>
   </head>
   <% unless disable_layout? %>
-    <body class="sidebar-mini sidebar-collapse">
-      <div class="wrapper">
-        <%= render "layouts/navbar" %>
-        <%= render "layouts/user_sidebar" %>
-        <div class="content-wrapper">
+    <body id="app" class>
+      <div class>
+        <%= render "layouts/user_navbar" %>
+        <div class="">
           <%= toastr_flash %>
           <%= yield %>
         </div>

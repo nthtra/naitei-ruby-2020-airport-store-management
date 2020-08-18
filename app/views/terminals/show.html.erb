@@ -1,0 +1,31 @@
+<% provide :title, t(".title") %>
+  <div class="container-fluid" id="terminal-content">
+    <div class="row" id="slot-content" >
+    <div class="col-6 mt-5">
+      <div>
+        <h1 class="mb-5">Sảnh bay sân bay Noi Bai</h1>
+        <% @slots.each do |slot| %>
+          <%= link_to slot do %>
+          <div class="row mt-3 slot-card">
+            <div class="col-5" id="slot-img-box">
+              <img src="https://media.timeout.com/images/105634590/630/472/image.jpg" class="slot-img">
+            </div>
+            <div class="col-7 pl-4">
+              <div class="slot-name">
+                <h3><%= slot.name %></h3>
+              </div>
+              <div class="terminal-name"><%= slot.terminal.name %></div>
+              <div class="">other</div>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+        <%= paginate @slots, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
+      </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+    </div>
+  </div>
+</div>

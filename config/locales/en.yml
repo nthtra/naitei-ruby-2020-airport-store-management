@@ -1,4 +1,11 @@
 en:
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     footer:
       version: Version
@@ -17,6 +24,15 @@ en:
       login: Login
       english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
       vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
+    user_navbar:
+      logo: Airport
+      profile: Profile
+      my_stores: My stores
+      references: References
+      english: "English"
+      vietnamese: "Vietnamese"
+      login: Login
+      logout: Logout
     sidebar:
       airport_store: Airport Store
       contracts: Contracts
@@ -45,14 +61,20 @@ en:
   static_pages:
     home:
       title: "Home"
-      welcome: "Welcome to the Airport Store Management System!"
-      home_breadcrumb: "Home"
-      welcome_breadcrumb: "Welcome"
-      airport_name: "Noi Bai airport"
-      view_more: "View more..."
-      content_html: |
-        Noi Bai International Airport,<br>
-        the biggest airport in northern Vietnam, serves the capital city of Hanoi.
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      content_title: Viet Nam
+      all_terminal: All terminal
+      terminal_dropdown: Terminal
+      question: Can't find a good selling area?
+      answer: Nothing is impossible when we talk together. Call us and find the right solution for you.
+      description_title: Search for a Collaborative Space in Vietnam
+      description_content: |
+                            With a dynamic business culture, our co-working space in Vietnam is the 
+                            perfect choice to multiply the success of all large groups by many times. 
+                            With unmatched convenience and flexibility, collaborative spaces, stunning private offices, 
+                            and spacious meeting rooms are the guarantee of your productivity. In addition, 
+                            our diverse and extensive on-site events make it easy to expand your network and strengthen cooperation. 
+                            To have a beautiful office with you at the center of everything, join WeWork today.
   users:
     new:
       title: "Sign up"
@@ -90,3 +112,22 @@ en:
       invalid_login: "Invalid email/password combination."
     destroy:
       logout_success: "Logout success!"
+  terminals: 
+    show:
+      title: Terminal
+      terminal: Terminal-
+      overview: Terminal overview
+      area: Area
+      slots: Slots
+      stores: Stores
+      contact: Contact
+      manager: Manager
+      phone_number: Phone number
+      email: Mail
+      description: Desctiption
+      stt: "No"
+      slot_name: Slot's name
+      status: Status
+      area: Area
+      empty: Empty
+      used: Used

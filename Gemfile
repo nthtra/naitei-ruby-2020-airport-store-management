@@ -10,12 +10,15 @@ gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "webpacker", "~> 4.0"
+gem "kaminari"
+gem 'bootstrap4-kaminari-views'
 
 group :development do
   gem "irb", require: false
   gem "listen", "~> 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem 'pry-rails'
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

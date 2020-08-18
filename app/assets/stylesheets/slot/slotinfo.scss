@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./Roboto-Regular.ttf");
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 0 60px;
+}
+
+header {
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+header .logo a {
+  font-size: 30px;
+  font-family: "roboto";
+  font-weight: bold;
+  display: inline-block;
+  margin: 15px 10px 15px 0;
+  text-decoration: none;
+  color: #000;
+}
+
+header .navbar ul {
+  display: flex;
+  list-style: none;
+  font-size: 18px;
+  margin: 25px 10px 15px;
+  font-family: "roboto";
+}
+
+header .navbar ul li {
+  margin: 0 10px;
+}
+
+header .navbar ul li a {
+  text-decoration: none;
+  color: #3e3d3d;
+  position: relative;
+  transition: 0.4s;
+}
+
+header .navbar ul li a:hover {
+  border-bottom: 1px solid #000;
+  transition: 0.4s;
+}
+
+header .saved a {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  margin: 25px 10px 15px 120px;
+  font-family: "roboto";
+  text-decoration: none;
+  color: #3e3d3d;
+}
+
+header .saved a i {
+  color: #e6e6e6;
+}
+
+header .contactUs a {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  margin: 25px 10px 15px;
+  font-family: roboto;
+  text-decoration: none;
+  color: #3e3d3d;
+}
+
+section.ray-page .ray-breadcrumbs {
+  list-style: none;
+  font-family: "roboto";
+  font-size: 14px;
+}
+
+section.ray-page .ray-breadcrumbs .ray-breadcrumb a {
+  color: #000;
+  text-decoration: none;
+}
+
+section.content {
+  margin-top: 70px;
+}
+
+section.content .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.content .header .header__right h1 {
+  font-size: 50px;
+  font-family: "roboto";
+}
+
+section.content .header .header__right span {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "roboto";
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  color: rgba(0,0,255,0.4);
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,255,0.4);
+}
+
+section.content .header .header__left p {
+  display: inline-block;
+  margin-top: 80px;
+  font-size: 18px;
+  font-family: "roboto";
+}
+
+section.content .main {
+  margin: 20px 0 20px 0;
+  display: flex;
+}
+
+section.content .main .main__left {
+  width: 60%;
+}
+
+section.content .main .main__left .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.content .main .main__left .products .product {
+  width: 47.5%;
+  margin-right: 2%;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+section.content .main .main__left .products .product img {
+  width: 100%;
+}
+
+section.content .main .main__left .products .product .product__title {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+section.content .main .main__left .products .product .product__title a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "roboto";
+}
+
+section.content .main .main__left .products .product .product__title a:hover {
+  text-decoration: underline;
+}
+
+section.content .main .main__left .products .product .product__title i {
+  color: #ffbc00;
+}
+
+section.content .main .main__left .products .product .product__text {
+  font-size: 14px;
+  font-family: "roboto";
+  margin: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+section.content .main .main__left .products .product h2 {
+  font-size: 20px;
+  font-family: "roboto";
+  margin: 20px;
+}
+section.content .main .main__left .products .product .text__header {
+  font-size: 16px;
+  font-family: "roboto";
+  margin: 20px;
+}
+
+section.content .main .main__left .products .product form input {
+  display: block;
+  margin: 30px;
+  padding: 10px 70px 10px 10px;
+  font-size: 16px;
+  font-family: "roboto";
+}
+
+section.content .main .main__left .products .product .link {
+  font-size: 16px;
+  font-family: "roboto";
+  text-decoration: none;
+  color: #2f2ff1;
+  margin: 30px;
+  padding: 10px 20px;
+  border: 1px solid #2f2ff1;
+  border-radius: 5px;
+}
+
+section.content .main .main__left .products .product .link:hover {
+  background: #ccf;
+}
+
+section.content .main .main__left .products .product .text__footer {
+  font-size: 12px;
+  font-family: "roboto";
+  margin: 30px;
+  line-height: 20px;
+}
+
+section.content .main .main__left .products .product .text__footer a {
+  text-decoration: none;
+}
+
+section.content .main .main__left .products .footer {
+  width: 97.5%;
+  margin-top: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  background: #e6e6e6;
+}
+
+section.content .main .main__left .products .footer h2 {
+  font-size: 20px;
+  font-family: "roboto";
+  margin: 20px 10px 10px 20px;
+}
+
+section.content .main .main__left .products .footer .text__header {
+  font-size: 14px;
+  font-family: "roboto";
+  margin: 20px 10px 10px 20px;
+}
+
+section.content .main .main__left .products .footer i {
+  font-size: 14px;
+  margin: 20px 10px 10px 20px;
+}
+
+section.content .main .main__left .text h2 {
+  font-size: 25px;
+  font-family: "roboto";
+  margin: 20px 20px 20px 0;
+}
+
+section.content .main .main__left .text p {
+  font-size: 16px;
+  font-family: "roboto";
+  margin: 20px 20px 20px 0;
+  line-height: 30px;
+}
+
+section.content .main .main__left .text a {
+  font-size: 16px;
+  font-family: "roboto";
+  margin: 20px 20px 20px 0;
+  text-decoration: none;
+}
+
+section.content .main .main__right {
+  width: 40%;
+  margin-top: 20px;
+}

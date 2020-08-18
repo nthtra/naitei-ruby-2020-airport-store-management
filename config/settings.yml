@@ -16,3 +16,10 @@ validations:
       regex: !ruby/regexp '/\+?(0|84)\d{9}/i'
 links:
   airport: 'https://www.hanoiairportonline.com/'
+pagination:
+  per_page: 4
+info:
+  phone: +84 28 4458 2344
+  star: 5.0
+
+
