@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_015832) do
     t.bigint "status_id", null: false
     t.datetime "start_date"
     t.datetime "end_date"
+    t.text "deny_message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["status_id"], name: "index_contracts_on_status_id"

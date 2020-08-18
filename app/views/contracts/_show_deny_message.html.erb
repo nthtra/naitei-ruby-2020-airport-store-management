@@ -1,0 +1,7 @@
+<% if contract.status_id == Settings.status.deny %>
+  <div class="row" id="deny-reason">
+    <p class="text-danger">
+      <%= t ".deny_reason"%>: <%= contract.deny_message.present? ? contract.deny_message : params[:message] %>
+    </p>
+  </div>
+<% end %>

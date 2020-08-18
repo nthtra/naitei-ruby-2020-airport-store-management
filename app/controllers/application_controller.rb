@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
   include EmployeeSessionsHelper
+  include ContractsHelper
 
   before_action :set_locale
 

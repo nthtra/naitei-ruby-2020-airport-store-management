@@ -266,8 +266,27 @@ vi:
       identity_number: Số chứng minh thư
       approve: Phê duyệt
       deny: Từ chối
+      deny_reason: Lý do từ chối
       pending: Chờ duyệt
       submit: Submit
+    update:
+      approve_successfully: Phê duyệt thành công
+      slot_is_full: Slot đã đầy
+      deny_successfully: Từ chối thành công
+      contract_not_found: Không tìm thấy hợp đồng
+      store_not_found: Không tìm thấy cửa hàng
+      slot_not_found: Không tìm thấy slot
+      update_database_false: Cập nhật dữ liệu bị lỗi
+      approve: Phê duyệt
+      deny: Từ chối
+    approve_deny_button:
+      deny_reason: Lý do từ chối
+      close: Đóng
+      send: Gửi
+    approve_status:
+      approve: Chấp nhận
+    deny_status:
+      deny: Từ chối
   slots:
     index:
       home: Trang chủ
