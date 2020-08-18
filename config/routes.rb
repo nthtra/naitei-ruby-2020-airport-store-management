@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     post "/employees/login", to: "employee_sessions#create"
     delete "/employees/logout", to: "employee_sessions#destroy"
     resources :employees, only: :show
+    resources :contracts, only: %i(index show)
   end
 end

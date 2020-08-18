@@ -60,6 +60,9 @@ GEM
     bcrypt (3.1.15)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
+    bootstrap4-kaminari-views (1.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.4)
     code_analyzer (0.5.2)
       sexp_processor
@@ -125,6 +128,18 @@ GEM
     irb (1.2.4)
       reline (>= 0.0.1)
     json (2.3.1)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     kwalify (0.7.2)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -289,9 +304,11 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bootsnap (>= 1.4.2)
+  bootstrap4-kaminari-views
   config
   factory_bot_rails
   irb
+  kaminari
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
   pry-rails

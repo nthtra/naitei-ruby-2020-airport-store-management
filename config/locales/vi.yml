@@ -129,3 +129,24 @@ vi:
       please_log_in: Hãy đăng nhập
       employee_not_found: Không tìm thấy nhân viên
       can_not_access: Không thể truy cập
+  contracts:
+    index:
+      home: Trang chủ
+      contracts: Hợp đồng
+      id: ID
+      user: Người dùng
+      store: Cửa hàng
+      slot: Khu vực
+      terminal: Sảnh
+      status: Trạng thái
+      start_date: Ngày bắt đầu
+      end_date: Ngày kết thúc
+      actions: Thao tác
+      detail: Chi tiết
+  views:
+    pagination:
+      first: "« Đầu"
+      last: "Cuối »"
+      previous: "‹ Trước"
+      next: "Tiếp ›"
+      truncate: "…"
