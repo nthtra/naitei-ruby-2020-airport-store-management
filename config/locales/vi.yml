@@ -1,4 +1,11 @@
 vi:
+  views:
+    pagination:
+      first: "&laquo; Đầu tiên"
+      last: "Cuối cùng &raquo;"
+      previous: "&lsaquo; Trước"
+      next: "Tiếp &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     footer:
       version: Phiên bản
@@ -15,8 +22,40 @@ vi:
       settings: Cài đặt
       logout: Đăng xuất
       login: Đăng nhập
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> Tiếng Anh'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
+    user_navbar:
+      logo: Sân bay
+      profile: Hồ sơ
+      my_stores: Cửa hàng
+      references: Tham khảo
+      english_html: Tiếng Anh
+      vietnamese_html: Tiếng Việt
+      login: Đăng nhập
+      logout: Đăng xuát
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+    employee_navbar:
+      home: Trang chủ
+      contact: Liên hệ
+      search: Tìm kiếm
+      notifications: Thông báo
+      minutes: phút trước
+      messages: tin nhắn
+      see_all_notifications: Xem tất cả thông báo
+      profile: Hồ sơ
+      settings: Cài đặt
+      logout: Đăng xuất
+      login: Đăng nhập
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+    user_navbar:
+      logo: Sân bay
+      profile: Hồ sơ
+      my_stores: Cửa hàng
+      references: Tham khảo
+      english_html: Tiếng Anh
+      vietnamese_html: Tiếng Việt
+      login: Đăng nhập
+      logout: Đăng xuất
     sidebar:
       contracts: Hợp đồng
       slots: Khu vực
@@ -40,19 +79,25 @@ vi:
       search: Tìm kiếm
       login: Đăng nhập
       sign_up: "Đăng ký"
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> Tiếng Anh'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
   static_pages:
     home:
-      title: "Trang chủ"
-      welcome: "Chào mừng đến với hệ thống quản lý cửa hàng sân bay!"
-      home_breadcrumb: "Trang chủ"
-      welcome_breadcrumb: "Chào mừng"
-      view_more: "Xem thêm..."
-      airport_name: "Sân bay Nội bài"
-      content_html: |
-        Sân bay Quốc tế Nội Bài,<br>
-        sân bay lớn nhất miền bắc Việt Nam, phục vụ thủ đô Hà Nội.
+      title: "Home"
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      content_title: Việt Nam
+      all_terminal: Tất cả sảnh bay
+      terminal_dropdown: Sảnh bay
+      question: Bạn không tìm được khu vực bán hàng ưng ý?
+      answer: Không gì là không thể khi chúng ta cùng nhau trao đổi. Hãy gọi chúng tôi và cùng tìm ra giải pháp phù hợp với bạn.
+      description_title: Tìm kiếm Không gian Hợp tác ở Việt Nam
+      description_content: |
+                            Với nét văn hóa kinh doanh năng động, không gian hợp tác của chúng tôi ở Việt Nam là
+                            lựa chọn hoàn hảo để nhân thành công của tất cả các nhóm lớn nhỏ lên nhiều lần. Với sự tiện dụng và
+                            linh hoạt không đâu sánh bằng, không gian hợp tác, các văn phòng riêng tuyệt đẹp, và các phòng họp
+                            rộng rãi của chúng tôi là sự đảm bảo cho năng suất của bạn. Ngoài ra, các sự kiện tại chỗ đa dạng
+                            và phong phú của chúng tôi giúp bạn dễ dàng mở rộng mạng lưới quan hệ của mình và tăng cường hợp tác.
+                            Để có được một văn phòng tuyệt đẹp với bạn là trung tâm của mọi hoạt động, hãy tham gia WeWork ngay hôm nay.
   users:
     new:
       title: "Đăng ký"
@@ -90,3 +135,148 @@ vi:
       invalid_login: "Email hoặc mật khẩu không hợp lệ."
     destroy:
       logout_success: "Đăng xuất thành công!"
+  terminals: 
+    show:
+      title: Sảnh bay
+      terminal_dropdown: Sảnh bay
+      airport_terminal: Sảnh bay sân bay Nội Bài
+      terminal_information: Thông tin terminal
+      name: Tên
+      area: Diện tích
+      description_title: Bạn quan tâm đến sảnh bay này?
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+  slots:
+    show:
+      title: Khu vực
+      review: nhận xét
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      area: Diện tích
+      price: Giá thuê
+      status: Trạng thái
+      amenities: Tiện ích
+      mission: Luôn hướng tới lợi ích doanh nghiệp và trải nghiệm khách hàng
+      clean: Dịch vụ vệ sinh cao cấp
+      business: Môi trường kinh doanh công bằng
+      affordable: Giá cả hợp lý
+      location: Vị trí kinh doanh thuận lợi
+      googlemap_link: Xem chi tiết vị trí tại đây
+      interested_in: Bạn có hứng thú với khu vực này?
+      mission_content: |
+                        Chúng tôi rất chú trọng đến lợi ích của các doanh nghiệp hợp tác,
+                        hướng tới môi trường kinh doanh lành mạnh, phát triển bền vững.
+      hire_now: Đăng ký thuê ngay!
+      rule: "Hãy chắc chắn bạn đồng ý với điều khoản của chúng tôi "
+      rule_link: Tham khảo điều khoản
+      experience_title: Bạn nên trải nghiệm trực tiếp
+      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+  stores:
+    show:
+      search: Tìm kiếm
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      description: Mô tả chi tiết
+      clean: Dịch vụ vệ sinh cao cấp
+      business: Môi trường kinh doanh công bằng
+      affordable: Giá cả hợp lý
+      location: Vị trí kinh doanh thuận lợi
+      mystore_information: Thông tin cửa hàng
+      area: Diện tích
+      price: Giá thuê
+      status: Trạng thái
+      hiring: Đang thuê
+      waiting: Đang chờ
+      cancel_check: Nếu bạn muốn hủy yêu cầu, vui lòng cân nhắc kỹ và bấm vào đây
+      cancel: Huỷ yêu cầu
+      experience_title: Bạn nên thử trải nghiệm trực tiếp một lần!
+      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+      googlemap_link: Xem chi tiết vị trí tại đây
+  employee_sessions:
+    new:
+      title: Nhân viên đăng nhập
+      languages: Ngôn ngữ
+      employee: Nhân viên
+      log_in_to_start_your_session: Đăng nhập để bắt đầu phiên
+      email: Email
+      password: Mật khẩu
+      remember_me: Nhớ đăng nhập
+      log_in: Đăng nhập
+      or_log_in_with: Đăng nhập với
+      i_forgot_my_password: Quên mật khẩu
+    create:
+      invalid_email_password_combination: Email không hợp lệ hoặc sai mật khẩu
+      logged_in_successfully: Đăng nhập thành công
+      can_not_access: Không thể truy cập
+    destroy:
+      logged_out: Đã đăng xuất
+  employees:
+    show:
+      profile: Hồ sơ
+      employees: Nhân viên
+      please_log_in: Hãy đăng nhập
+      employee_not_found: Không tìm thấy nhân viên
+      can_not_access: Không thể truy cập
+  contracts:
+    index:
+      home: Trang chủ
+      contracts: Hợp đồng
+      id: ID
+      user: Người dùng
+      store: Cửa hàng
+      slot: Khu vực
+      terminal: Sảnh
+      status: Trạng thái
+      start_date: Ngày bắt đầu
+      end_date: Ngày kết thúc
+      actions: Thao tác
+      detail: Chi tiết
+    show:
+      home: Trang chủ
+      contracts: Hợp đồng
+      contract_details: Chi tiết hợp đồng
+      id: "Mã hợp đồng: "
+      location: Vị trí
+      slot_area: Diện tích
+      category: Loại hình kinh doanh
+      price: Giá
+      per_month: $/tháng
+      start_date: Ngày bắt đầu thuê
+      end_date: Ngày kết thúc
+      store_information: " Cửa hàng: "
+      legal_terms: " Điều khoản pháp lý"
+      a_term: Bên A đồng ý cho bên B thuê theo thời gian đã định.
+      b_term: Bên B sử dụng đúng mục đích đã trao đổi, chấp hành quy định của pháp luật và sân bay.
+      customer_information: " Thông tin khách hàng"
+      company: Công ty
+      customer_name: Tên khách hàng
+      email: Email
+      phone_number: Số điện thoại
+      identity_number: Số chứng minh thư
+      approve: Phê duyệt
+      deny: Từ chối
+      pending: Chờ duyệt
+      submit: Submit
+  views:
+    pagination:
+      first: "« Đầu"
+      last: "Cuối »"
+      previous: "‹ Trước"
+      next: "Tiếp ›"
+      truncate: "…"
+  terminals: 
+    show:
+      title: Sảnh bay
+      terminal: Sảnh bay-
+      overview: Giới thiệu
+      area: Diện tích
+      slots: Cửa hàng
+      stores: Cửa hàng
+      contact: Liên hệ
+      manager: Người quản lý
+      phone_number: Số điện thoại
+      email: Mail
+      description: Mô tả
+      stt: STT
+      slot_name: Mã cửa hàng
+      status: Trạng thái
+      area: Diện tích
+      empty: Còn trống
+      used: Đã được sử dụng

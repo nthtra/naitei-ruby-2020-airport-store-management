@@ -6,17 +6,30 @@
     <%= render "layouts/rails_default" %>
   </head>
   <% unless disable_layout? %>
-    <body class="sidebar-mini sidebar-collapse">
-      <div class="wrapper">
-        <%= render "layouts/navbar" %>
-        <%= render "layouts/user_sidebar" %>
-        <div class="content-wrapper">
-          <%= toastr_flash %>
-          <%= yield %>
+    <% if employee_logged_in? %>
+      <body class="sidebar-mini sidebar-collapse">
+        <div class="wrapper">
+            <%= render "layouts/employee_navbar" %>
+            <%= render "layouts/employee_sidebar" %>
+          <div class="content-wrapper">
+            <%= toastr_flash %>
+              <%= yield %>
+          </div>
+          <%= render "layouts/footer" %>
         </div>
-        <%= render "layouts/footer" %>
-      </div>
-    </body>
+      </body>
+    <% else %>
+      <body id="app" class>
+        <div class>
+          <%= render "layouts/user_navbar" %>
+          <div class="">
+            <%= toastr_flash %>
+            <%= yield %>
+          </div>
+          <%= render "layouts/footer" %>
+        </div>
+      </body>
+    <%end%>
   <% else %>
     <%= yield %>
   <% end %>

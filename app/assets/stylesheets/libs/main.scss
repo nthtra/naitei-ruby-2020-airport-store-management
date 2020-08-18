@@ -1,0 +1,174 @@
+@import 'abstract/_variables.scss';
+* {
+  font-family: sans-serif, "Apercu", Avenir, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Calibri", "Roboto",Arial, "Font Awesome 5 Free" !important;
+  margin: 0;
+  padding: 0;
+}
+nav.main-header {
+  position: fixed !important;
+  width: 96% !important;
+}
+.main-sidebar{
+ position: fixed !important;
+}
+#error_explanation {
+ color: red;
+ ul {
+   color: red;
+ }
+}
+
+.checkbox {
+ span {
+   margin-left: 2px;
+ }
+}
+
+.overview {
+ font-size: 45px;
+ color: $gray-medium-light-1;
+}
+
+#home-content {
+ background-image: url('../../images/bg.jpg');
+ height: 710px;
+}
+
+#home-content-row {
+ background-color: $home-background;
+ height: 710px;
+ color: white;
+ padding-top: 100px;
+ padding-left: 180px;
+}
+
+#view-more {
+ color: white;
+}
+
+#view-more:hover {
+ color: $gray-medium-light-2;
+}
+
+#attendant {
+ margin-left: -50px;
+ width: 613px;
+ height: 613px;
+}
+
+#custom_nav {
+ position: absolute;
+ top: 0;
+ width: 100%;
+ margin: 0;
+ transition: none;
+ nav {
+   padding: 5px 100px;
+ }
+ .brand-image {
+   position: relative;
+   top: -1px;
+   margin-right: 4px;
+ }
+}
+
+#home-content, .login-page, .register-page {
+ background-image: url("../../images/bg.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.login-box, .register-box {
+ margin-top: 70px;
+}
+
+.login-box {
+ width: 450px;
+}
+
+.register-box {
+ width: 700px;
+}
+
+.register-logo {
+ margin-bottom: 10px;
+}
+
+.required:after {
+ content: "*";
+ color: red;
+}
+
+.form_error {
+ margin-top: .25rem;
+ font-size: 80%;
+ color: $form-error-red;
+}
+
+.brand-image {
+ opacity: .8;
+ width: 20px;
+ height: auto;
+}
+
+#terminal-info {
+ margin: 70px 70px;
+ width: 100%;
+ height: 100%;
+}
+
+#terminal-content {
+ padding-top: 50px;
+ overflow: auto;
+}
+
+.my-full {
+ width: 100%;
+}
+
+#slot-content{
+ margin-left: 150px;
+}
+
+.slot-card {
+ width: 100%;
+ height: 100%;
+ border: 1px solid $white-1;
+ border-radius: 10px;
+ margin-top: 20px;
+ background-color: white;
+}
+
+#slot-img-box{
+ padding-right: 0;
+ padding-left: 0;
+}
+
+.slot-img {
+ width: 100%;
+ height: 170px;
+ border-top-left-radius: 10px;
+ border-bottom-left-radius: 10px;
+}
+
+#dropdownMenuLinkTerminal {
+ border-left: 0 !important;
+ p{
+   margin: 0 !important;
+   padding: 0.5rem 0 !important;
+   text-align: center;
+ }
+}
+
+#terminalItem {
+ flex-direction: column;
+ padding-top: 0 !important;
+}
+
+#contract-detail-btn .btn {
+ width: 25%;
+}
+
+#contract-detail {
+ font-size: 2.5rem;
+}

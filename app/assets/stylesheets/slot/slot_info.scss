@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./Roboto-Regular.ttf");
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 0 60px;
+}
+
+header {
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+header .logo a {
+  font-size: 30px;
+  font-family: "roboto";
+  font-weight: bold;
+  display: inline-block;
+  margin: 15px 10px 15px 0;
+  text-decoration: none;
+  color: #000;
+}
+
+header .navbar ul {
+  display: flex;
+  list-style: none;
+  font-size: 18px;
+  margin: 25px 10px 15px;
+  font-family: "roboto";
+}
+
+header .navbar ul li {
+  margin: 0 10px;
+}
+
+header .navbar ul li a {
+  text-decoration: none;
+  color: #3e3d3d;
+  position: relative;
+  transition: 0.4s;
+}
+
+header .navbar ul li a:hover {
+  border-bottom: 1px solid #000;
+  transition: 0.4s;
+}
+
+header .saved a {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  font-family: "roboto";
+  text-decoration: none;
+  color: #3e3d3d;
+}
+
+header .saved a i {
+  color: #e6e6e6;
+}
+
+header .contactUs a {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  margin: 25px 10px 15px;
+  font-family: roboto;
+  text-decoration: none;
+  color: #3e3d3d;
+}
+
+section.ray-page .ray-breadcrumbs {
+  list-style: none;
+  font-family: "roboto";
+  font-size: 14px;
+}
+
+section.ray-page .ray-breadcrumbs .ray-breadcrumb a {
+  color: #000;
+  text-decoration: none;
+}
+
+section.content {
+  margin-top: 70px;
+}
+
+section.content .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.content .header .header__right h1 {
+  font-size: 50px;
+  font-family: "roboto";
+}
+
+section.content .header .header__right i {
+  color: #ffbc00;
+  padding-right: 10px;
+}
+
+section.content .header .header__right a {
+  color: #000;
+  border-left: 1px solid #3e3d3d;
+  padding-left: 10px;
+}
+
+section.content .header .header__left p {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "roboto";
+}
+
+section.content .main {
+  margin: 20px 0 20px 0;
+  display: flex;
+}
+
+section.content .main .main__left {
+  width: 60%;
+}
+
+section.content .main .main__left img {
+  width: 100%;
+}
+
+// section.content .main .main__left .pricing span {
+//   display: inline-block;
+//   text-align: center;
+//   font-size: 14px;
+//   font-family: "roboto";
+//   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+//   color: #3e3d3d;
+//   border-radius: 50px;
+//   border: 1px solid #3e3d3d;
+// }
+
+section.content .main .main__left .pricing h2 {
+  font-size: 30px;
+  font-family: "roboto";
+  margin: 20px 0 20px 0;
+}
+
+section.content .main .main__left .pricing p {
+  font-size: 14px;
+  font-family: "roboto";
+}
+
+section.content .main .main__left .products#slot-info-products {
+  margin-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 10px;
+}
+
+section.content .main .main__left .products .product {
+  margin-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  img{
+    width: 30%;  
+  }
+}
+
+section.content .main .main__left .products .product:nth-child(3) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+section.content .main .main__left .products .product img {
+  width: 100%;
+}
+
+section.content .main .main__left .products .product .product__detail {
+  margin: 20px;
+}
+
+section.content .main .main__left .products .product .product__detail h3 {
+  font-size: 18px;
+  font-family: "roboto";
+  margin-bottom: 10px;
+  color: #464646;
+}
+
+section.content .main .main__left .products .product .product__detail p {
+  font-size: 14px;
+  font-family: "roboto";
+  margin-bottom: 10px;
+  color: #666;
+}
+
+section.content .main .main__left .previews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.content .main .main__left .previews .preview {
+  width: 23%;
+  height: 150px;
+  background: #e6e6e6;
+  position: relative;
+  margin-top: 20px;
+  margin-right: 2%;
+}
+
+section.content .main .main__left .previews .preview li {
+  width: 20%;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+section.content .main .main__left .previews .preview p {
+  font-size: 14px;
+  font-family: "roboto";
+  position: absolute;
+  top: 60%;
+  margin-left: 0;
+}
+
+section.content .main .main__left .previews a {
+  font-size: 16px;
+  font-family: "roboto";
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+section.content .main .main__right {
+  width: 40%;
+}
+
+section.content .main .main__right .lead {
+  padding: 40px 20px 20px 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  background: #e6e6e6;
+  margin-left: 20px;
+}
+
+section.content .main .main__right .lead h2 {
+  font-size: 24px;
+  font-family: "roboto";
+}
+
+section.content .main .main__right .lead p {
+  font-size: 16px;
+  font-family: "roboto";
+  line-height: 1.8;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+section.content .main .main__right .lead p a {
+  text-decoration: none;
+}
+
+section.content .main .main__right .lead .text__footer {
+  font-size: 14px;
+}
+
+section.content .main .main__right .lead h3 {
+  font-size: 16px;
+  font-family: "roboto";
+}
+#slot-info-products {
+  flex-direction: column;
+  border-top: 0 !important;
+}
+
+.slot-info-product {
+  width: 100% !important;
+  padding-top: 0 !important;
+}
+
+.slot-info-product-img {
+  width: 30% !important;
+}
+
+.p-info{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  width: 100% !important;
+  height: 30px !important;
+}
+
+.p-info-item{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+}
+
+.p-info-img{
+  width: 30px !important;
+  height: 100% !important;
+  margin-right: 20px !important;
+  font-size: 25px;
+}
+
+#slot_name_title span{
+  border: 0 !important;
+  font-size: 30px;
+}
+
+#button_dangky {
+  color: blue;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
+  border: .0625rem solid blue;
+  border-radius: .25rem;
+  cursor: pointer;
+  padding: 1.1875rem 1.4375rem;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.preview p {
+  text-align: center !important;
+  width: 100% !important;
+}

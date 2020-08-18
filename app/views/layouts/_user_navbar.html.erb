@@ -1,0 +1,64 @@
+  <header class="header container" id="navbar-header">
+    <div class="user_navbar_header_left">
+      <span class="logo"><a href="./index.html"><%= t ".logo" %> </a></span>
+      <span class="navbar">
+        <ul>
+          <li><%= link_to t(".profile"), "#" %></li>
+          <li>
+            <% if logged_in? %>
+              <%= link_to t(".my_stores"), stores_path(current_user) %>
+            <% else %>
+              <%= link_to t(".my_stores"), "#" %>
+            <% end %>
+          </li>
+          <li><%= link_to t(".references"), "#" %></li>
+        </ul>
+      </span>
+    </div>
+    <div class="navbar-right row">
+      <div class="saved col-6">
+        <% if logged_in? %>
+          <div class="d-sm-inline-block">
+            <%= link_to t(".logout"), logout_path, class: "nav-link" %>
+          </div>
+        <% else %>
+          <div class="nav-item d-none d-sm-inline-block">
+            <%= link_to t(".login"), login_path, class: "nav-link" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="contactUs col-3">
+        <div class="dropdown">
+          <%= link_to "#", class: "nav-link", data: {toggle: "dropdown"} do%>
+            <% if I18n.locale == :en %>
+              <i class="flag-icon flag-icon-us"></i>
+            <% else %>
+              <i class="flag-icon flag-icon-vn"></i>
+            <% end %>
+          <% end %>
+          <div class="dropdown-menu dropdown-menu-right p-0">
+            <%= link_to t(".english"), {locale: :en}, class: "dropdown-item", id: "language-dropdown" %>
+            <%= link_to t(".vietnamese"), {locale: :vi}, class: "dropdown-item", id: "language-dropdown" %>
+          </div>
+        </div>
+      </div>
+      <div class="contactUs col-3">
+        <div class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 <%= t ".notifications" %></span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 <%= t ".messages" %>
+              <span class="float-right text-muted text-sm">3 <%= t ".minutes" %></span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer"><%= t ".see_all_notifications" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

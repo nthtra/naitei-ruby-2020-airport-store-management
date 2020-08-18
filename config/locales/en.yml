@@ -1,4 +1,11 @@
 en:
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     footer:
       version: Version
@@ -15,8 +22,40 @@ en:
       settings: Settings
       logout: Logout
       login: Login
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
+    user_navbar:
+      logo: Airport
+      profile: Profile
+      my_stores: My stores
+      references: References
+      english: "English"
+      vietnamese: "Vietnamese"
+      login: Login
+      logout: Logout
+      english: "English"
+      vietnamese: "Vietnamese"
+    employee_navbar:
+      home: Home
+      contact: Contact
+      search: Search
+      notifications: Notifications
+      minutes: mins ago
+      messages: messages
+      see_all_notifications: See All Notifications
+      profile: Profile
+      settings: Settings
+      logout: Logout
+      login: Login
+      english: "English"
+      vietnamese: "Vietnamese"
+    user_navbar:
+      logo: Airport
+      profile: Profile
+      my_stores: My stores
+      references: References
+      english: "English"
+      vietnamese: "Vietnamese"
+      login: Login
+      logout: Logout
     sidebar:
       airport_store: Airport Store
       contracts: Contracts
@@ -40,19 +79,25 @@ en:
       search: Search
       login: Login
       sign_up: "Sign up"
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
+      english: "English"
+      vietnamese: "Vietnamese"
   static_pages:
     home:
       title: "Home"
-      welcome: "Welcome to the Airport Store Management System!"
-      home_breadcrumb: "Home"
-      welcome_breadcrumb: "Welcome"
-      airport_name: "Noi Bai airport"
-      view_more: "View more..."
-      content_html: |
-        Noi Bai International Airport,<br>
-        the biggest airport in northern Vietnam, serves the capital city of Hanoi.
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      content_title: Viet Nam
+      all_terminal: All terminal
+      terminal_dropdown: Terminal
+      question: Can't find a good selling area?
+      answer: Nothing is impossible when we talk together. Call us and find the right solution for you.
+      description_title: Search for a Collaborative Space in Vietnam
+      description_content: |
+                            With a dynamic business culture, our co-working space in Vietnam is the 
+                            perfect choice to multiply the success of all large groups by many times. 
+                            With unmatched convenience and flexibility, collaborative spaces, stunning private offices, 
+                            and spacious meeting rooms are the guarantee of your productivity. In addition, 
+                            our diverse and extensive on-site events make it easy to expand your network and strengthen cooperation. 
+                            To have a beautiful office with you at the center of everything, join WeWork today.
   users:
     new:
       title: "Sign up"
@@ -72,6 +117,8 @@ en:
     create:
       sign_up_success: "Sign up success!"
       user_not_found: "User invalid!"
+    user: 
+      user_not_found: "User not found!"
   sessions:
     new:
       title: "Sign in"
@@ -90,3 +137,148 @@ en:
       invalid_login: "Invalid email/password combination."
     destroy:
       logout_success: "Logout success!"
+  terminals: 
+    show:
+      title: Terminal
+      terminal_dropdown: Terminal
+      airport_terminal: Noi Bai airport terminal
+      terminal_information: Terminal information
+      name: Name
+      area: Area
+      description_title: Interested in this terminal?
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+  slots:
+    show:
+      title: Slot
+      review: reviews
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      area: Area
+      price: Price
+      status: Status
+      amenities: Amenities
+      mission: Always towards business benefits and user experience
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      googlemap_link: See location details here
+      interested_in: Interested in this building?
+      mission_content: |
+                        We attach great importance to the benefits of cooperative businesses,
+                        towards a healthy and developing business environment.
+      hire_now: Hire now
+      rule: "Be sure to agree to our terms "
+      rule_link: Read more rules
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+  stores:
+    show:
+      search: Search
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      description: Description
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      mystore_information: My store information
+      area: Area
+      price: Price
+      status: Status
+      hiring: Hiring
+      waiting: Waiting
+      cancel_check: If you want to cancel the request, please consider carefully and click here
+      cancel: Cancel request
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+      googlemap_link: See location details here
+  employee_sessions:
+    new:
+      title: Employee log in
+      languages: Languages
+      manager: Manager
+      log_in_to_start_your_session: Log in to start your session
+      email: Email
+      password: Password
+      remember_me: Remember Me
+      log_in: Log in
+      or_log_in_with: Log in with
+      i_forgot_my_password: I forgot my password
+    create:
+      invalid_email_password_combination: Invalid email/password combination
+      logged_in_successfully: Logged in successfully
+      can_not_access: Can not access
+    destroy:
+      logged_out: Logged out
+  employees:
+    show:
+      profile: Profile
+      employees: Employees
+      please_log_in: Please log in
+      employee_not_found: Employee not found
+      can_not_access: Can not access
+  contracts:
+    index:
+      home: Home
+      contracts: Contracts
+      id: ID
+      user: User
+      store: Store
+      slot: Slot
+      terminal: Terminal
+      status: Status
+      start_date: Start date
+      end_date: End date
+      actions: Actions
+      detail: Detail
+    show:
+      home: Home
+      contracts: Contracts
+      contract_details: Contract detail
+      id: "Contract ID: "
+      location: Location
+      slot_area: Slot area
+      category: Category
+      price: Price
+      per_month: $/month
+      start_date: Start date
+      end_date: End date
+      store_information: " Store: "
+      legal_terms: " Legal terms"
+      a_term: Party A agrees to lease to Party B according to the set time.
+      b_term: Party B uses the right purposes and complies with the provisions of law and the airport.
+      customer_information: " Customer information"
+      company: Company
+      customer_name: Customer name
+      email: Email
+      phone_number: Phone number
+      identity_number: Identity number
+      approve: Approve
+      deny: Deny
+      pending: Pending
+      submit: Submit
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"
+  terminals: 
+    show:
+      title: Terminal
+      terminal: Terminal-
+      overview: Terminal overview
+      area: Area
+      slots: Slots
+      stores: Stores
+      contact: Contact
+      manager: Manager
+      phone_number: Phone number
+      email: Mail
+      description: Desctiption
+      stt: "No"
+      slot_name: Slot's name
+      status: Status
+      area: Area
+      empty: Empty
+      used: Used

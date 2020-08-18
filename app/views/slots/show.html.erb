@@ -1,0 +1,135 @@
+<% provide :title, t(".title") %>
+  <main>
+    <section class="ray-page container">
+      <ul class="ray-breadcrumbs">
+        <li class="ray-breadcrumb">
+          <%= t ".search" %>
+        </li>
+      </ul>
+    </section>
+    <section class="content container">
+      <div class="header">
+        <div class="header__right">
+          <h5 id="slot_name_title"><%= @slot.name %></h5>
+          <i class="fas fa-star">5.0</i>
+          <a href="#">16 <%= t ".review" %></a>
+        </div>
+        <div class="header__left">
+          <p> <%= t ".address" %> </p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main__left">
+          <img src="https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg" alt="image">
+          <div class="pricing" id="p-info">
+            <div class="p-info">
+              <div class="p-info-item">
+                <li class="p-info-img fas fa-warehouse"></li>
+                <div class=""> <%= t ".area" %> <%= @slot.area %><span>m<sup>2</sup></span> </div>
+              </div>
+            </div>
+            <div class="p-info">
+              <div class="p-info-item">
+                <li class="p-info-img fas fa-money-check-alt"></li>
+                <div class=""> <%= t ".price" %> <%= @slot.price %> </div>
+              </div>
+            </div>
+            <div class="p-info">
+              <div class="p-info-item">
+                <li class="p-info-img fas fa-calendar-check"></li>
+                <div class=""> <%= t ".status" %> </div>
+              </div>
+            </div>
+          </div>
+          <%# <div class="pricing">
+            <h2>Chỗ làm việc còn trống</h2>
+            <span>Sửa chữa</span>
+            <span>Ngày chuyển vào</span>
+          </div> %>
+          <%# <div class="pricing">
+            <h2>Gợi ý</h2>
+          </div> %>
+          <%# <div class="products" id="slot-info-products">
+            <div class="product" id="slot-info-product">
+              <img id="slot-info-product-img"src="https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg" alt="image">
+              <div class="product__detail">
+                <h3>Văn phòng riêng</h3>
+                <p>Không gian văn phòng có khóa cho các nhóm với mọi quy mô</p>
+                <p class="pay">chỉ từ ₫26,100,000/mo</p>
+              </div>
+            </div>
+            <div class="product">
+              <img src="./image/private_office.7c259f1fa51705d69e43439b2280aa9a.svg" alt="image">
+              <div class="product__detail">
+                <h3>Văn phòng riêng</h3>
+                <p>Không gian văn phòng có khóa cho các nhóm với mọi quy mô</p>
+                <p class="pay">chỉ từ ₫26,100,000/mo</p>
+              </div>
+            </div>
+            <div class="product">
+              <img src="./image/private_office.7c259f1fa51705d69e43439b2280aa9a.svg" alt="image">
+              <div class="product__detail">
+                <h3>Văn phòng riêng</h3>
+                <p>Không gian văn phòng có khóa cho các nhóm với mọi quy mô</p>
+                <p class="pay">chỉ từ ₫26,100,000/mo</p>
+              </div>
+            </div>
+          </div> %>
+          <div class="pricing">
+            <h2><%= t ".amenities" %></h2>
+            <p><%= t ".mission" %></p>
+          </div>
+          <div class="previews">
+            <div class="preview">
+              <li class="p-info-img fas fa-hand-sparkles"></li>
+              <p><%= t ".clean" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-balance-scale"></li>
+              <p><%= t ".business" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-dollar-sign"></li>
+              <p><%= t ".affordable" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-smile-wink"></li>
+              <p><%= t ".location" %></p>
+            </div>
+            <%# <div class="preview">
+              <img src="./image/cleaning_services.55c904c9d15e95c5bca848be7ea6f385.svg" alt="icon">
+              <p>Thị trường kinh doanh lành mạnh</p>
+            </div>
+            <div class="preview">
+              <img src="./image/cleaning_services.55c904c9d15e95c5bca848be7ea6f385.svg" alt="icon">
+              <p>Dịch vụ vệ sinh nâng cao</p>
+            </div>
+            <div class="preview">
+              <img src="./image/cleaning_services.55c904c9d15e95c5bca848be7ea6f385.svg" alt="icon">
+              <p>Dịch vụ vệ sinh nâng cao</p>
+            </div>
+            <div class="preview">
+              <img src="./image/cleaning_services.55c904c9d15e95c5bca848be7ea6f385.svg" alt="icon">
+              <p>Dịch vụ vệ sinh nâng cao</p>
+            </div> %>
+            <a href="https://bit.ly/2CS5Il7" target="_blank"><%= t ".googlemap_link" %></a>
+          </div>
+        </div>
+        <div class="main__right" id="slot_main_right">
+          <div class="lead">
+            <h5><%= t ".interested_in" %></h5>
+            <p><%= t ".mission_content" %></p>
+            <%# <span>Đăng ký thuê ngay</span> %>
+            <button id="button_dangky">
+              <%= t ".hire_now" %>
+            </button>
+            <p class="text__footer"><%= t ".rule" %><a href="#"><%= t ".rule_link" %></a></p>
+          </div>
+          <div class="lead" style="margin-top: 20px;">
+            <h3><%= t ".experience_title" %></h3>
+            <p class="text__footer"><%= t ".experience" %><a href="#"><%= @slot.terminal.employee.email %> </a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>

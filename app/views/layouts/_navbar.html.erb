@@ -4,7 +4,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="#" class="nav-link"><%= t ".home" %></a>
+      <%= link_to t(".home"), root_path, class: "nav-link" %>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="#" class="nav-link"><%= t ".contact" %></a>
@@ -35,8 +35,8 @@
         <% end %>
       <% end %>
       <div class="dropdown-menu dropdown-menu-right p-0">
-        <%= link_to t(".english_html"), { locale: :en }, class: "dropdown-item" %>
-        <%= link_to t(".vietnamese_html"), { locale: :vi }, class: "dropdown-item" %>
+        <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
+        <%= link_to t(".vietnamese"), {locale: :vi}, class: "dropdown-item" %>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -77,6 +77,30 @@
           <i class="fas fa-cog"></i>
           <%= t ".settings" %>
         </a>
+         <% if logged_in? %>
+          <div class="dropdown-divider"></div>
+          <%= link_to current_user, class: "dropdown-item dropdown-footer" do %>
+            <i class="fas fa-user"></i>
+            <%= t ".profile" %>
+          <% end %>
+          <div class="dropdown-divider"></div>
+          <%= link_to logout_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
+            <i class="fas fa-sign-out-alt"></i>
+            <%= t ".logout" %>
+          <% end %>
+        <% end %>
+        <% if employee_logged_in? %>
+          <div class="dropdown-divider"></div>
+          <%= link_to current_employee, class: "dropdown-item dropdown-footer" do %>
+            <i class="fas fa-user"></i>
+            <%= t ".profile" %>
+          <% end %>
+          <div class="dropdown-divider"></div>
+          <%= link_to employees_logout_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
+            <i class="fas fa-sign-out-alt"></i>
+            <%= t ".logout" %>
+          <% end %>
+        <% end %>
       </div>
     </li>
   </ul>
