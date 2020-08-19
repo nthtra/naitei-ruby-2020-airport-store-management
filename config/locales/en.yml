@@ -1,7 +1,4 @@
 en:
-  hello: Hello world
-  test: Test
-  home: Home
   layouts:
     footer:
       version: Version
@@ -11,13 +8,81 @@ en:
       contact: Contact
       search: Search
       notifications: Notifications
+      minutes: mins ago
       messages: messages
       see_all_notifications: See All Notifications
       profile: Profile
       languages: Languages
       settings: Settings
+      logout: Logout
+      login: Login
     sidebar:
+      airport_store: Airport Store
       contracts: Contracts
       slots: Slots
+      my_stores: My Stores
+      requests: Request
+      terminals: Terminals
+      references: References
     application:
       store_management: Store Management
+  shared:
+    error_messages:
+      alert: "The form contains"
+      alert_error: "error"
+    custom_navbar:
+      airport_store: Airport Store
+      home: Home
+      contact: Contact
+      help: Help
+      about: About
+      search: Search
+      login: Login
+      sign_up: "Sign up"
+      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
+      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
+  static_pages:
+    home:
+      title: "Home"
+      welcome: "Welcome to the Airport Store Management System!"
+      home_breadcrumb: "Home"
+      welcome_breadcrumb: "Welcome"
+      airport_name: "Noi Bai airport"
+      view_more: "View more..."
+      content_html  : |
+        Noi Bai International Airport,<br>
+        the biggest airport in northern Vietnam, serves the capital city of Hanoi.
+  users:
+    new:
+      title: "Sign up"
+      register: "Register a new membership"
+      full_name: "Full name"
+      email: "Email"
+      password: "Password"
+      retype_password: "Retype password"
+      company_name: "Company name"
+      identity_number: "Identity number"
+      phone_number: "Phone number"
+      submit: "Register"
+      or: "- OR -"
+      facebook_signup: "Sign up using Facebook"
+      google_signup: "Sign up using Gmail"
+      had_membership: "I already have a membership"
+    create:
+      sign_up_success: "Sign up success!"
+      user_not_found: "User invalid!"
+  sessions:
+    new:
+      title: "Sign in"
+      sign_in: "Sign in to start your session"
+      email: "Email"
+      password: "Password"
+      remember_me: "Remember me"
+      submit: "Sign in"
+      or: "- OR -"
+      facebook_signup: "Sign in using Facebook"
+      google_signup: "Sign in using Gmail"
+      forgot_password: "I forgot my password"
+      register: "Register a new membership"
+    create:
+      invalid_login: "Invalid email/password combination."
