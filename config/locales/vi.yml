@@ -1,7 +1,4 @@
 vi:
-  hello: Xin chào
-  test: Test
-  home: Trang chủ
   layouts:
     footer:
       version: Phiên bản
@@ -11,13 +8,81 @@ vi:
       contact: Liên hệ
       search: Tìm kiếm
       notifications: Thông báo
+      minutes: phút trước
       messages: tin nhắn
       see_all_notifications: Xem tất cả thông báo
       profile: Hồ sơ
       languages: Ngôn ngữ
       settings: Cài đặt
+      logout: Đăng xuất
+      login: Đăng nhập
     sidebar:
       contracts: Hợp đồng
       slots: Khu vực
+      airport_store: Quản lý cửa hàng
+      my_stores: Cửa hàng của tôi
+      requests: Yêu cầu
+      terminals: Sảnh bay
+      references: Tham khảo
     application:
       store_management: Quản lý cửa hàng
+  shared:
+    error_messages:
+      alert: "Form chứa"
+      alert_error: "lỗi"
+    custom_navbar:
+      airport_store: Quản lý cửa hàng
+      home: Trang chủ
+      help: Giúp đỡ
+      about: Giới thiệu
+      contact: Liên hệ
+      search: Tìm kiếm
+      login: Đăng nhập
+      sign_up: "Đăng ký"
+      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> Tiếng Anh'
+      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
+  static_pages:
+    home:
+      title: "Trang chủ"
+      welcome: "Chào mừng đến với hệ thống quản lý cửa hàng sân bay!"
+      home_breadcrumb: "Trang chủ"
+      welcome_breadcrumb: "Chào mừng"
+      view_more: "Xem thêm..."
+      airport_name: "Sân bay Nội bài"
+      content_html: |
+        Sân bay Quốc tế Nội Bài,<br>
+        sân bay lớn nhất miền bắc Việt Nam, phục vụ thủ đô Hà Nội.
+  users:
+    new:
+      title: "Đăng ký"
+      register: "Đăng ký thành viên mới"
+      full_name: "Họ và tên"
+      email: "Email"
+      password: "Mật khẩu"
+      retype_password: "Gõ lại mật khẩu"
+      company_name: "Tên công ty"
+      identity_number: "Số CMND"
+      phone_number: "Số điện thoại"
+      submit: "Đăng ký"
+      or: "- HOẶC -"
+      facebook_signup: "Đăng ký bằng Facebook"
+      google_signup: "Đăng ký bằng Gmail"
+      had_membership: "Đã có tài khoản?"
+    create:
+      sign_up_success: "Đăng ký thành công!"
+      user_not_found: "Không tìm thấy người dùng!"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      sign_in: "Đăng nhập để bắt đầu phiên của bạn"
+      email: "Email"
+      password: "Mật khẩu"
+      remember_me: "Nhớ phiên đăng nhập"
+      submit: "Đăng nhập"
+      or: "- HOẶC -"
+      facebook_signup: "Đăng nhập bằng Facebook"
+      google_signup: "Đăng nhập bằng Gmail"
+      forgot_password: "Quên mật khẩu?"
+      register: "Đăng ký thành viên mới"
+    create:
+      invalid_login: "Email hoặc mật khẩu không hợp lệ."
