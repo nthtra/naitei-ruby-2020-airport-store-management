@@ -2,6 +2,7 @@
 @import 'libs/adminlte.scss';
 @import 'libs/all.css';
 @import 'abstract/_variables.scss';
+@import 'toastr/toastr.scss';
 
 #error_explanation {
   color: red;
@@ -75,7 +76,7 @@
 }
 
 .login-box {
-  width: 600px;
+  width: 450px;
 }
 
 .register-box {

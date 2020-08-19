@@ -1,24 +1,30 @@
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1><%= t "test" %></h1>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#"><%= t "home" %></a></li>
-            <li class="breadcrumb-item active"><%= t "test" %></li>
-          </ol>
-        </div>
+<% provide :title, t(".title") %>
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark"><%= t ".welcome" %></h1>
       </div>
-    </div><!-- /.container-fluid -->
-  </section>
-
-  <!-- Main content -->
-  <section class="content">
-    <%= t "hello" %>
-  </section>
-  <!-- /.content -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><%= link_to t(".home_breadcrumb"), root_path %></li>
+          <li class="breadcrumb-item active"><%= t ".welcome_breadcrumb" %></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content" ></div>
+  <div class="container-fluid" id="home-content">
+    <div class="row" id="home-content-row">
+      <div class="col-lg-6">
+        <h5><%= t ".airport_name" %></h5>
+        <p class="overview"><%= t ".content_html" %></p>
+        <%= link_to t(".view_more"), Settings.links.airport, id: "view-more", target: "_blank" %>
+      </div>
+      <div class="col-lg-6">
+        <%= image_tag "/images/flight-attendant.png", id: "attendant", class: "img-circle" %>
+      </div>
+    </div>
+  </div>
 </div>
