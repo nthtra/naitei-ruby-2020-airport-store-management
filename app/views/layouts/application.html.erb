@@ -11,14 +11,13 @@
         <%= render "layouts/navbar" %>
         <%= render "layouts/user_sidebar" %>
         <div class="content-wrapper">
-          <%= render "shared/flash_messages" %>
+          <%= toastr_flash %>
           <%= yield %>
         </div>
         <%= render "layouts/footer" %>
       </div>
     </body>
   <% else %>
-    <%= render "shared/flash_messages" %>
     <%= yield %>
   <% end %>
 </html>

@@ -27,6 +27,11 @@
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Notifications Dropdown Menu -->
+    <% unless logged_in? %>
+      <li class="nav-item d-none d-sm-inline-block">
+        <%= link_to t(".login"), login_path, class: "nav-link" %>
+      </li>
+    <% end %>
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
@@ -37,7 +42,7 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item">
           <i class="fas fa-envelope mr-2"></i> 4 <%= t ".messages" %>
-          <span class="float-right text-muted text-sm">3 mins</span>
+          <span class="float-right text-muted text-sm">3 <%= t ".minutes" %></span>
         </a>
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer"><%= t ".see_all_notifications" %></a>
@@ -50,20 +55,25 @@
         <i class="fas fa-ellipsis-v"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">
           <i class="fas fa-user"></i>
           <%= t ".profile" %>
         </a>
-
+        <% if logged_in? %>
+          <div class="dropdown-divider"></div>
+          <%= link_to logout_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
+            <i class="fas fa-sign-out-alt"></i>
+            <%= t ".logout" %>
+          <% end %>
+        <% end %>
         <div class="dropdown-divider"></div>
         <div class="dropdown-item dropdown-footer">
           <%= t ".languages" %>:
-          <%= link_to locale:"en" do %>
+          <%= link_to locale: "en" do %>
             <span class="flag-icon flag-icon-us"></span>
           <% end %>
-          <%= link_to locale:"vi" do %>
+          <%= link_to locale: "vi" do %>
             <span class="flag-icon flag-icon-vn"> </span>
           <% end %>
         </div>
