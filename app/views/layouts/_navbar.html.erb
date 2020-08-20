@@ -1,5 +1,4 @@
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-  <!-- Left navbar links -->
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -11,8 +10,6 @@
       <a href="#" class="nav-link"><%= t ".contact" %></a>
     </li>
   </ul>
-
-  <!-- SEARCH FORM -->
   <form class="form-inline ml-3">
     <div class="input-group input-group-sm">
       <input class="form-control form-control-navbar" type="search" placeholder= "<%= t ".search" %>" aria-label="Search">
@@ -23,15 +20,25 @@
       </div>
     </div>
   </form>
-
-  <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
-    <!-- Notifications Dropdown Menu -->
     <% unless logged_in? %>
       <li class="nav-item d-none d-sm-inline-block">
         <%= link_to t(".login"), login_path, class: "nav-link" %>
       </li>
     <% end %>
+    <li class="nav-item dropdown">
+      <%= link_to "#", class: "nav-link", data: {toggle: "dropdown"} do%>
+        <% if I18n.locale == :en %>
+          <i class="flag-icon flag-icon-us"></i>
+        <% else %>
+          <i class="flag-icon flag-icon-vn"></i>
+        <% end %>
+      <% end %>
+      <div class="dropdown-menu dropdown-menu-right p-0">
+        <%= link_to t(".english_html"), { locale: :en }, class: "dropdown-item" %>
+        <%= link_to t(".vietnamese_html"), { locale: :vi }, class: "dropdown-item" %>
+      </div>
+    </li>
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
@@ -48,8 +55,6 @@
         <a href="#" class="dropdown-item dropdown-footer"><%= t ".see_all_notifications" %></a>
       </div>
     </li>
-
-    <!-- Messages Dropdown Menu -->
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="fas fa-ellipsis-v"></i>
@@ -67,16 +72,6 @@
             <%= t ".logout" %>
           <% end %>
         <% end %>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-item dropdown-footer">
-          <%= t ".languages" %>:
-          <%= link_to locale: "en" do %>
-            <span class="flag-icon flag-icon-us"></span>
-          <% end %>
-          <%= link_to locale: "vi" do %>
-            <span class="flag-icon flag-icon-vn"> </span>
-          <% end %>
-        </div>
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">
           <i class="fas fa-cog"></i>
