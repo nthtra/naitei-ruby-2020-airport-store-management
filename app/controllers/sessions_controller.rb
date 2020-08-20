@@ -14,6 +14,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    log_out if logged_in?
+    flash[:success] = t ".logout_success"
+    redirect_to root_url
+  end
+
   private
 
   def find_user_by_email

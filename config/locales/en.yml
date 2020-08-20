@@ -12,10 +12,11 @@ en:
       messages: messages
       see_all_notifications: See All Notifications
       profile: Profile
-      languages: Languages
       settings: Settings
       logout: Logout
       login: Login
+      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
+      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
     sidebar:
       airport_store: Airport Store
       contracts: Contracts
@@ -49,7 +50,7 @@ en:
       welcome_breadcrumb: "Welcome"
       airport_name: "Noi Bai airport"
       view_more: "View more..."
-      content_html  : |
+      content_html: |
         Noi Bai International Airport,<br>
         the biggest airport in northern Vietnam, serves the capital city of Hanoi.
   users:
@@ -87,3 +88,5 @@ en:
     create:
       login_success: "Login success!"
       invalid_login: "Invalid email/password combination."
+    destroy:
+      logout_success: "Logout success!"
