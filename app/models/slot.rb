@@ -1,4 +1,4 @@
 class Slot < ApplicationRecord
   belongs_to :terminal
-  belongs_to :store
+  has_many :stores, dependent: :destroy
 end

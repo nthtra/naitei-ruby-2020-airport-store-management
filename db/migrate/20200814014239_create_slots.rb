@@ -5,6 +5,8 @@ class CreateSlots < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :area
       t.text :description
+      t.boolean :is_empty, default: true
+      t.float :price
 
       t.timestamps
     end
