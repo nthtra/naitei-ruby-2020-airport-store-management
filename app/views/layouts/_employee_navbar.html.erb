@@ -21,11 +21,6 @@
     </div>
   </form>
   <ul class="navbar-nav ml-auto">
-    <% unless logged_in? %>
-      <li class="nav-item d-none d-sm-inline-block">
-        <%= link_to t(".login"), login_path, class: "nav-link" %>
-      </li>
-    <% end %>
     <li class="nav-item dropdown">
       <%= link_to "#", class: "nav-link", data: {toggle: "dropdown"} do%>
         <% if I18n.locale == :en %>
@@ -35,7 +30,9 @@
         <% end %>
       <% end %>
       <div class="dropdown-menu dropdown-menu-right p-0">
-        <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
+        <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" do %>
+
+        <% end %>
         <%= link_to t(".vietnamese"), {locale: :vi}, class: "dropdown-item" %>
       </div>
     </li>
@@ -60,35 +57,6 @@
         <i class="fas fa-ellipsis-v"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer">
-          <i class="fas fa-user"></i>
-          <%= t ".profile" %>
-        </a>
-        <% if logged_in? %>
-          <div class="dropdown-divider"></div>
-          <%= link_to logout_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
-            <i class="fas fa-sign-out-alt"></i>
-            <%= t ".logout" %>
-          <% end %>
-        <% end %>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer">
-          <i class="fas fa-cog"></i>
-          <%= t ".settings" %>
-        </a>
-         <% if logged_in? %>
-          <div class="dropdown-divider"></div>
-          <%= link_to current_user, class: "dropdown-item dropdown-footer" do %>
-            <i class="fas fa-user"></i>
-            <%= t ".profile" %>
-          <% end %>
-          <div class="dropdown-divider"></div>
-          <%= link_to logout_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
-            <i class="fas fa-sign-out-alt"></i>
-            <%= t ".logout" %>
-          <% end %>
-        <% end %>
         <% if employee_logged_in? %>
           <div class="dropdown-divider"></div>
           <%= link_to current_employee, class: "dropdown-item dropdown-footer" do %>

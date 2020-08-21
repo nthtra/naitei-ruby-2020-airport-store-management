@@ -15,8 +15,22 @@ en:
       settings: Settings
       logout: Logout
       login: Login
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
+      english: "English"
+      vietnamese: "Vietnamese"
+    employee_navbar:
+      home: Home
+      contact: Contact
+      search: Search
+      notifications: Notifications
+      minutes: mins ago
+      messages: messages
+      see_all_notifications: See All Notifications
+      profile: Profile
+      settings: Settings
+      logout: Logout
+      login: Login
+      english: "English"
+      vietnamese: "Vietnamese"
     sidebar:
       airport_store: Airport Store
       contracts: Contracts
@@ -40,8 +54,8 @@ en:
       search: Search
       login: Login
       sign_up: "Sign up"
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> English'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Vietnamese'
+      english: "English"
+      vietnamese: "Vietnamese"
   static_pages:
     home:
       title: "Home"
@@ -90,3 +104,28 @@ en:
       invalid_login: "Invalid email/password combination."
     destroy:
       logout_success: "Logout success!"
+  employee_sessions:
+    new:
+      title: Employee log in
+      languages: Languages
+      manager: Manager
+      log_in_to_start_your_session: Log in to start your session
+      email: Email
+      password: Password
+      remember_me: Remember Me
+      log_in: Log in
+      or_log_in_with: Log in with
+      i_forgot_my_password: I forgot my password
+    create:
+      invalid_email_password_combination: Invalid email/password combination
+      logged_in_successfully: Logged in successfully
+      can_not_access: Can not access
+    destroy:
+      logged_out: Logged out
+  employees:
+    show:
+      profile: Profile
+      employees: Employees
+      please_log_in: Please log in
+      employee_not_found: Employee not found
+      can_not_access: Can not access

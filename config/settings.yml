@@ -14,5 +14,9 @@ validations:
       max_length: 12
     phone_number:
       regex: !ruby/regexp '/\+?(0|84)\d{9}/i'
+  employee:
+    name_maximum: 50
+    password_minimum: 5
+    store_unit: 1
 links:
   airport: 'https://www.hanoiairportonline.com/'
