@@ -23,4 +23,9 @@ module EmployeeSessionsHelper
     flash[:error] = t ".can_not_access"
     redirect_to employee_login_path
   end
+
+  def employee_log_out
+    session.delete :employee_id
+    @current_employee = nil
+  end
 end
