@@ -7,5 +7,9 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     resources :users, only: %i(show new create)
     resources :terminals, only: :show
+    get "/employees/login", to: "employee_sessions#new"
+    post "/employees/login", to: "employee_sessions#create"
+    delete "/employees/logout", to: "employee_sessions#destroy"
+    resources :employees, only: :show
   end
 end

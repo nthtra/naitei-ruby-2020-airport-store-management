@@ -1,10 +1,17 @@
 module ApplicationHelper
   def disable_layout?
     current_page?(signup_path) || current_page?(login_path) ||
-      (controller.controller_name == "users" &&
-        controller.action_name == "create") ||
-      (controller.controller_name == "sessions" &&
-        controller.action_name == "create")
+      controller.controller_name.eql?("users") &&
+        controller.action_name.eql?("create") ||
+      controller.controller_name.eql?("sessions") &&
+        controller.action_name.eql?("create") ||
+      employee_layout?
+  end
+
+  def employee_layout?
+    current_page?(employees_login_path) ||
+      controller.controller_name.eql?("employee_sessions") &&
+        controller.action_name.eql?("create")
   end
 
   def toastr_flash

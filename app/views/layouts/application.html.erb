@@ -8,8 +8,13 @@
   <% unless disable_layout? %>
     <body class="sidebar-mini sidebar-collapse">
       <div class="wrapper">
-        <%= render "layouts/navbar" %>
-        <%= render "layouts/user_sidebar" %>
+        <% if logged_in? %>
+          <%= render "layouts/navbar" %>
+          <%= render "layouts/user_sidebar" %>
+        <% elsif employee_logged_in? %>
+          <%= render "layouts/employee_navbar" %>
+          <%= render "layouts/employee_sidebar" %>
+        <% end %>
         <div class="content-wrapper">
           <%= toastr_flash %>
           <%= yield %>

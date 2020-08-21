@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2020_08_14_015832) do
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "unit_id", null: false
     t.bigint "role_id", null: false
-    t.bigint "terminal_id", null: false
     t.string "name"
     t.string "email"
     t.string "password_digest"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_015832) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_employees_on_email", unique: true
     t.index ["role_id"], name: "index_employees_on_role_id"
-    t.index ["terminal_id"], name: "index_employees_on_terminal_id"
+    t.index ["unit_id"], name: "index_employees_on_unit_id"
   end
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -83,12 +83,20 @@ ActiveRecord::Schema.define(version: 2020_08_14_015832) do
   end
 
   create_table "terminals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "employee_id", null: false
     t.string "name"
     t.integer "area"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["employee_id"], name: "index_terminals_on_employee_id"
     t.index ["name"], name: "index_terminals_on_name", unique: true
+  end
+
+  create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -109,9 +117,10 @@ ActiveRecord::Schema.define(version: 2020_08_14_015832) do
   add_foreign_key "contracts", "statuses"
   add_foreign_key "contracts", "stores"
   add_foreign_key "employees", "roles"
-  add_foreign_key "employees", "terminals"
+  add_foreign_key "employees", "units"
   add_foreign_key "slots", "terminals"
   add_foreign_key "stores", "categories"
   add_foreign_key "stores", "slots"
   add_foreign_key "stores", "users"
+  add_foreign_key "terminals", "employees"
 end

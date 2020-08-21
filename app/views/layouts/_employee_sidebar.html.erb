@@ -1,0 +1,35 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <a href="#" class="brand-link">
+    <%= image_tag "/images/AdminLTELogo.png",
+      class: "brand-image img-circle elevation-3" %>
+    <span class="brand-text font-weight-light"> <%= t ".airport_store" %> </span>
+  </a>
+  <div class="sidebar">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <%= image_tag "/images/weezer.jpg", class: "img-circle elevation-2" %>
+      </div>
+      <div class="info">
+        <%= link_to "#", class: "d-block" do %>
+          <% current_employee.name %>
+        <% end %>
+      </div>
+    </div>
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p><%= t ".contracts" %></p>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="nav-icon fas fa-th"></i>
+            <p><%= t ".slots" %></p>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

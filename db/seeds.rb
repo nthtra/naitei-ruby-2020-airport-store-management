@@ -6,15 +6,30 @@ Role.create(name: "Admin")
 
 Role.create(name: "Manager")
 
-Terminal.create(name: "Terminal 1",area: "1000")
+Unit.create(name: "Store Management")
 
-Terminal.create(name: "Terminal 2",area: "1200")
+Unit.create(name: "Flight Management")
 
-Terminal.create(name: "Terminal 3",area: "1500")
+Unit.create(name: "BA")
 
-Terminal.create(name: "Terminal 4",area: "1400")
+Unit.create(name: "AC")
 
-Employee.create(role_id: 1, terminal_id: 1, name: "Vu Duc Nguyen", email: "vuducnguyen@gmail.com")
+Unit.create(name: "SM")
+
+Employee.create(role_id: 1, unit_id: 1, name: "Vu Duc Nguyen", email: "employee1@gmail.com",
+  password: "123456", password_confirmation: "123456")
+Employee.create(role_id: 1, unit_id: 1, name: "ABC", email: "employee2@gmail.com",
+  password: "123456", password_confirmation: "123456")
+Employee.create(role_id: 1, unit_id: 2, name: "DEF", email: "employee3@gmail.com",
+  password: "123456", password_confirmation: "123456")
+
+Terminal.create(name: "Terminal 1", area: "1000", employee_id: 1)
+
+Terminal.create(name: "Terminal 2",area: "1200", employee_id: 1)
+
+Terminal.create(name: "Terminal 3",area: "1500", employee_id: 1)
+
+Terminal.create(name: "Terminal 4",area: "1400",  employee_id: 1)
 
 Category.create(name: "Drink")
 

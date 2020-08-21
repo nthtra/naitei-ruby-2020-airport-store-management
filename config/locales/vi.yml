@@ -15,8 +15,22 @@ vi:
       settings: Cài đặt
       logout: Đăng xuất
       login: Đăng nhập
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> Tiếng Anh'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+    employee_navbar:
+      home: Trang chủ
+      contact: Liên hệ
+      search: Tìm kiếm
+      notifications: Thông báo
+      minutes: phút trước
+      messages: tin nhắn
+      see_all_notifications: Xem tất cả thông báo
+      profile: Hồ sơ
+      settings: Cài đặt
+      logout: Đăng xuất
+      login: Đăng nhập
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
     sidebar:
       contracts: Hợp đồng
       slots: Khu vực
@@ -40,8 +54,8 @@ vi:
       search: Tìm kiếm
       login: Đăng nhập
       sign_up: "Đăng ký"
-      english_html: '<i class="flag-icon flag-icon-us mr-2"></i> Tiếng Anh'
-      vietnamese_html: '<i class="flag-icon flag-icon-vn mr-2"></i> Tiếng Việt'
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
   static_pages:
     home:
       title: "Trang chủ"
@@ -50,7 +64,7 @@ vi:
       welcome_breadcrumb: "Chào mừng"
       view_more: "Xem thêm..."
       airport_name: "Sân bay Nội bài"
-      content_html: |
+      content: |
         Sân bay Quốc tế Nội Bài,<br>
         sân bay lớn nhất miền bắc Việt Nam, phục vụ thủ đô Hà Nội.
   users:
@@ -90,3 +104,28 @@ vi:
       invalid_login: "Email hoặc mật khẩu không hợp lệ."
     destroy:
       logout_success: "Đăng xuất thành công!"
+  employee_sessions:
+    new:
+      title: Nhân viên đăng nhập
+      languages: Ngôn ngữ
+      employee: Nhân viên
+      log_in_to_start_your_session: Đăng nhập để bắt đầu phiên
+      email: Email
+      password: Mật khẩu
+      remember_me: Nhớ đăng nhập
+      log_in: Đăng nhập
+      or_log_in_with: Đăng nhập với
+      i_forgot_my_password: Quên mật khẩu
+    create:
+      invalid_email_password_combination: Email không hợp lệ hoặc sai mật khẩu
+      logged_in_successfully: Đăng nhập thành công
+      can_not_access: Không thể truy cập
+    destroy:
+      logged_out: Đã đăng xuất
+  employees:
+    show:
+      profile: Hồ sơ
+      employees: Nhân viên
+      please_log_in: Hãy đăng nhập
+      employee_not_found: Không tìm thấy nhân viên
+      can_not_access: Không thể truy cập

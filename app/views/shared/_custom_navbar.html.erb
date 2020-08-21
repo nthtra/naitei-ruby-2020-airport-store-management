@@ -26,18 +26,13 @@
         <% end %>
       <% end %>
       <div class="dropdown-menu dropdown-menu-right p-0">
-        <%= link_to t(".english_html"), { locale: :en }, class: "dropdown-item" %>
-        <%= link_to t(".vietnamese_html"), { locale: :vi }, class: "dropdown-item" %>
+        <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
+        <%= link_to t(".vietnamese"), {locale: :vi}, class: "dropdown-item" %>
       </div>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <%= link_to login_path, class: "nav-link" do %>
         <%= t ".login" %>
-      <% end %>
-    </li>
-    <li class="nav-item d-none d-sm-inline-block">
-      <%= link_to signup_path, class: "nav-link" do %>
-        <%= t ".sign_up" %>
       <% end %>
     </li>
   </ul>
