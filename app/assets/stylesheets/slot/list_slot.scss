@@ -1,14 +1,21 @@
+@import 'abstract/_variables.scss';
+@import 'libs/all.css';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 * {
   margin: 0;
   padding: 0;
-  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
+  font-family: "roboto";
 }
 
 @font-face {
-  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
+  font-family: roboto;
   src: url("./Roboto-Regular.ttf");
 }
-
+#navbar-header {
+  position: fixed !important;
+  margin-left: 278px !important;
+}
 .container {
   width: 70%;
   margin: auto;
@@ -116,7 +123,7 @@ section.content .header .header__right span {
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
-  font-family: "roboto";
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
   padding: -0.25rem 1rem 0.75rem 1rem;
   color: $header-border;
   border-radius: 50px;
@@ -164,6 +171,7 @@ section.content .main .main__left .products .product .product__title {
 }
 
 section.content .main .main__left .products .product .product__title a {
+  color: $purple-link;
   text-decoration: none;
   font-size: 18px;
   font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
@@ -171,6 +179,7 @@ section.content .main .main__left .products .product .product__title a {
 
 section.content .main .main__left .products .product .product__title a:hover {
   text-decoration: underline;
+  color: $purple-link-hover;
 }
 
 section.content .main .main__left .products .product .product__title i {
@@ -243,13 +252,13 @@ section.content .main .main__left .products .footer {
 
 section.content .main .main__left .products .footer h2 {
   font-size: 20px;
-  font-family: "roboto";
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif !important ;
   margin: 20px 10px 10px 20px;
 }
 
 section.content .main .main__left .products .footer .text__header {
   font-size: 14px;
-  font-family: "roboto";
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
   margin: 20px 10px 10px 20px;
 }
 
@@ -260,22 +269,23 @@ section.content .main .main__left .products .footer i {
 
 section.content .main .main__left .text h2 {
   font-size: 25px;
-  font-family: "roboto";
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
   margin: 20px 20px 20px 0;
 }
 
 section.content .main .main__left .text p {
   font-size: 16px;
-  font-family: "roboto";
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
   margin: 20px 20px 20px 0;
   line-height: 30px;
 }
 
 section.content .main .main__left .text a {
   font-size: 16px;
-  font-family: "roboto";
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif;
   margin: 20px 20px 20px 0;
   text-decoration: none;
+  color: $purple-link;
 }
 
 section.content .main .main__right {

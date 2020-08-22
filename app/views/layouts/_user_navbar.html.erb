@@ -1,4 +1,4 @@
-  <header class="header container">
+  <header class="header container" id="navbar-header">
     <div style="display: flex; align-items: center;">
       <span class="logo"><a href="./index.html"><%= t ".logo" %> </a></span>
       <span class="navbar">
@@ -31,7 +31,7 @@
             <% end %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right p-0">
-            <%= link_to t(".english"), {rlocale: :en}, class: "dropdown-item", id: "language-dropdown" %>
+            <%= link_to t(".english"), {locale: :en}, class: "dropdown-item", id: "language-dropdown" %>
             <%= link_to t(".vietnamese"), { locale: :vi }, class: "dropdown-item", id: "language-dropdown" %>
           </div>
         </div>

@@ -17,11 +17,11 @@
                 <%= t ".terminal_dropdown" %>
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <% Terminal.all.each do |terminal| %>
-                      <%= link_to terminal, class: "dropdown-item" do %>
-                        <p><%= terminal.name %></p>
-                      <% end %>
+                <% Terminal.all.each do |terminal| %>
+                  <%= link_to terminal, class: "dropdown-item" do %>
+                    <p><%= terminal.name %></p>
                   <% end %>
+                <% end %>
               </div>
             </div>
           </span>

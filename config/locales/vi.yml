@@ -115,19 +115,10 @@ vi:
   terminals: 
     show:
       title: Sảnh bay
-      terminal: Sảnh bay-
-      overview: Giới thiệu
+      terminal_dropdown: Sảnh
+      airport_terminal: Sảnh bay sân bay Nội Bài
+      terminal_information: Thông tin terminal
+      name: Tên
       area: Diện tích
-      slots: Cửa hàng
-      stores: Cửa hàng
-      contact: Liên hệ
-      manager: Người quản lý
-      phone_number: Số điện thoại
-      email: Mail
-      description: Mô tả
-      stt: STT
-      slot_name: Mã cửa hàng
-      status: Trạng thái
-      area: Diện tích
-      empty: Còn trống
-      used: Đã được sử dụng
+      description_title: Bạn quan tâm đến sảnh bay này?
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City

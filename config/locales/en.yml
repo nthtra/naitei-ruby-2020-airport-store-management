@@ -115,19 +115,10 @@ en:
   terminals: 
     show:
       title: Terminal
-      terminal: Terminal-
-      overview: Terminal overview
+      terminal_dropdown: Terminal
+      airport_terminal: Noi Bai airport terminal
+      terminal_information: Terminal information
+      name: Name
       area: Area
-      slots: Slots
-      stores: Stores
-      contact: Contact
-      manager: Manager
-      phone_number: Phone number
-      email: Mail
-      description: Desctiption
-      stt: "No"
-      slot_name: Slot's name
-      status: Status
-      area: Area
-      empty: Empty
-      used: Used
+      description_title: Interested in this terminal?
+      address: Phu Minh Ward Soc Son  District Ha Noi city
