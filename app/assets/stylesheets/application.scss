@@ -19,12 +19,11 @@
 @import 'abstract/_variables.scss';
 @import 'toastr/toastr.scss';
 // @import 'slot/show.css';
+// @import 'slot/slot_info.scss';
 @import 'slot/list_slot.scss';
-// @import 'slot/slotinfo.scss';
-
 
  * {
-   font-family:  "Font Awesome 5 Free", "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,sans-serif !important;
+   font-family: sans-serif, "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"Calibri","Roboto",Arial,"Font Awesome 5 Free" !important;
    margin: 0;
    padding: 0;
  }
@@ -175,3 +174,16 @@
   border-bottom-left-radius: 10px;
 }
 
+#dropdownMenuLinkTerminal {
+  border-left: 0 !important;
+  p{
+    margin: 0 !important;
+    padding: 0.5rem 0 !important;
+    text-align: center;
+  }
+}
+
+#terminalItem {
+  flex-direction: column;
+  padding-top: 0 !important;
+}

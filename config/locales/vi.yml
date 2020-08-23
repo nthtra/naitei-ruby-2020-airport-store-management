@@ -115,10 +115,34 @@ vi:
   terminals: 
     show:
       title: Sảnh bay
-      terminal_dropdown: Sảnh
+      terminal_dropdown: Sảnh bay
       airport_terminal: Sảnh bay sân bay Nội Bài
       terminal_information: Thông tin terminal
       name: Tên
       area: Diện tích
       description_title: Bạn quan tâm đến sảnh bay này?
       address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+  slots:
+    show:
+      title: Khu vực
+      review: nhận xét
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      area: Diện tích
+      price: Giá thuê
+      status: Trạng thái
+      amenities: Tiện ích
+      mission: Luôn hướng tới lợi ích doanh nghiệp và trải nghiệm khách hàng
+      clean: Dịch vụ vệ sinh cao cấp
+      business: Môi trường kinh doanh công bằng
+      affordable: Giá cả hợp lý
+      location: Vị trí kinh doanh thuận lợi
+      googlemap_link: Xem chi tiết vị trí tại đây
+      interested_in: Bạn có hứng thú với khu vực này?
+      mission_content: |
+                        Chúng tôi rất chú trọng đến lợi ích của các doanh nghiệp hợp tác,
+                        hướng tới môi trường kinh doanh lành mạnh, phát triển bền vững.
+      hire_now: Đăng ký thuê ngay!
+      rule: "Hãy chắc chắn bạn đồng ý với điều khoản của chúng tôi "
+      rule_link: Tham khảo điều khoản
+      experience_title: Bạn nên trải nghiệm trực tiếp
+      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "

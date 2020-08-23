@@ -122,3 +122,31 @@ en:
       area: Area
       description_title: Interested in this terminal?
       address: Phu Minh Ward Soc Son  District Ha Noi city
+  slots:
+    show:
+      title: Slot
+      review: reviews
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      area: Area
+      price: Price
+      status: Status
+      amenities: Amenities
+      mission: Always towards business benefits and user experience
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      googlemap_link: See location details here
+      interested_in: Interested in this building?
+      mission_content: |
+                        We attach great importance to the benefits of cooperative businesses,
+                        towards a healthy and developing business environment.
+      hire_now: Hire now
+      rule: "Be sure to agree to our terms "
+      rule_link: Read more rules
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+
+
+
+
