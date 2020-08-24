@@ -20,3 +20,12 @@ validations:
     store_unit: 1
 links:
   airport: 'https://www.hanoiairportonline.com/'
+paginate:
+  contracts_per_page: 9
+status:
+  pending: 1
+  approve: 2
+  deny: 3
+  expire: 4
+dates:
+  format: "%H:%M %d/%m/%Y"

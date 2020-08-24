@@ -129,3 +129,24 @@ en:
       please_log_in: Please log in
       employee_not_found: Employee not found
       can_not_access: Can not access
+  contracts:
+    index:
+      home: Home
+      contracts: Contracts
+      id: ID
+      user: User
+      store: Store
+      slot: Slot
+      terminal: Terminal
+      status: Status
+      start_date: Start date
+      end_date: End date
+      actions: Actions
+      detail: Detail
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"

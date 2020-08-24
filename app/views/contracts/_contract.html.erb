@@ -1,0 +1,15 @@
+<tr>
+  <td><%= link_to contract.id, contract %></td>
+  <td><%= contract.store_name %></td>
+  <td><%= contract.terminal_name %></td>
+  <td><%= contract.user_name %></td>
+  <td><span class="badge badge-<%= modify_label_color contract.status_id %>"><%= contract.status_name %></span></td>
+  <td><%= I18n.localize contract.start_date, format: Settings.dates.format %></td>
+  <td><%= I18n.localize contract.end_date, format: Settings.dates.format %></td>
+  <td class="text-center">
+    <%= link_to contract, class: "btn btn-primary btn-sm", "data-toggle": "tooltip",
+    "data-placement": "top", title: t(".detail") do %>
+      <i class="fa fa-eye"></i>
+    <% end %>
+  </td>
+</tr>
