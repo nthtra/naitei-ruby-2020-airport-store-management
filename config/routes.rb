@@ -6,7 +6,10 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     get "/logout", to: "sessions#destroy"
-    resources :users, only: %i(show new create)
+    get "/users/:id/stores", to: "stores#index", as: "stores"
+    resources :users, only: %i(show new create) do
+      resources :stores, only: %i(show)
+    end
     resources :terminals, only: :show
     resources :slots, only: :show
   end

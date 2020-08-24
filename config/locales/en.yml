@@ -94,6 +94,8 @@ en:
     create:
       sign_up_success: "Sign up success!"
       user_not_found: "User invalid!"
+    user: 
+      user_not_found: "User not found!"
   sessions:
     new:
       title: "Sign in"
