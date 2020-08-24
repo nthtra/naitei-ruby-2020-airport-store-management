@@ -11,6 +11,12 @@ class EmployeeSessionsController < ApplicationController
     end
   end
 
+  def destroy
+    employee_log_out if employee_logged_in?
+    flash[:success] = t ".logged_out"
+    redirect_to employees_login_path
+  end
+
   private
 
   def store_employee employee
