@@ -1,1 +1,139 @@
-<%= @contract.id %>
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6" id="contract-detail">
+        <%= t ".contract_details" %>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item">
+            <%= link_to t(".home"), root_path %>
+          </li>
+          <li class="breadcrumb-item"><%= link_to t(".contracts"), contracts_path %></li>
+          <li class="breadcrumb-item active"><%= @contract.id %></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <h3>
+          <%= t ".id"%><%= @contract.id %>
+          &nbsp;&nbsp;
+          <span class="badge badge-<%= modify_label_color @contract.status_id %>"><%= @contract.status_name %></span>
+        </h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="text-primary">
+                  <i class="fas fa-layer-group"></i>
+                  <%= t ".store_information"%><%= @contract.store_name%>
+                </h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                  <div class="info-box-content">
+                    <span class="info-box-text text-center text-muted"><%= t ".location"%></span>
+                    <span class="info-box-number text-center text-muted mb-0"><%= @contract.terminal_name %></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                  <div class="info-box-content">
+                    <span class="info-box-text text-center text-muted"><%= t ".slot_area"%></span>
+                    <span class="info-box-number text-center text-muted mb-0">
+                      <%= @contract.slot_area %><i class="icon-square-meters">&#13217;</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                  <div class="info-box-content">
+                    <span class="info-box-text text-center text-muted"><%= t ".category"%></span>
+                    <span class="info-box-number text-center text-muted mb-0"><%= @contract.category_name %><span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                  <div class="info-box-content">
+                    <span class="info-box-text text-center text-muted"><%= t ".price"%></span>
+                    <span class="info-box-number text-center text-muted mb-0"><%= @contract.slot_price %><%= t ".per_month"%></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                  <div class="info-box-content">
+                    <span class="info-box-text text-center text-muted"><%= t ".start_date"%></span>
+                    <span class="info-box-number text-center text-muted mb-0"><%= I18n.localize @contract.start_date, format: Settings.dates.format %></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                  <div class="info-box-content">
+                    <span class="info-box-text text-center text-muted"><%= t ".end_date"%></span>
+                    <span class="info-box-number text-center text-muted mb-0"><%= I18n.localize @contract.end_date, format: Settings.dates.format %><span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h4 class="text-primary"><i class="fas fa-copy"></i><%= t ".legal_terms"%></h4>
+                  <div class="post">
+                    <br>
+                    <div><%= t ".a_term"%></div>
+                    <br>
+                    <div><%= t ".b_term"%></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+            <h4 class="text-primary"><i class="fas fa-paint-brush"></i><%= t ".customer_information"%></h4>
+            <br>
+            <div class="text-muted">
+              <p class="text-md"><%= t ".customer_name"%>
+                <b class="d-block"><%= @contract.user_name %></b>
+              </p>
+              <p class="text-md"><%= t ".company"%>
+                <b class="d-block"><%= @contract.user_company_name %></b>
+              </p>
+              <p class="text-md"><%= t ".email"%>
+                <b class="d-block"><%= @contract.user_email %></b>
+              </p>
+              <p class="text-md"><%= t ".phone_number"%>
+                <b class="d-block"><%= @contract.user_phone_number %></b>
+              </p>
+              <p class="text-md"><%= t ".identity_number"%>
+                <b class="d-block"><%= @contract.user_identity_number %></b>
+              </p>
+            </div>
+            <div class="text-center mt-5 mb-3" id="contract-detail-btn">
+              <% options = modify_action @contract.status_id %>
+                  <% options.each do |val| %>
+                    <% button_name = convert_id_to_name val %>
+                    <% button_color = modify_label_color val %>
+                    <%= link_to t(".#{button_name}"), "#", class: "btn btn-lg btn-#{button_color}"%>
+                  <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

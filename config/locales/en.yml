@@ -143,6 +143,32 @@ en:
       end_date: End date
       actions: Actions
       detail: Detail
+    show:
+      home: Home
+      contracts: Contracts
+      contract_details: Contract detail
+      id: "Contract ID: "
+      location: Location
+      slot_area: Slot area
+      category: Category
+      price: Price
+      per_month: $/month
+      start_date: Start date
+      end_date: End date
+      store_information: " Store: "
+      legal_terms: " Legal terms"
+      a_term: Party A agrees to lease to Party B according to the set time.
+      b_term: Party B uses the right purposes and complies with the provisions of law and the airport.
+      customer_information: " Customer information"
+      company: Company
+      customer_name: Customer name
+      email: Email
+      phone_number: Phone number
+      identity_number: Identity number
+      approve: Approve
+      deny: Deny
+      pending: Pending
+      submit: Submit
   views:
     pagination:
       first: "« FIRST"
