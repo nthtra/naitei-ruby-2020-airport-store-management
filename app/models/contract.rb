@@ -3,9 +3,11 @@ class Contract < ApplicationRecord
   belongs_to :status
 
   delegate :name, to: :status, prefix: :status
-  delegate :name, to: :store, prefix: :store
-  delegate :name, :user_name, :slot_name,
-           :terminal_name, :terminal_id, to: :store
+  delegate :name, :description, to: :store, prefix: :store
+  delegate :name, :user_name, :user_email, :user_company_name,
+           :user_identity_number, :user_phone_number,
+           :slot_area, :slot_price, :slot_name,
+           :category_name, :terminal_name, :terminal_id, to: :store
 
   scope :by_status_and_datetime, ->{order(status_id: :asc, created_at: :desc)}
 end

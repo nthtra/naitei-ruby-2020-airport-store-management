@@ -143,6 +143,32 @@ vi:
       end_date: Ngày kết thúc
       actions: Thao tác
       detail: Chi tiết
+    show:
+      home: Trang chủ
+      contracts: Hợp đồng
+      contract_details: Chi tiết hợp đồng
+      id: "Mã hợp đồng: "
+      location: Vị trí
+      slot_area: Diện tích
+      category: Loại hình kinh doanh
+      price: Giá
+      per_month: $/tháng
+      start_date: Ngày bắt đầu thuê
+      end_date: Ngày kết thúc
+      store_information: " Cửa hàng: "
+      legal_terms: " Điều khoản pháp lý"
+      a_term: Bên A đồng ý cho bên B thuê theo thời gian đã định.
+      b_term: Bên B sử dụng đúng mục đích đã trao đổi, chấp hành quy định của pháp luật và sân bay.
+      customer_information: " Thông tin khách hàng"
+      company: Công ty
+      customer_name: Tên khách hàng
+      email: Email
+      phone_number: Số điện thoại
+      identity_number: Số chứng minh thư
+      approve: Phê duyệt
+      deny: Từ chối
+      pending: Chờ duyệt
+      submit: Submit
   views:
     pagination:
       first: "« Đầu"
