@@ -12,22 +12,17 @@ module ContractsHelper
     end
   end
 
-  def modify_action id
-    array = []
-    case id
+  def modify_contract_action status_id
+    contract_actions = []
+    case status_id
     when Settings.status.pending
-      array.push(Settings.status.approve)
-      array.push(Settings.status.deny)
+      contract_actions.push(Settings.status.approve)
+      contract_actions.push(Settings.status.deny)
     when Settings.status.approve
-      array.push(Settings.status.deny)
+      contract_actions.push(Settings.status.deny)
     when Settings.status.deny
-      array.push(Settings.status.pending)
-      array.push(Settings.status.approve)
-    when Settings.status.expire
-      array.push(Settings.status.approve)
-      array.push(Settings.status.deny)
+      contract_actions.push(Settings.status.approve)
     end
-    array
   end
 
   def convert_id_to_name id

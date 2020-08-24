@@ -12,8 +12,9 @@ validations:
     identity_number:
       min_length: 9
       max_length: 12
+      regex: !ruby/regexp /([0-9])/
     phone_number:
-      regex: !ruby/regexp '/\+?(0|84)\d{9}/i'
+      regex: !ruby/regexp /(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/
   employee:
     name_maximum: 50
     password_minimum: 5

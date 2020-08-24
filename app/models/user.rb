@@ -16,7 +16,8 @@ class User < ApplicationRecord
             length: {
               minimum: Settings.validations.user.identity_number.min_length,
               maximum: Settings.validations.user.identity_number.max_length
-            }
+            },
+            format: {with: Settings.validations.user.identity_number.regex}
   validates :phone_number, presence: true,
             format: {with: Settings.validations.user.phone_number.regex}
 
