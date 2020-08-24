@@ -1,0 +1,69 @@
+<% provide :title, t(".title") %>
+  <main>
+    <section class="ray-page container">
+      <ul class="ray-breadcrumbs">
+        <li class="ray-breadcrumb">
+          <%= t ".search" %>
+        </li>
+      </ul>
+    </section>
+    <section class="content container">
+      <div class="header">
+        <div class="header__right">
+          <h1 id="slot_name_title"><%= @store.name %></h1>
+          <i class="fas fa-star">5.0</i>
+        </div>
+        <div class="header__left">
+          <p> <%= t ".address" %> </p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main__left">
+          <img src="https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg" alt="image">
+          <div class="pricing">
+            <h2><%= t ".description" %></h2>
+            <p><%= @store.description %></p>
+          </div>
+          <div class="previews">
+            <div class="preview">
+              <li class="p-info-img fas fa-hand-sparkles"></li>
+              <p><%= t ".clean" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-balance-scale"></li>
+              <p><%= t ".business" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-dollar-sign"></li>
+              <p><%= t ".affordable" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-smile-wink"></li>
+              <p><%= t ".location" %></p>
+            </div>
+            <a href="https://bit.ly/2CS5Il7" target="_blank"><%= t ".googlemap_link" %></a>
+          </div>
+        </div>
+        <div class="main__right">
+          <div class="lead">
+            <h5><%= t ".mystore_information" %></h5>
+            <p class="store-info-p"> <%= t ".area" %>: <%= @store.slot.area %><span>m<sup>2</sup></span> </p>
+            <p class="store-info-p"> <%= t ".price" %>: <%= @store.slot.price %></p>
+            <% if @store.is_active %>
+              <p class="store-info-p"> <%= t ".status" %>: <%= t ".hiring" %></p>
+            <% else %>
+              <p class="store-info-p"> <%= t ".status" %>: <%= t ".waiting" %></p>
+              <p class="store-info-p"><%= t ".cancel_check" %></p>
+              <button id="button_dangky">
+                <%= t ".cancel" %>
+              </button>
+            <% end %>
+          </div>
+          <div class="lead" style="margin-top: 20px;">
+            <h3><%= t ".experience_title" %></h3>
+            <p class="text__footer"><%= t ".experience" %><a href="#"><%= @store.slot.terminal.employee.email %>  </a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>

@@ -148,7 +148,23 @@ en:
       rule_link: Read more rules
       experience_title: You should experience AirPort firsthand!
       experience: "Schedule a visit above. Or call us: "
-
-
-
-
+  stores:
+    show:
+      search: Search
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      description: Description
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      mystore_information: My store information
+      area: Area
+      price: Price
+      status: Status
+      hiring: Hiring
+      waiting: Waiting
+      cancel_check: If you want to cancel the request, please consider carefully and click here
+      cancel: Cancel request
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+      googlemap_link: See location details here

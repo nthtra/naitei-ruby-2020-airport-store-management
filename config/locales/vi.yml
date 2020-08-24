@@ -146,3 +146,23 @@ vi:
       rule_link: Tham khảo điều khoản
       experience_title: Bạn nên trải nghiệm trực tiếp
       experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+  stores:
+    show:
+      search: Tìm kiếm
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      description: Mô tả chi tiết
+      clean: Dịch vụ vệ sinh cao cấp
+      business: Môi trường kinh doanh công bằng
+      affordable: Giá cả hợp lý
+      location: Vị trí kinh doanh thuận lợi
+      mystore_information: Thông tin cửa hàng
+      area: Diện tích
+      price: Giá thuê
+      status: Trạng thái
+      hiring: Đang thuê
+      waiting: Đang chờ
+      cancel_check: Nếu bạn muốn hủy yêu cầu, vui lòng cân nhắc kỹ và bấm vào đây
+      cancel: Huỷ yêu cầu
+      experience_title: Bạn nên thử trải nghiệm trực tiếp một lần!
+      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+      googlemap_link: Xem chi tiết vị trí tại đây

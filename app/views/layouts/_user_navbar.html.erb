@@ -5,16 +5,18 @@
         <ul>
           <li><a href="#"> <%= t ".profile" %> </a></li>
           <li>
-          <%= link_to t(".my_stores"), stores_path(current_user) %>
+            <% if logged_in? %>
+              <%= link_to t(".my_stores"), stores_path(current_user) %>
+            <% else %>
+              <%= link_to t(".my_stores"), ""  %>
+            <% end %>
           </li>
           <li><a href="#"><%= t ".references" %> </a></li>
         </ul>
       </span>
     </div>
     <div class="navbar-right row">
-      <div class="col-3">
-      </div>
-      <div class="saved col-3">
+      <div class="saved col-6">
         <% if logged_in? %>
           <div class="d-sm-inline-block">
             <%= link_to t(".logout"), logout_path, class: "nav-link" %>
