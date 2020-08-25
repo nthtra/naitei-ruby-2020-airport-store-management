@@ -1,0 +1,108 @@
+<% provide :title, t(".title") %>
+  <main>
+    <section class="ray-page container">
+      <ul class="ray-breadcrumbs">
+        <li class="ray-breadcrumb">
+          <%= t ".search" %>
+        </li>
+      </ul>
+    </section>
+    <section class="content container">
+      <div class="header">
+        <div class="header__right">
+          <h1 id="slot_name_title"><%= t ".title" %></h1>
+          <i class="fas fa-star"><%= Settings.info.star %></i>
+        </div>
+        <div class="header__left">
+          <p> <%= t ".address" %> </p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main__left">
+          <div class="products" id="slot-info-products">
+            <% @stores.each do |store| %>
+              <%= link_to user_store_path(current_user) do %>
+                <div class="product slot-info-product" id="store_product">
+                  <%= image_tag "https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg", class: "slot-info-product-img" %>
+                  <div class="product__detail">
+                    <h3><%= store.name %></h3>
+                    <p><%= store.description %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+            <div class="mt-4">
+              <%= paginate @stores, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
+            </div>
+          </div>
+          <div class="pricing">
+            <h2><%= t ".amenities" %></h2>
+            <p><%= t ".mission" %></p>
+          </div>
+          <div class="previews">
+            <div class="preview">
+              <li class="p-info-img fas fa-hand-sparkles"></li>
+              <p><%= t ".clean" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-balance-scale"></li>
+              <p><%= t ".business" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-dollar-sign"></li>
+              <p><%= t ".affordable" %></p>
+            </div>
+            <div class="preview">
+              <li class="p-info-img fas fa-smile-wink"></li>
+              <p><%= t ".location" %></p>
+            </div>
+            <%= link_to t(".googlemap_link"), "https://bit.ly/2CS5Il7", target: "_blank"%>
+          </div>
+        </div>
+        <div class="main__right", id="store_main_right">
+          <div class="lead" id="slider">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <% current_user.stores.each_with_index do |store, index| %>
+                    <% if index == 0 %>
+                      <div class="carousel-item active">
+                        <%= image_tag "https://media.timeout.com/images/105634590/630/472/image.jpg", class: "d-block w-100" %>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5><%= store.name %></h5>
+                          <p><%= store.description %></p>
+                        </div>
+                      </div>
+                    <% else %>
+                      <div class="carousel-item">
+                        <%= image_tag "https://media.timeout.com/images/105634590/630/472/image.jpg", class: "d-block w-100" %>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5><%= store.name %></h5>
+                          <p><%= store.description %></p>
+                        </div>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"><%= t ".previous" %></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only"><%= t ".next" %></span>
+                </a>
+            </div>
+          </div>
+          <div class="lead" style="margin-top: 20px;">
+            <h3><%= t ".experience_title" %></h3>
+            <p class="text__footer"><%= t ".experience" %><%= link_to "#" %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
