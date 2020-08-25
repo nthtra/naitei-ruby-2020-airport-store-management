@@ -124,7 +124,7 @@
               </p>
             </div>
             <div class="text-center mt-5 mb-3" id="contract-detail-btn">
-              <% options = modify_action @contract.status_id %>
+              <% options = modify_contract_action @contract.status_id %>
                   <% options.each do |val| %>
                     <% button_name = convert_id_to_name val %>
                     <% button_color = modify_label_color val %>
