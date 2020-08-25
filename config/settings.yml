@@ -21,6 +21,13 @@ validations:
     store_unit: 1
 links:
   airport: 'https://www.hanoiairportonline.com/'
+  googlemap: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.3309818186235!2d105.80198221533867!3d21.218719886641136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135021539afc453%3A0xe6e0faa3520226b4!2zQ-G6o25nIGjDoG5nIGtow7RuZyBxdeG7kWMgdOG6vyBO4buZaSBCw6Bp!5e0!3m2!1svi!2s!4v1598076515519!5m2!1svi!2s'
+  demo_image: 'https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg'
+pagination:
+  per_page: 4
+info:
+  phone: +84 28 4458 2344
+  star: 5.0
 paginate:
   contracts_per_page: 9
   slots_per_page: 9
@@ -31,3 +38,8 @@ status:
   expire: 4
 dates:
   format: "%H:%M %d/%m/%Y"
+pagination:
+  per_page: 4
+info:
+  phone: +84 28 4458 2344
+  star: 5.0
