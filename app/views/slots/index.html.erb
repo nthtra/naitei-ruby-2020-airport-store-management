@@ -1,0 +1,48 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1><%= t ".slots" %></h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item">
+            <%= link_to t(".home"), root_path %>
+          </li>
+          <li class="breadcrumb-item active"><%= t ".slots" %></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-striped table-hover table-bordered padding-margin-0">
+              <thead>
+                <tr>
+                  <th><%= t ".id" %></th>
+                  <th><%= t ".name" %></th>
+                  <th><%= t ".terminal" %></th>
+                  <th><%= t ".area" %></th>
+                  <th><%= t ".status" %></th>
+                  <th><%= t ".price" %></th>
+                  <th class="text-center"><%= t ".action" %></th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= render @slots %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <%= paginate @slots, theme: "twitter-bootstrap-4" %>
+    </div>
+  </div>
+<section>

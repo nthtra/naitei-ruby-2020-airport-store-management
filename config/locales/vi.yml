@@ -169,6 +169,20 @@ vi:
       deny: Từ chối
       pending: Chờ duyệt
       submit: Submit
+  slots:
+    index:
+      slots: Slots
+      id: ID
+      name: Tên
+      terminal: Sảnh
+      area: Diện tích
+      status: Trạng thái
+      price: Giá
+      action: Thao tác
+      per_month: $/tháng
+    slot:
+      empty: Trống
+      not_empty: Đã thuê
   views:
     pagination:
       first: "« Đầu"

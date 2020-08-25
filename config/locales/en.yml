@@ -169,6 +169,20 @@ en:
       deny: Deny
       pending: Pending
       submit: Submit
+  slots:
+    index:
+      slots: Slots
+      id: ID
+      name: Name
+      terminal: Terminal
+      Area: Area
+      Status: Status
+      price: Price
+      action: Action
+      per_month: $/month
+    slot:
+      empty: Empty
+      not_empty: Not empty
   views:
     pagination:
       first: "« FIRST"

@@ -1,0 +1,14 @@
+<tr>
+  <td><%= slot.id %></td>
+  <td><%= slot.name %></td>
+  <td><%= slot.terminal_name %></td>
+  <td><%= slot.area %><i class="icon-square-meters">&#13217;</i></td>
+  <% slot_status = modify_slot_status slot.is_empty %>
+  <td><%= t ".#{slot_status}" %></td>
+  <td><%= slot.price %>&#x00024;</td>
+  <td class="text-center">
+    <%= link_to "#", class: "btn btn-primary btn-sm" do %>
+      <i class="fa fa-eye"></i>
+    <% end %>
+  </td>
+</tr>
