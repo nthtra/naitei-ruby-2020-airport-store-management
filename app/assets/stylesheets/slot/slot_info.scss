@@ -1,3 +1,5 @@
+@import 'abstract/_variables.scss';
+@import 'libs/all.css';
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +87,7 @@ section.ray-page .ray-breadcrumbs {
 }
 
 section.ray-page .ray-breadcrumbs .ray-breadcrumb a {
-  color: $back-1;
+  color: $black-1;
   text-decoration: none;
 }
 
@@ -109,7 +111,7 @@ section.content .header .header__right i {
 }
 
 section.content .header .header__right a {
-  color: $back-1;
+  color: $black-1;
   border-left: 1px solid $gray-1;
   padding-left: 10px;
 }

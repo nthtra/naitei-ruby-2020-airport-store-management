@@ -173,6 +173,7 @@ en:
       experience: "Schedule a visit above. Or call us: "
   stores:
     show:
+      title: Store
       search: Search
       address: Phu Minh Ward Soc Son  District Ha Noi city
       description: Description
@@ -191,6 +192,20 @@ en:
       experience_title: You should experience AirPort firsthand!
       experience: "Schedule a visit above. Or call us: "
       googlemap_link: See location details here
+    index:
+      title: My stores
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      amenities: Amenities
+      mission: Always towards business benefits and user experience
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      googlemap_link: See location details here
+      previous: Previous
+      next: Next
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
   employee_sessions:
     new:
       title: Employee log in
@@ -256,20 +271,6 @@ en:
       deny: Deny
       pending: Pending
       submit: Submit
-  slots:
-    index:
-      slots: Slots
-      id: ID
-      name: Name
-      terminal: Terminal
-      Area: Area
-      Status: Status
-      price: Price
-      action: Action
-      per_month: $/month
-    slot:
-      empty: Empty
-      not_empty: Not empty
   views:
     pagination:
       first: "« FIRST"

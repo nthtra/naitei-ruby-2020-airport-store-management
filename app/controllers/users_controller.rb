@@ -20,6 +20,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def stores
+    @stores = @user.stores.order_by_created_at_asc.page(params[:page])
+                   .per Settings.pagination.per_page
+    redirect_to :show_stores
+  end
+
   private
 
   def user_params
