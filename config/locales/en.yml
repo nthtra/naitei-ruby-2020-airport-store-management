@@ -1,4 +1,11 @@
 en:
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
   layouts:
     footer:
       version: Version
@@ -15,6 +22,15 @@ en:
       settings: Settings
       logout: Logout
       login: Login
+    user_navbar:
+      logo: Airport
+      profile: Profile
+      my_stores: My stores
+      references: References
+      english: "English"
+      vietnamese: "Vietnamese"
+      login: Login
+      logout: Logout
       english: "English"
       vietnamese: "Vietnamese"
     employee_navbar:
@@ -31,6 +47,15 @@ en:
       login: Login
       english: "English"
       vietnamese: "Vietnamese"
+    user_navbar:
+      logo: Airport
+      profile: Profile
+      my_stores: My stores
+      references: References
+      english: "English"
+      vietnamese: "Vietnamese"
+      login: Login
+      logout: Logout
     sidebar:
       airport_store: Airport Store
       contracts: Contracts
@@ -59,14 +84,20 @@ en:
   static_pages:
     home:
       title: "Home"
-      welcome: "Welcome to the Airport Store Management System!"
-      home_breadcrumb: "Home"
-      welcome_breadcrumb: "Welcome"
-      airport_name: "Noi Bai airport"
-      view_more: "View more..."
-      content_html: |
-        Noi Bai International Airport,<br>
-        the biggest airport in northern Vietnam, serves the capital city of Hanoi.
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      content_title: Viet Nam
+      all_terminal: All terminal
+      terminal_dropdown: Terminal
+      question: Can't find a good selling area?
+      answer: Nothing is impossible when we talk together. Call us and find the right solution for you.
+      description_title: Search for a Collaborative Space in Vietnam
+      description_content: |
+                            With a dynamic business culture, our co-working space in Vietnam is the 
+                            perfect choice to multiply the success of all large groups by many times. 
+                            With unmatched convenience and flexibility, collaborative spaces, stunning private offices, 
+                            and spacious meeting rooms are the guarantee of your productivity. In addition, 
+                            our diverse and extensive on-site events make it easy to expand your network and strengthen cooperation. 
+                            To have a beautiful office with you at the center of everything, join WeWork today.
   users:
     new:
       title: "Sign up"
@@ -86,6 +117,8 @@ en:
     create:
       sign_up_success: "Sign up success!"
       user_not_found: "User invalid!"
+    user: 
+      user_not_found: "User not found!"
   sessions:
     new:
       title: "Sign in"
@@ -104,6 +137,60 @@ en:
       invalid_login: "Invalid email/password combination."
     destroy:
       logout_success: "Logout success!"
+  terminals: 
+    show:
+      title: Terminal
+      terminal_dropdown: Terminal
+      airport_terminal: Noi Bai airport terminal
+      terminal_information: Terminal information
+      name: Name
+      area: Area
+      description_title: Interested in this terminal?
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+  slots:
+    show:
+      title: Slot
+      review: reviews
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      area: Area
+      price: Price
+      status: Status
+      amenities: Amenities
+      mission: Always towards business benefits and user experience
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      googlemap_link: See location details here
+      interested_in: Interested in this building?
+      mission_content: |
+                        We attach great importance to the benefits of cooperative businesses,
+                        towards a healthy and developing business environment.
+      hire_now: Hire now
+      rule: "Be sure to agree to our terms "
+      rule_link: Read more rules
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+  stores:
+    show:
+      search: Search
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      description: Description
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location: Favorable business location
+      mystore_information: My store information
+      area: Area
+      price: Price
+      status: Status
+      hiring: Hiring
+      waiting: Waiting
+      cancel_check: If you want to cancel the request, please consider carefully and click here
+      cancel: Cancel request
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+      googlemap_link: See location details here
   employee_sessions:
     new:
       title: Employee log in
@@ -190,3 +277,22 @@ en:
       previous: "‹ PREV"
       next: "NEXT ›"
       truncate: "…"
+  terminals: 
+    show:
+      title: Terminal
+      terminal: Terminal-
+      overview: Terminal overview
+      area: Area
+      slots: Slots
+      stores: Stores
+      contact: Contact
+      manager: Manager
+      phone_number: Phone number
+      email: Mail
+      description: Desctiption
+      stt: "No"
+      slot_name: Slot's name
+      status: Status
+      area: Area
+      empty: Empty
+      used: Used
