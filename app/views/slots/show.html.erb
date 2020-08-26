@@ -1,84 +1,202 @@
 <% provide :title, t(".title") %>
-  <main>
-    <section class="ray-page container">
-      <ul class="ray-breadcrumbs">
-        <li class="ray-breadcrumb">
-          <%= t ".search" %>
-        </li>
-      </ul>
-    </section>
-    <section class="content container">
-      <div class="header">
-        <div class="header__right">
-          <h5 id="slot_name_title"><%= @slot.name %></h5>
-          <i class="fas fa-star">5.0</i>
-          <a href="#">16 <%= t ".review" %></a>
-        </div>
-        <div class="header__left">
-          <p> <%= t ".address" %> </p>
-        </div>
-      </div>
-      <div class="main">
-        <div class="main__left">
-          <img src="https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg" alt="image">
-          <div class="pricing" id="p-info">
-            <div class="p-info">
-              <div class="p-info-item">
-                <li class="p-info-img fas fa-warehouse"></li>
-                <div class=""> <%= t ".area" %> <%= @slot.area %><span>m<sup>2</sup></span> </div>
-              </div>
-            </div>
-            <div class="p-info">
-              <div class="p-info-item">
-                <li class="p-info-img fas fa-money-check-alt"></li>
-                <div class=""> <%= t ".price" %> <%= @slot.price %> </div>
-              </div>
-            </div>
-            <div class="p-info">
-              <div class="p-info-item">
-                <li class="p-info-img fas fa-calendar-check"></li>
-                <div class=""> <%= t ".status" %> </div>
-              </div>
-            </div>
+  <% if employee_logged_in? %>
+    <section class="content-header" id="employee">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1><%= t ".title" %></h1>
           </div>
-          <div class="pricing">
-            <h2><%= t ".amenities" %></h2>
-            <p><%= t ".mission" %></p>
-          </div>
-          <div class="previews">
-            <div class="preview">
-              <li class="p-info-img fas fa-hand-sparkles"></li>
-              <p><%= t ".clean" %></p>
-            </div>
-            <div class="preview">
-              <li class="p-info-img fas fa-balance-scale"></li>
-              <p><%= t ".business" %></p>
-            </div>
-            <div class="preview">
-              <li class="p-info-img fas fa-dollar-sign"></li>
-              <p><%= t ".affordable" %></p>
-            </div>
-            <div class="preview">
-              <li class="p-info-img fas fa-smile-wink"></li>
-              <p><%= t ".location" %></p>
-            </div>
-            <a href="https://bit.ly/2CS5Il7" target="_blank"><%= t ".googlemap_link" %></a>
-          </div>
-        </div>
-        <div class="main__right" id="slot_main_right">
-          <div class="lead">
-            <h5><%= t ".interested_in" %></h5>
-            <p><%= t ".mission_content" %></p>
-            <button id="button_dangky">
-              <%= t ".hire_now" %>
-            </button>
-            <p class="text__footer"><%= t ".rule" %><a href="#"><%= t ".rule_link" %></a></p>
-          </div>
-          <div class="lead" style="margin-top: 20px;">
-            <h3><%= t ".experience_title" %></h3>
-            <p class="text__footer"><%= t ".experience" %><a href="#"><%= @slot.terminal.employee.email %> </a></p>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item">
+                <%= link_to t(".home"), root_path %>
+              </li>
+              <li class="breadcrumb-item"><%= link_to t(".slots"), slots_path %></li>
+              <li class="breadcrumb-item active"><%= @slot.id %></li>
+            </ol>
           </div>
         </div>
       </div>
     </section>
-  </main>
+    <section class="content" id="emloyee-content">
+      <div class="container-fluid" id="emloyee-container-fluid">
+        <div class="card">
+          <div class="card-header">
+            <h3>
+              <% slot_status = modify_slot_status @slot.is_empty %>
+              <%= t ".id"%><%= @slot.id %>&nbsp;&nbsp;<%= t ".#{slot_status}" %>
+            </h3>
+          </div>
+          <% find_store_by_slot_id @slot.id %>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="text-primary">
+                      <i class="fas fa-layer-group"></i>
+                      <% if @store_of_slot %>
+                        <%= t ".store_information"%><%= @store_of_slot.name%>
+                      <% else %>
+                        <%= t ".no_store" %>
+                      <% end %>
+                    </h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted"><%= t ".location"%></span>
+                        <span class="info-box-number text-center text-muted mb-0"><%= @slot.name %></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted"><%= t ".slot_area"%></span>
+                        <span class="info-box-number text-center text-muted mb-0">
+                          <%= @slot.area %><i class="icon-square-meters">&#13217;</i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted"><%= t ".category"%></span>
+                        <span class="info-box-number text-center text-muted mb-0">
+                          <% if @store_of_slot %>
+                            <%= @store_of_slot.category_name %>
+                          <% else %>
+                            <%= t ".no_info" %>
+                          <% end %>
+                        <span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted"><%= t ".price"%></span>
+                        <span class="info-box-number text-center text-muted mb-0"><%= @slot.price %><%= t ".per_month"%></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                <h4 class="text-primary"><i class="fas fa-paint-brush"></i><%= t ".customer_information"%></h4>
+                <br>
+                <% if @store_of_slot %>
+                  <div class="text-muted">
+                  <p class="text-md"><%= t ".customer_name"%>
+                    <b class="d-block"><%= @store_of_slot.user_name %></b>
+                  </p>
+                  <p class="text-md"><%= t ".company"%>
+                    <b class="d-block"><%= @store_of_slot.user_company_name %></b>
+                  </p>
+                  <p class="text-md"><%= t ".email"%>
+                    <b class="d-block"><%= @store_of_slot.user_email %></b>
+                  </p>
+                  <p class="text-md"><%= t ".phone_number"%>
+                    <b class="d-block"><%= @store_of_slot.user_phone_number %></b>
+                  </p>
+                </div>
+                <% else %>
+                  <div class="text-muted">
+                    <%= t ".no_info" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% else %>
+    <main>
+      <section class="ray-page container">
+        <ul class="ray-breadcrumbs">
+          <li class="ray-breadcrumb">
+            <%= t ".search" %>
+          </li>
+        </ul>
+      </section>
+      <section class="content container">
+        <div class="header">
+          <div class="header__right">
+            <h5 id="slot_name_title"><%= @slot.name %></h5>
+            <i class="fas fa-star">5.0</i>
+            <a href="#">16 <%= t ".review" %></a>
+          </div>
+          <div class="header__left">
+            <p> <%= t ".address" %> </p>
+          </div>
+        </div>
+        <div class="main">
+          <div class="main__left">
+            <img src="https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg" alt="image">
+            <div class="pricing" id="p-info">
+              <div class="p-info">
+                <div class="p-info-item">
+                  <li class="p-info-img fas fa-warehouse"></li>
+                  <div class=""> <%= t ".area" %> <%= @slot.area %><span>m<sup>2</sup></span> </div>
+                </div>
+              </div>
+              <div class="p-info">
+                <div class="p-info-item">
+                  <li class="p-info-img fas fa-money-check-alt"></li>
+                  <div class=""> <%= t ".price" %> <%= @slot.price %> </div>
+                </div>
+              </div>
+              <div class="p-info">
+                <div class="p-info-item">
+                  <li class="p-info-img fas fa-calendar-check"></li>
+                  <div class=""> <%= t ".status" %> </div>
+                </div>
+              </div>
+            </div>
+            <div class="pricing">
+              <h2><%= t ".amenities" %></h2>
+              <p><%= t ".mission" %></p>
+            </div>
+            <div class="previews">
+              <div class="preview">
+                <li class="p-info-img fas fa-hand-sparkles"></li>
+                <p><%= t ".clean" %></p>
+              </div>
+              <div class="preview">
+                <li class="p-info-img fas fa-balance-scale"></li>
+                <p><%= t ".business" %></p>
+              </div>
+              <div class="preview">
+                <li class="p-info-img fas fa-dollar-sign"></li>
+                <p><%= t ".affordable" %></p>
+              </div>
+              <div class="preview">
+                <li class="p-info-img fas fa-smile-wink"></li>
+                <p><%= t ".location" %></p>
+              </div>
+              <a href="https://bit.ly/2CS5Il7" target="_blank"><%= t ".googlemap_link" %></a>
+            </div>
+          </div>
+          <div class="main__right" id="slot_main_right">
+            <div class="lead">
+              <h5><%= t ".interested_in" %></h5>
+              <p><%= t ".mission_content" %></p>
+              <button id="button_dangky">
+                <%= t ".hire_now" %>
+              </button>
+              <p class="text__footer"><%= t ".rule" %><a href="#"><%= t ".rule_link" %></a></p>
+            </div>
+            <div class="lead" style="margin-top: 20px;">
+              <h3><%= t ".experience_title" %></h3>
+              <p class="text__footer"><%= t ".experience" %><a href="#"><%= @slot.terminal.employee.email %> </a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  <% end %>
