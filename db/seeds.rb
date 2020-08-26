@@ -118,3 +118,7 @@ Contract.create(store_id: 8, status_id: 2, start_date: "8:00 2020/06/20", end_da
 Contract.create(store_id: 9, status_id: 3, start_date: "8:30 2020/06/20", end_date: "8:45 2021/06/20")
 
 Contract.create(store_id: 10, status_id: 3, start_date: "8:00 2020/06/20", end_date: "8:45 2021/06/20")
+
+Category.create(name: "Clothes")
+
+Category.create(name: "Drink")

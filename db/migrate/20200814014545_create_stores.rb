@@ -7,6 +7,7 @@ class CreateStores < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.boolean :is_active, default:false
+      t.string :image_url
 
       t.timestamps
     end

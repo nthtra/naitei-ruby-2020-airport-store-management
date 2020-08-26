@@ -1,4 +1,6 @@
 class Store < ApplicationRecord
+  STORE_PERMITTED_PARAMS = %i(user_id slot_id category_id name description image_url).freeze
+
   belongs_to :slot
   belongs_to :user
   belongs_to :category

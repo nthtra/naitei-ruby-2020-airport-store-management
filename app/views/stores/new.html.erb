@@ -1,0 +1,40 @@
+<% provide :title, t(".title") %>
+  <main>
+    <section class="ray-page container">
+      <ul class="ray-breadcrumbs">
+        <li class="ray-breadcrumb">
+          <%= t ".search" %>
+        </li>
+      </ul>
+    </section>
+    <section class="content container">
+      <%= form_for @store, url: store_path do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <%= f.label :name , t(".name")%>
+        <%= f.text_field :name, class: "form-control" %>
+        <%= f.label :description, t(".description") %>
+        <%= f.email_field :description, class: "form-control" %>
+        <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+          <%= f.label :start_date, t(".start_date") %>
+          <%= f.text_field :start_date, class: "form-control"%>
+          <i class="fas fa-calendar input-prefix"></i>
+        </div>
+        <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+          <%= f.label :end_date, t(".end_date") %>
+          <%= f.text_field :end_date, class: "form-control"%>
+          <i class="fas fa-calendar input-prefix"></i>
+        </div>
+        <div class="dropdown show">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLinkTerminal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t ".terminal_dropdown" %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkTerminal">
+            <% Category.all.each do |cat| %>
+              <p><%= cat.name %></p>
+            <% end %>
+          </div>
+        </div>
+        <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    <% end %>
+    </section>
+  </main>

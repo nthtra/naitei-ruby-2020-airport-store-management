@@ -17,5 +17,7 @@ Rails.application.routes.draw do
     resources :employees, only: :show
     resources :contracts, only: %i(index show)
     resources :slots, only: %i(show index)
+    post "/store", to: "stores#create"
+    resources :stores, only: %i(new)
   end
 end
