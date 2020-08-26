@@ -189,6 +189,20 @@ vi:
       experience_title: Bạn nên thử trải nghiệm trực tiếp một lần!
       experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
       googlemap_link: Xem chi tiết vị trí tại đây
+    index:
+      title: Cửa hàng
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      amenities: Tiện ích
+      mission: Luôn hướng tới lợi ích doanh nghiệp và trải nghiệm khách hàng
+      clean: Dịch vụ vệ sinh cao cấp
+      business: Môi trường kinh doanh công bằng
+      affordable: Giá cả hợp lý
+      location: Vị trí kinh doanh thuận lợi
+      googlemap_link: Xem chi tiết vị trí tại đây
+      previous: Trước
+      next: Tiếp
+      experience_title: Bạn nên trải nghiệm trực tiếp
+      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
   employee_sessions:
     new:
       title: Nhân viên đăng nhập
@@ -254,20 +268,6 @@ vi:
       deny: Từ chối
       pending: Chờ duyệt
       submit: Submit
-  slots:
-    index:
-      slots: Slots
-      id: ID
-      name: Tên
-      terminal: Sảnh
-      area: Diện tích
-      status: Trạng thái
-      price: Giá
-      action: Thao tác
-      per_month: $/tháng
-    slot:
-      empty: Trống
-      not_empty: Đã thuê
   views:
     pagination:
       first: "« Đầu"
