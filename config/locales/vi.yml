@@ -268,6 +268,41 @@ vi:
       deny: Từ chối
       pending: Chờ duyệt
       submit: Submit
+  slots:
+    index:
+      home: Trang chủ
+      slots: Slots
+      id: ID
+      name: Tên
+      terminal: Sảnh
+      area: Diện tích
+      status: Trạng thái
+      price: Giá
+      action: Thao tác
+      per_month: $/tháng
+    slot:
+      empty: Trống
+      not_empty: Đã thuê
+    show:
+      title: Chi tiết slot
+      home: Trang chủ
+      slots: Slots
+      id: "Mã slot: "
+      location: Vị trí
+      slot_area: Diện tích
+      category: Loại hình kinh doanh
+      price: Giá
+      per_month: $/tháng
+      store_information: " Cửa hàng: "
+      customer_information: " Thông tin khách hàng"
+      company: Công ty
+      customer_name: Tên khách hàng
+      email: Email
+      phone_number: Số điện thoại
+      empty: Trống
+      not_empty: Đã thuê
+      no_store: Không có cửa hàng
+      no_info: Không có thông tin
   views:
     pagination:
       first: "« Đầu"

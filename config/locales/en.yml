@@ -271,6 +271,41 @@ en:
       deny: Deny
       pending: Pending
       submit: Submit
+  slots:
+    index:
+      home: Home
+      slots: Slots
+      id: ID
+      name: Name
+      terminal: Terminal
+      Area: Area
+      Status: Status
+      price: Price
+      action: Action
+      per_month: $/month
+    slot:
+      empty: Empty
+      not_empty: Rented
+    show:
+      title: Slot detail
+      home: Home
+      slots: Slots
+      id: "Slot ID: "
+      location: Location
+      slot_area: Slot area
+      category: Category
+      price: Price
+      per_month: $/month
+      store_information: " Store: "
+      customer_information: " Customer information"
+      company: Company
+      customer_name: Customer name
+      email: Email
+      phone_number: Phone number
+      empty: Empty
+      not_empty: Rented
+      no_store: No store
+      no_info: No Information
   views:
     pagination:
       first: "« FIRST"
