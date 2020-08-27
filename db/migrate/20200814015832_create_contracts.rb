@@ -5,6 +5,7 @@ class CreateContracts < ActiveRecord::Migration[6.0]
       t.references :status, null: false, foreign_key: true
       t.datetime :start_date
       t.datetime :end_date
+      t.text :deny_message
 
       t.timestamps
     end

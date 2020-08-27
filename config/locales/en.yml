@@ -269,8 +269,27 @@ en:
       identity_number: Identity number
       approve: Approve
       deny: Deny
+      deny_reason: Deny reason
       pending: Pending
       submit: Submit
+    update:
+      approve_successfully: Approved successfully
+      slot_is_full: Slot is full
+      deny_successfully: Deny successfully
+      contract_not_found: Contract not found
+      store_not_found: Store not found
+      slot_not_found: Slot not found
+      update_database_false: Update database false
+      approve: Approve
+      deny: Deny
+    approve_deny_button:
+      deny_reason: Deny reason
+      close: Close
+      send: Send
+    approve_status:
+      approve: Approve
+    deny_status:
+      deny: Deny
   slots:
     index:
       home: Home

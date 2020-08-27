@@ -1,0 +1,25 @@
+<% if params[:status_id].to_i == Settings.status.approve && @result != :update_database_false %>
+  <% unless @result == :slot_is_full %>
+    $('#show_status_name').html('<span class="badge badge-success"><%= t ".approve" %></span>')
+    $('#show-deny-message').hide()
+    <% @contract.status_id = Settings.status.approve %>
+    $('#contract-detail-btn').html('<%= j render("contracts/approve_deny_button", contract: @contract) %>')
+  <% end %>
+<% elsif params[:status_id].to_i == Settings.status.deny %>
+  <% if @result == :deny_successfully %>
+    $('#show_status_name').html('<span class="badge badge-danger"><%= t ".deny" %></span>')
+    <%= @contract.status_id = Settings.status.deny %>
+    $('#show-deny-message').show()
+    $('#show-deny-message').html('<%= j render("contracts/show_deny_message", contract: @contract) %>')
+    $('#contract-detail-btn').html('<%= j render("contracts/approve_deny_button", contract: @contract) %>')
+    $('#denyModal').modal('hide')
+    $('.modal-backdrop').remove()
+  <% elsif @result == :update_database_false %>
+    $('#denyModal').modal('hide')
+    $('.modal-backdrop').remove()
+  <% end %>
+<% end %>
+
+<% flash.each_with_object([]) do |(type, message), flash_messages| %>
+  toastr.<%= type %>('<%= message %>')
+<% end %>
