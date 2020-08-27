@@ -1,6 +1,6 @@
   <header class="header container" id="navbar-header">
     <div class="user_navbar_header_left">
-      <span class="logo"><a href="./index.html"><%= t ".logo" %> </a></span>
+      <span class="logo"><%= link_to t(".logo"), root_path, class: "nav-link" %></span>
       <span class="navbar">
         <ul>
           <li><%= link_to t(".profile"), "#" %></li>

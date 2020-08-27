@@ -78,8 +78,8 @@ nav.main-header {
 
 #home-content, .login-page, .register-page {
  background-image: url("../../../images/bg.jpg") !important;
- background-repeat: no-repeat;
- background-size: cover;
+ background-repeat: no-repeat !important;
+ background-size: cover !important;
 }
 
 .login-box, .register-box {
