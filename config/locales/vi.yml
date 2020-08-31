@@ -84,6 +84,8 @@ vi:
   static_pages:
     home:
       title: "Home"
+      rent: Đã thuê
+      empty: Còn trống
       address: Phú Minh Ward Sóc Sơn  District Hà Nội City
       content_title: Việt Nam
       all_terminal: Tất cả sảnh bay
@@ -145,30 +147,22 @@ vi:
       area: Diện tích
       description_title: Bạn quan tâm đến sảnh bay này?
       address: Phú Minh Ward Sóc Sơn  District Hà Nội City
-  slots:
-    show:
-      title: Khu vực
-      review: nhận xét
-      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
-      area: Diện tích
-      price: Giá thuê
+      title: Sảnh bay
+      terminal: Sảnh bay-
+      overview: Giới thiệu
+      slots: Cửa hàng
+      stores: Cửa hàng
+      contact: Liên hệ
+      manager: Người quản lý
+      phone_number: Số điện thoại
+      email: Mail
+      description: Mô tả
+      stt: STT
+      slot_name: Mã cửa hàng
       status: Trạng thái
-      amenities: Tiện ích
-      mission: Luôn hướng tới lợi ích doanh nghiệp và trải nghiệm khách hàng
-      clean: Dịch vụ vệ sinh cao cấp
-      business: Môi trường kinh doanh công bằng
-      affordable: Giá cả hợp lý
-      location: Vị trí kinh doanh thuận lợi
-      googlemap_link: Xem chi tiết vị trí tại đây
-      interested_in: Bạn có hứng thú với khu vực này?
-      mission_content: |
-                        Chúng tôi rất chú trọng đến lợi ích của các doanh nghiệp hợp tác,
-                        hướng tới môi trường kinh doanh lành mạnh, phát triển bền vững.
-      hire_now: Đăng ký thuê ngay!
-      rule: "Hãy chắc chắn bạn đồng ý với điều khoản của chúng tôi "
-      rule_link: Tham khảo điều khoản
-      experience_title: Bạn nên trải nghiệm trực tiếp
-      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+      empty: Còn trống
+      used: Đã được sử dụng
+      rent: Đã thuê
   stores:
     show:
       search: Tìm kiếm
@@ -189,6 +183,11 @@ vi:
       experience_title: Bạn nên thử trải nghiệm trực tiếp một lần!
       experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
       googlemap_link: Xem chi tiết vị trí tại đây
+      cancel: Huỷ yêu cầu
+      close: Đóng
+      modal_title: Huỷ yêu cầu
+      confirm_content: Bạn chắc chắn muốn huỷ yêu cầu?
+      confirm: Xác nhận
     index:
       title: Cửa hàng
       address: Phú Minh Ward Sóc Sơn  District Hà Nội City
@@ -203,6 +202,20 @@ vi:
       next: Tiếp
       experience_title: Bạn nên trải nghiệm trực tiếp
       experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+      registered_success: Đăng ký thành công!
+      confirm: Bạn đã chắc chắn chưa?
+      rent: Đã thuê
+      pending: Đang xử lý
+      cancel: Huỷ yêu cầu
+      close: Đóng
+      modal_title: Huỷ yêu cầu
+      confirm_content: Bạn chắc chắn muốn huỷ yêu cầu?
+      confirm: Xác nhận
+    create:
+      registered_success: Đăng ký thành công!
+      register_failed: Đăng ký thất bại!
+    destroy:
+      destroy_success: Huỷ yêu cầu thành công!
   employee_sessions:
     new:
       title: Nhân viên đăng nhập
@@ -303,14 +316,13 @@ vi:
       empty: Trống
       not_empty: Đã thuê
     show:
-      title: Chi tiết slot
+      title: Khu vực
       home: Trang chủ
       slots: Slots
       id: "Mã slot: "
       location: Vị trí
       slot_area: Diện tích
       category: Loại hình kinh doanh
-      price: Giá
       per_month: $/tháng
       store_information: " Cửa hàng: "
       customer_information: " Thông tin khách hàng"
@@ -322,6 +334,38 @@ vi:
       not_empty: Đã thuê
       no_store: Không có cửa hàng
       no_info: Không có thông tin
+      review: nhận xét
+      address: Phú Minh Ward Sóc Sơn  District Hà Nội City
+      area: Diện tích
+      price: Giá thuê
+      status: Trạng thái
+      amenities: Tiện ích
+      mission: Luôn hướng tới lợi ích doanh nghiệp và trải nghiệm khách hàng
+      clean: Dịch vụ vệ sinh cao cấp
+      business: Môi trường kinh doanh công bằng
+      affordable: Giá cả hợp lý
+      location_amenities: Vị trí kinh doanh thuận lợi
+      googlemap_link: Xem chi tiết vị trí tại đây
+      interested_in: Bạn có hứng thú với khu vực này?
+      mission_content: |
+                        Chúng tôi rất chú trọng đến lợi ích của các doanh nghiệp hợp tác,
+                        hướng tới môi trường kinh doanh lành mạnh, phát triển bền vững.
+      hire_now: Đăng ký thuê ngay!
+      rule: "Hãy chắc chắn bạn đồng ý với điều khoản của chúng tôi "
+      rule_link: Tham khảo điều khoản
+      experience_title: Bạn nên trải nghiệm trực tiếp
+      experience: "Lên lịch ghé thăm hoặc liên lạc với chúng tôi: "
+      is_empty: "Còn trống"
+      registered_success: Đăng ký thành công!
+      confirm: Xác nhận
+      name: Tên cửa hàng
+      description: Mô tả
+      close: Đóng
+      modal_title: Đăng ký thuê
+      confirm_content: Bạn có chắc chắn muốn thuê cửa hàng này?
+    contract_field:
+      start_date: Ngày bắt đầu
+      end_date: Ngày kết thúc
   views:
     pagination:
       first: "« Đầu"
@@ -329,22 +373,3 @@ vi:
       previous: "‹ Trước"
       next: "Tiếp ›"
       truncate: "…"
-  terminals: 
-    show:
-      title: Sảnh bay
-      terminal: Sảnh bay-
-      overview: Giới thiệu
-      area: Diện tích
-      slots: Cửa hàng
-      stores: Cửa hàng
-      contact: Liên hệ
-      manager: Người quản lý
-      phone_number: Số điện thoại
-      email: Mail
-      description: Mô tả
-      stt: STT
-      slot_name: Mã cửa hàng
-      status: Trạng thái
-      area: Diện tích
-      empty: Còn trống
-      used: Đã được sử dụng

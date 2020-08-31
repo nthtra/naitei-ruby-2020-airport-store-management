@@ -6,8 +6,8 @@ class CreateStores < ActiveRecord::Migration[6.0]
       t.references :category, null: false, foreign_key: true
       t.string :name
       t.text :description
-      t.boolean :is_active, default:false
-
+      t.integer :status, default: 1
+      t.string :image_url
       t.timestamps
     end
     add_index :stores, :name

@@ -8,6 +8,5 @@ class Contract < ApplicationRecord
            :user_identity_number, :user_phone_number,
            :slot_area, :slot_price, :slot_name,
            :category_name, :terminal_name, :terminal_id, to: :store
-
   scope :by_status_and_datetime, ->{order(status_id: :asc, created_at: :desc)}
 end

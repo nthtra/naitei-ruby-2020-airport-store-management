@@ -7,9 +7,11 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     get "/logout", to: "sessions#destroy"
     get "/users/:id/stores", to: "stores#index", as: "stores"
-    resources :users, only: %i(show new create) do
-      resources :stores, only: %i(show)
+    resources :users, only: %i(show new create)
+    resources :slots, only: %i(show index) do
+      resources :stores, only: %i(show new create)
     end
+    get "stores/:id/destroy", to: "stores#destroy", as: "destroy_store"
     resources :terminals, only: :show
     get "/employees/login", to: "employee_sessions#new"
     post "/employees/login", to: "employee_sessions#create"

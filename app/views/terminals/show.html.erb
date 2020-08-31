@@ -34,30 +34,33 @@
         <div class="main">
           <div class="main__left">
             <div class="products">
-              <% @slots.each do |slot| %>
-                <%= link_to slot do %>
-                  <div class="product" id="terminalItem">
-                    <%= link_to slot do %>
-                      <%= image_tag "https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg"%>
-                    <% end %>
-                    <div class="product__title">
-                      <%= link_to slot.name, slot %>
-                      <i class="fas fa-star"> <%= Settings.info.star %> </i>
+                <% @slots.each do |slot| %>
+                  <%= link_to slot do %>
+                    <div class="product" id="terminalItem">
+                      <%= link_to slot do %>
+                        <%= image_tag Settings.links.store_image %>
+                      <% end %>
+                      <div class="product__title">
+                        <%= link_to slot.name, slot %>
+                        <% if slot.is_empty %>
+                          <span class="badge badge-success slot_status"><%= t ".empty" %></span>
+                        <% else %>
+                          <span class="badge badge-info slot_status"><%= t ".rented" %></span>
+                        <% end %>
+                      </div>
+                      <p class="product__text"><%= slot.terminal.name %> </p>
                     </div>
-                    <p class="product__text"><%= slot.terminal.name %> </p>
-                  </div>
+                  <% end %>
                 <% end %>
-              <% end %>
-              <div class="mt-4">
-                <%= paginate @slots, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
-              </div>
-              <div class="footer">
-                <h2><%= t ".terminal_information" %> </h2>
-                <p class="text__header"><%= t ".name" %>: <%= @terminal.name %></p>
-                <span class="text__header"><%= t ".area" %>: <%= @terminal.area %> <span>m<sup>2</sup></span></p>
-
-                <i class="fas fa-phone"><%= Settings.info.phone %> </i>
-              </div>
+                <div class="mt-4">
+                  <%= paginate @slots, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
+                </div>
+                <div class="footer">
+                  <h2><%= t ".terminal_information" %> </h2>
+                  <p class="text__header"><%= t ".name" %>: <%= @terminal.name %></p>
+                  <span class="text__header"><%= t ".area" %>: <%= @terminal.area %> <span>m<sup>2</sup></span></p>
+                  <i class="fas fa-phone"><%= Settings.info.phone %> </i>
+                </div>
             </div>
             <div class="text">
               <h2> <%= t ".description_title" %> </h2>

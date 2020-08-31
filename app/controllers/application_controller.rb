@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include EmployeeSessionsHelper
   include ContractsHelper
+  add_flash_types :success, :danger, :warning
 
   before_action :set_locale
 
@@ -23,10 +24,11 @@ class ApplicationController < ActionController::Base
   end
 
   def find_user_by_id
-    @user = User.find_by id: params[:id]
+    @user = User.find_by(id: params[:id]) ||
+            User.find_by(id: session[:user_id])
     return if @user
 
-    flash[:danger] = t "users.user.user_not_found"
+    flash[:error] = t "users.user.user_not_found"
     redirect_to root_url
   end
 
@@ -34,7 +36,7 @@ class ApplicationController < ActionController::Base
     return if logged_in?
 
     store_location
-    flash[:danger] = t "users.new.login"
+    flash[:error] = t "users.new.login"
     redirect_to login_url
   end
 

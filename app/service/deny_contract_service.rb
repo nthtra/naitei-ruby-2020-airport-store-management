@@ -16,12 +16,12 @@ class DenyContractService
 
   def deny_contract
     ActiveRecord::Base.transaction do
-      if store.is_active
+      if store.status != Store.statuses.key(1)
         store_update = true
         update_store_slot
       end
       if store_update &&
-         (store.is_active != false || slot.is_empty != true)
+         (store.status == Store.statuses.key(2) || slot.is_empty != true)
         raise ActiveRecord::Rollback
       end
 
@@ -31,7 +31,7 @@ class DenyContractService
   end
 
   def update_store_slot
-    store.update! is_active: false
+    store.update! status: Store.statuses.key(3)
     slot.update! is_empty: true
   end
 

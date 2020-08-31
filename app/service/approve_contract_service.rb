@@ -17,7 +17,7 @@ class ApproveContractService
     if slot.is_empty
       ActiveRecord::Base.transaction do
         update_contract
-        if store.is_active != true ||
+        if store.approved? != true ||
            slot.is_empty != false ||
            contract.status_id != Settings.status.approve ||
            contract.deny_message != ""
@@ -31,7 +31,7 @@ class ApproveContractService
   end
 
   def update_contract
-    store.update! is_active: true
+    store.update! status: Settings.store_status.approved
     slot.update! is_empty: false
     contract.update! status_id: Settings.status.approve
     contract.update! deny_message: ""

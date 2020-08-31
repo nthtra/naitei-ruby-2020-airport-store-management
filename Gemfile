@@ -4,6 +4,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 gem "bcrypt"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views"
+gem "bootstrap-datepicker-rails"
 gem "config"
 gem "figaro"
 gem "font-awesome-sass", "~> 5.13.0"
@@ -13,6 +14,7 @@ gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "sass-rails", ">= 6"
+gem "toastr-rails"
 gem "webpacker", "~> 4.0"
 
 group :development do

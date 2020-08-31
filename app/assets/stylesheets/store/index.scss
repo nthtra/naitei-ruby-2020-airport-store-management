@@ -1,4 +1,6 @@
-#store_main_right{
+@import 'abstract/_variables.scss';
+
+#store_main_right {
   margin-top: 50px;
 }
 
@@ -9,3 +11,25 @@
 #store_product {
   display: flex;
 }
+
+.ray-tag {
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: 5px;
+  white-space: nowrap;
+  margin: 2px;
+  padding: 0 4px;
+  height: 1.125rem;
+  border-color: $white-3;
+  font-family: "Apercu Mono",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  border: 1px solid $gray-4;
+  border-radius: .25rem;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  background-color: $cancel-red;
+  color:white;
+}
+

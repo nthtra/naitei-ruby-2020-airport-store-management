@@ -84,6 +84,8 @@ en:
   static_pages:
     home:
       title: "Home"
+      rent: Rent
+      empty: Empty
       address: Phu Minh Ward Soc Son  District Ha Noi city
       content_title: Viet Nam
       all_terminal: All terminal
@@ -147,30 +149,22 @@ en:
       area: Area
       description_title: Interested in this terminal?
       address: Phu Minh Ward Soc Son  District Ha Noi city
-  slots:
-    show:
-      title: Slot
-      review: reviews
-      address: Phu Minh Ward Soc Son  District Ha Noi city
-      area: Area
-      price: Price
+      title: Terminal
+      terminal: Terminal-
+      overview: Terminal overview
+      slots: Slots
+      stores: Stores
+      contact: Contact
+      manager: Manager
+      phone_number: Phone number
+      email: Mail
+      description: Desctiption
+      stt: "No"
+      slot_name: Slot's name
       status: Status
-      amenities: Amenities
-      mission: Always towards business benefits and user experience
-      clean: Enhanced cleaning services
-      business: Fair business market
-      affordable: Affordable
-      location: Favorable business location
-      googlemap_link: See location details here
-      interested_in: Interested in this building?
-      mission_content: |
-                        We attach great importance to the benefits of cooperative businesses,
-                        towards a healthy and developing business environment.
-      hire_now: Hire now
-      rule: "Be sure to agree to our terms "
-      rule_link: Read more rules
-      experience_title: You should experience AirPort firsthand!
-      experience: "Schedule a visit above. Or call us: "
+      empty: Empty
+      used: Used
+      rent: Rent
   stores:
     show:
       title: Store
@@ -192,6 +186,11 @@ en:
       experience_title: You should experience AirPort firsthand!
       experience: "Schedule a visit above. Or call us: "
       googlemap_link: See location details here
+      cancel: Cancel
+      close: Close
+      modal_title: Cancel request
+      confirm_content: You definitely want to cancel the request?
+      confirm: Confirm
     index:
       title: My stores
       address: Phu Minh Ward Soc Son  District Ha Noi city
@@ -206,6 +205,20 @@ en:
       next: Next
       experience_title: You should experience AirPort firsthand!
       experience: "Schedule a visit above. Or call us: "
+      registered_success: Registered success!
+      confirm: Are you sure?
+      rent: Rent
+      peding: Pending
+      cancel: Cancel
+      close: Close
+      modal_title: Cancel request
+      confirm_content: You definitely want to cancel the request?
+      confirm: Confirm
+    create: 
+      registered_success: Registered success!
+      register_failed: Register failed!
+    destroy:
+      destroy_success: Cancel request success!
   employee_sessions:
     new:
       title: Employee log in
@@ -325,29 +338,41 @@ en:
       not_empty: Rented
       no_store: No store
       no_info: No Information
+      review: reviews
+      address: Phu Minh Ward Soc Son  District Ha Noi city
+      area: Area
+      status: Status
+      amenities: Amenities
+      mission: Always towards business benefits and user experience
+      clean: Enhanced cleaning services
+      business: Fair business market
+      affordable: Affordable
+      location_amenities: Favorable business location
+      googlemap_link: See location details here
+      interested_in: Interested in this building?
+      mission_content: |
+                        We attach great importance to the benefits of cooperative businesses,
+                        towards a healthy and developing business environment.
+      hire_now: Rent now
+      rule: "Be sure to agree to our terms "
+      rule_link: Read more rules
+      experience_title: You should experience AirPort firsthand!
+      experience: "Schedule a visit above. Or call us: "
+      is_empty: Empty
+      registered_success: Registred success!
+      confirm: Confirm
+      name: Name
+      description: Description
+      close: Close
+      modal_title: Register to rent
+      confirm_content: Are you sure you want to rent this store?
+    contract_field:
+      start_date: Start date
+      end_date: End date
   views:
     pagination:
-      first: "« FIRST"
-      last: "LAST »"
-      previous: "‹ PREV"
-      next: "NEXT ›"
+      first: "« First"
+      last: "Last »"
+      previous: "‹ Pre"
+      next: "Next ›"
       truncate: "…"
-  terminals: 
-    show:
-      title: Terminal
-      terminal: Terminal-
-      overview: Terminal overview
-      area: Area
-      slots: Slots
-      stores: Stores
-      contact: Contact
-      manager: Manager
-      phone_number: Phone number
-      email: Mail
-      description: Desctiption
-      stt: "No"
-      slot_name: Slot's name
-      status: Status
-      area: Area
-      empty: Empty
-      used: Used

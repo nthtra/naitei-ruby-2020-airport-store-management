@@ -79,25 +79,25 @@ Status.create(name: "Deny")
 
 Status.create(name: "Expire")
 
-Store.create(slot_id: 1, user_id: 1, category_id: 1, name: "Pepsi", description: "Pepsi")
+Store.create(slot_id: 1, user_id: 1, category_id: 1, name: "Pepsi", description: "Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.")
 
-Store.create(slot_id: 2, user_id: 1, category_id: 3, name: "Gucci", description: "Gucci")
+Store.create(slot_id: 2, user_id: 1, category_id: 3, name: "Gucci", description: "Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.")
 
-Store.create(slot_id: 3, user_id: 1, category_id: 4, name: "Bamboo", description: "Bamboo")
+Store.create(slot_id: 3, user_id: 1, category_id: 4, name: "Bamboo", description: "Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.")
 
-Store.create(slot_id: 4, user_id: 1, category_id: 2, name: "VDN", description: "VDN")
+Store.create(slot_id: 4, user_id: 1, category_id: 2, name: "VDN", description: "Zara is one of the largest international fashion companies. It belongs to Inditex, one of the world’s largest distribution groups.")
 
-Store.create(slot_id: 5, user_id: 1, category_id: 1, name: "ABC", description: "demo1", is_active: true)
+Store.create(slot_id: 5, user_id: 1, category_id: 1, name: "ABC", description: "demo1", status: 1)
 
-Store.create(slot_id: 6, user_id: 1, category_id: 2, name: "Messi1", description: "demo2", is_active: true)
+Store.create(slot_id: 6, user_id: 1, category_id: 2, name: "Messi1", description: "demo2", status: 1)
 
-Store.create(slot_id: 7, user_id: 1, category_id: 3, name: "Ronaldo", description: "demo3", is_active: false)
+Store.create(slot_id: 7, user_id: 1, category_id: 3, name: "Ronaldo", description: "demo3", status: 1)
 
-Store.create(slot_id: 8, user_id: 1, category_id: 1, name: "Neymar", description: "demo4", is_active: false)
+Store.create(slot_id: 8, user_id: 1, category_id: 1, name: "Neymar", description: "demo4", status: 1)
 
-Store.create(slot_id: 9, user_id: 1, category_id: 2, name: "Mbape", description: "demo5", is_active: false)
+Store.create(slot_id: 9, user_id: 1, category_id: 2, name: "Mbape", description: "demo5", status: 1)
 
-Store.create(slot_id: 10, user_id: 1, category_id: 3, name: "Suarez", description: "demo6", is_active: false)
+Store.create(slot_id: 10, user_id: 1, category_id: 3, name: "Suarez", description: "demo6", status: 1)
 
 Contract.create(store_id: 1, status_id: 1, start_date: "7:00 2020/05/20", end_date: "7:00 2021/05/20")
 
