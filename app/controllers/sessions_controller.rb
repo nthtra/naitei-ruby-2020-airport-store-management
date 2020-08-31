@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
 
   def create
     user = find_user_by_email
-
     if user&.authenticate params[:session][:password]
       flash[:success] = t ".login_success"
       log_in user
