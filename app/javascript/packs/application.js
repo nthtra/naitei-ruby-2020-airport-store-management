@@ -20,3 +20,13 @@ global.$ = require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+// import '../../assets/stylesheets/application.scss'
+
+//= require bootstrap-datepicker
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
+//= require toastr
+//= require jquery
+//= require jquery_ujs
+//= require_tree .

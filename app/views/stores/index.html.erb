@@ -11,7 +11,6 @@
       <div class="header">
         <div class="header__right">
           <h1 id="slot_name_title"><%= t ".title" %></h1>
-          <i class="fas fa-star"><%= Settings.info.star %></i>
         </div>
         <div class="header__left">
           <p> <%= t ".address" %> </p>
@@ -21,15 +20,44 @@
         <div class="main__left">
           <div class="products" id="slot-info-products">
             <% @stores.each do |store| %>
-              <%= link_to user_store_path(current_user) do %>
+              <div>
                 <div class="product slot-info-product" id="store_product">
-                  <%= image_tag "https://www.mlive.com/resizer/YEU5ywOU3--21qj7nAlYwDOT_64=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/4G27NNGGWJDYHIBIL2YJQ6DVPA.jpg", class: "slot-info-product-img" %>
+                  <%= image_tag Settings.links.store_image, class: "slot-info-product-img" %>
                   <div class="product__detail">
-                    <h3><%= store.name %></h3>
+                    <h3><%= link_to store.name, slot_store_path(store.slot.id, store.id) %></h3>
                     <p><%= store.description %></p>
+                    <% if store.status == Store.statuses.key(1) %>
+                      <p><b><%= t ".pending" %></b></p>
+                      <button type="button" class="ray-tag amenity-tag" data-toggle="modal" data-target="#exampleModal">
+                        <%= t ".cancel" %>
+                      </button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel"><%= t ".modal_title" %></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <%= t ".confirm_content" %>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t ".close" %></button>
+                              <%= link_to t(".confirm"), destroy_store_path(store.id), class: "btn btn-primary"%>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <% elsif store.status == Store.statuses.key(2) %>
+                      <p><b><%= t ".rent" %></b></p>
+                    <% elsif store.status == Store.statuses.key(3) %>
+                      <p><b><%= t ".rejected" %></b></p>
+                    <% end %>
                   </div>
                 </div>
-              <% end %>
+              </div>
             <% end %>
             <div class="mt-4">
               <%= paginate @stores, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
@@ -71,7 +99,7 @@
                   <% current_user.stores.each_with_index do |store, index| %>
                     <% if index == 0 %>
                       <div class="carousel-item active">
-                        <%= image_tag "https://media.timeout.com/images/105634590/630/472/image.jpg", class: "d-block w-100" %>
+                        <%= image_tag Settings.links.store_image, class: "d-block w-100" %>
                         <div class="carousel-caption d-none d-md-block">
                           <h5><%= store.name %></h5>
                           <p><%= store.description %></p>
@@ -79,7 +107,7 @@
                       </div>
                     <% else %>
                       <div class="carousel-item">
-                        <%= image_tag "https://media.timeout.com/images/105634590/630/472/image.jpg", class: "d-block w-100" %>
+                        <%= image_tag Settings.links.store_image, class: "d-block w-100" %>
                         <div class="carousel-caption d-none d-md-block">
                           <h5><%= store.name %></h5>
                           <p><%= store.description %></p>
@@ -100,7 +128,7 @@
           </div>
           <div class="lead" style="margin-top: 20px;">
             <h3><%= t ".experience_title" %></h3>
-            <p class="text__footer"><%= t ".experience" %><%= link_to "#" %></p>
+            <p class="text__footer"><%= t ".experience" %><%= Settings.info.phone %></p>
           </div>
         </div>
       </div>

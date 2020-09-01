@@ -1,0 +1,14 @@
+<div class="form-row">
+  <div class="form-group col-md-12">
+    <%= f.label t(".start_date") %>
+    <div>
+      <%= f.date_select :start_date, "data-provide" => "datepicker", html: {class: "select optional form-control" } %>
+    </div>
+  </div>
+  <div class="form-group col-md-12">
+      <%= f.label t(".end_date") %>
+      <div>
+        <%= f.date_select :end_date, "data-provide" => "datepicker" %>
+      </div>
+  </div>
+</div>

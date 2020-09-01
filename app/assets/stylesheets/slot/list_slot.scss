@@ -324,7 +324,17 @@ section.content .main .main__right {
   margin-top: 20px !important;
 }
 
-.user_navbar_header_left{
+.user_navbar_header_left {
   display: flex;
   align-items: center;
+}
+
+.login_btn {
+  float: right;
+}
+
+.slot_status {
+  padding-bottom: 7px;
+  justify-content: center;
+  padding-top: 7px;
 }

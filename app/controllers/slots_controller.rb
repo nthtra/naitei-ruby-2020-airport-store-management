@@ -3,6 +3,8 @@ class SlotsController < ApplicationController
 
   def show
     @slot = Slot.find_by(id: params[:id])
+    @store = Store.new
+    @store.build_contract
   end
 
   def index

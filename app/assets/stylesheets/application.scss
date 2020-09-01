@@ -11,6 +11,8 @@
  * It is generally better to create a new file per style scope.
  *= require_tree .
  *= require_self
+ *= require bootstrap-datepicker
+ *= require toastr
  */
 @import 'bootstrap/scss/bootstrap';
 @import 'libs/adminlte.scss';
@@ -20,3 +22,4 @@
 @import 'slot/list_slot.scss';
 @import 'store/index.scss';
 @import 'employee/main.scss';
+@import 'store/new.scss';

@@ -1,7 +1,7 @@
 class TerminalsController < ApplicationController
   def show
     @terminal = Terminal.find_by id: params[:id]
-    @slots = @terminal.slots.order_by_created_at_asc.page(params[:page])
-                      .per Settings.pagination.per_page
+    @slots = @terminal.slots.by_status_and_datetime_for_user
+                      .page(params[:page]).per Settings.pagination.per_page
   end
 end
