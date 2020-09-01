@@ -2,9 +2,9 @@ User.create(name: "Nguyen Xuan Phuc", email: "user1@gmail.com",
   company_name: "ABC", identity_number: "123412345", phone_number: "0987987987",
   password: "123456", password_confirmation: "123456")
 
-Role.create(name: "Admin")
-
 Role.create(name: "Manager")
+
+Role.create(name: "Admin")
 
 Unit.create(name: "Store Management")
 
