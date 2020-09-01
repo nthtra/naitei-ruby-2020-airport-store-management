@@ -5,6 +5,7 @@ gem "bcrypt"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views"
 gem "config"
+gem "figaro"
 gem "font-awesome-sass", "~> 5.13.0"
 gem "kaminari"
 gem "mysql2", ">= 0.4.4"
@@ -31,4 +32,11 @@ group :development, :test do
   gem "rspec-rails"
   gem "rubocop", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
+end
+
+group :test do
+  gem "capybara"
+  gem "database_cleaner-active_record"
+  gem "shoulda-matchers"
+  gem "simplecov", require: false
 end
