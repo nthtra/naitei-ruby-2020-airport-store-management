@@ -15,6 +15,7 @@ validations:
       regex: !ruby/regexp /\A[0-9]*\z/
     phone_number:
       regex: !ruby/regexp /(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/
+    default_password: "12345678"
   employee:
     name_maximum: 50
     password_minimum: 5
