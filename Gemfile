@@ -6,6 +6,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views"
 gem "bootstrap-datepicker-rails"
 gem "config"
+gem "faker"
 gem "figaro"
 gem "font-awesome-sass", "~> 5.13.0"
 gem "kaminari"
@@ -28,9 +29,9 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem "factory_bot_rails"
-  gem "faker"
   gem "pry-rails"
   gem "rails_best_practices"
+  gem "rails-controller-testing"
   gem "reek"
   gem "rspec-rails"
   gem "rubocop", require: false

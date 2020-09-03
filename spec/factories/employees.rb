@@ -4,7 +4,7 @@ FactoryBot.define do
     email {Faker::Internet.unique.email}
     password {Settings.validations.employee.default_password}
     password_confirmation {Settings.validations.employee.default_password}
-    unit_id {Settings.validations.employee.default_unit_id}
-    role_id {Settings.validations.employee.default_role_id}
+    role_id {FactoryBot.create(:role).id}
+    unit_id{FactoryBot.create(:unit).id}
   end
 end
