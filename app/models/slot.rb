@@ -1,6 +1,5 @@
 class Slot < ApplicationRecord
   belongs_to :terminal
-  has_one :store, dependent: :nullify
   has_many :stores, dependent: :destroy
 
   delegate :name, :id, to: :terminal, prefix: :terminal
