@@ -29,4 +29,3 @@ jobs:
         run: |
           DATABASE_USERNAME=root DATABASE_PASSWORD=root DATABASE_NAME_DEVELOPMENT=store_management_development DATABASE_NAME_TEST=store_management_test bundle exec rails db:create
           DATABASE_USERNAME=root DATABASE_PASSWORD=root DATABASE_NAME_DEVELOPMENT=store_management_development DATABASE_NAME_TEST=store_management_test bundle exec rspec --format documentation
-
