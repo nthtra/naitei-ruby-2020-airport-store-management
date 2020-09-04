@@ -2,8 +2,9 @@ class ContractsController < ApplicationController
   before_action :find_employee
 
   def index
-    @contracts = Contract.by_status_and_datetime.page(params[:page])
-                         .per Settings.paginate.contracts_per_page
+    @q = Contract.ransack params[:q]
+    @contracts = @q.result.by_status_and_datetime.page(params[:page])
+                   .per Settings.paginate.contracts_per_page
   end
 
   def show

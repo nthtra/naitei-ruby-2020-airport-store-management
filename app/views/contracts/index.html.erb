@@ -20,22 +20,49 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
+          <div class="card-header">
+            <div class="card-tools">
+              <%= search_form_for @q, class: "input-group input-group-sm" do |f| %>
+                <span><%= t ".start_date" %>: </span> &nbsp;
+                <%= f.date_field :start_date_gteq, class: "form-control" %>
+                &nbsp;&nbsp;
+                <span><%= t ".end_date" %>: </span> &nbsp;
+                <%= f.date_field :end_date_lteq, class: "form-control" %>
+                &nbsp;&nbsp;
+                <%= f.text_field :store_user_name_or_store_name_or_store_slot_terminal_name_or_status_name_cont,
+                  class: "form-control float-right", placeholder: t(".search") %>
+                &nbsp;
+                <%= f.button :submit, class: "btn btn-sm btn-primary input-group-append" do %>
+                  <%= t ".search_button" %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
           <div class="card-body table-responsive p-0">
             <table class="table table-striped table-hover table-bordered padding-margin-0">
               <thead>
                 <tr>
-                  <th><%= t ".id" %></th>
-                  <th><%= t ".store" %></th>
-                  <th><%= t ".terminal" %></th>
-                  <th><%= t ".user" %></th>
-                  <th><%= t ".status" %></th>
-                  <th><%= t ".start_date" %></th>
-                  <th><%= t ".end_date" %></th>
+                  <th><%= sort_link @q, :id, t(".id") %></th>
+                  <th><%= sort_link @q, :store_name, t(".store") %></th>
+                  <th><%= sort_link @q, :store_slot_terminal_name, t(".terminal") %></th>
+                  <th><%= sort_link @q, :store_user_name, t(".user") %></th>
+                  <th><%= sort_link @q, :status_id, t(".status") %></th>
+                  <th><%= sort_link @q, :start_date, t(".start_date") %></th>
+                  <th><%= sort_link @q, :start_date, t(".end_date") %></th>
                   <th class="text-center"><%= t ".actions" %></th>
                 </tr>
               </thead>
               <tbody>
-                <%= render @contracts %>
+                <% if @contracts.size != 0 %>
+                  <%= render @contracts %>
+                <% else %>
+                  <div class="row">
+                    <div class="col-12">
+                      <h1 class="text-center"><%= t ".no_result" %></h1>
+                      <hr>
+                    </div>
+                  </div>
+                <% end %>
               </tbody>
             </table>
           </div>

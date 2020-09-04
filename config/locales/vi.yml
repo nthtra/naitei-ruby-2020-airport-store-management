@@ -255,6 +255,11 @@ vi:
       end_date: Ngày kết thúc
       actions: Thao tác
       detail: Chi tiết
+      search: Tìm kiếm cửa hàng, khách hàng, trạng thái, sảnh...
+      search_button: Tìm kiếm
+      start_date: Ngày bắt đầu
+      end_date: Ngày kết thúc
+      no_result: Không có kết quả
     show:
       home: Trang chủ
       contracts: Hợp đồng

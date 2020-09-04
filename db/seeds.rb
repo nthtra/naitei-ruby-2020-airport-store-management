@@ -101,20 +101,20 @@ Store.create(slot_id: 10, user_id: 1, category_id: 3, name: "Suarez", descriptio
 
 Contract.create(store_id: 1, status_id: 1, start_date: "7:00 2020/05/20", end_date: "7:00 2021/05/20")
 
-Contract.create(store_id: 2, status_id: 1, start_date: "8:00 2020/05/20", end_date: "8:00 2022/05/20")
+Contract.create(store_id: 2, status_id: 1, start_date: "8:00 2020/05/25", end_date: "8:00 2022/05/25")
 
 Contract.create(store_id: 3, status_id: 1, start_date: "8:45 2020/06/20", end_date: "8:45 2021/06/20")
 
-Contract.create(store_id: 4, status_id: 1, start_date: "9:00 2020/06/20", end_date: "9:30 2021/06/20")
+Contract.create(store_id: 4, status_id: 1, start_date: "9:00 2020/06/22", end_date: "9:30 2021/06/22")
 
-Contract.create(store_id: 5, status_id: 2, start_date: "9:15 2020/06/20", end_date: "9:30 2021/06/20")
+Contract.create(store_id: 5, status_id: 2, start_date: "9:15 2020/06/25", end_date: "9:30 2021/06/25")
 
-Contract.create(store_id: 6, status_id: 2, start_date: "9:30 2020/06/20", end_date: "9:30 2021/06/20")
+Contract.create(store_id: 6, status_id: 2, start_date: "9:30 2020/07/27", end_date: "9:30 2021/07/27")
 
-Contract.create(store_id: 7, status_id: 3, start_date: "9:45 2020/06/20", end_date: "8:45 2021/06/20")
+Contract.create(store_id: 7, status_id: 3, start_date: "9:45 2020/07/16", end_date: "8:45 2021/07/20")
 
-Contract.create(store_id: 8, status_id: 3, start_date: "8:00 2020/06/20", end_date: "8:45 2021/06/20")
+Contract.create(store_id: 8, status_id: 3, start_date: "8:00 2020/09/16", end_date: "8:45 2021/10/20")
 
-Contract.create(store_id: 9, status_id: 4, start_date: "8:30 2020/06/20", end_date: "8:45 2021/06/20")
+Contract.create(store_id: 9, status_id: 4, start_date: "8:30 2020/10/20", end_date: "8:45 2021/10/20")
 
-Contract.create(store_id: 10, status_id: 4, start_date: "8:00 2020/06/20", end_date: "8:45 2021/06/20")
+Contract.create(store_id: 10, status_id: 4, start_date: "8:00 2020/11/16", end_date: "8:45 2021/12/20")

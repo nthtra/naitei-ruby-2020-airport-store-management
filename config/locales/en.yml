@@ -258,6 +258,11 @@ en:
       end_date: End date
       actions: Actions
       detail: Detail
+      search: Search store, status, user, terminal...
+      search_button: Search
+      start_date: Start date
+      end_date: End date
+      no_result: No result
     show:
       home: Home
       contracts: Contracts
