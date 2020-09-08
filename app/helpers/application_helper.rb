@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include SessionsHelper
+
   def disable_layout?
     current_page?(signup_path) || current_page?(login_path) ||
       controller.controller_name.eql?("users") &&
@@ -25,8 +27,8 @@ module ApplicationHelper
     javascript_tag flash_script.join("\n")
   end
 
-  def unread_noti_quantity
-    Notification.user_receive_noti(current_employee.id).unread_noti.count
+  def unread_noti_quantity receiver_type
+    Notification.user_receive_noti(current_employee.id, receiver_type).unread_noti.count
   end
 
   def unread_noti
@@ -36,5 +38,13 @@ module ApplicationHelper
 
   def time_ago time
     time_ago_in_words(time)
+  end
+
+  def all_noti receiver_type
+    Notification.user_receive_noti(current_employee.id, receiver_type).noti_order_by_created_at_desc
+  end
+
+  def user_unread_noti_quantity receiver_type
+    Notification.user_receive_noti(current_user.id, receiver_type).unread_noti.count
   end
 end

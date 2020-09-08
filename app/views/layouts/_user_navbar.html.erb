@@ -31,21 +31,20 @@
           </div>
         </div>
       </div>
-      <div class="contactUs col-3">
+      <div class="contactUs col-3 pt-4">
         <div class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
+          <div class="nav-link" data-toggle="dropdown" id="notification_button">
             <i class="far fa-bell"></i>
-            <span class="badge badge-warning navbar-badge">5</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">5<%= t ".notifications" %></span>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-envelope mr-2"></i> 4 <%= t ".messages" %>
-              <span class="float-right text-muted text-sm">3 <%= t ".minutes" %></span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer"><%= t ".see_all_notifications" %></a>
+            <% if logged_in? %>
+              <% if user_unread_noti_quantity("User") > 0 %>
+                <span class="badge badge-warning navbar-badge" id=<%= "notification_user_#{current_user.id}" %>><%= user_unread_noti_quantity("User") %></span>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="d-none" id="notification_url">
+            <%= notifications_path %>
+          </div>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" id="notification_dropdown">
           </div>
         </div>
       </div>

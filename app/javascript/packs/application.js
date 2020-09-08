@@ -31,10 +31,3 @@ global.$ = require('jquery')
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-//= require i18n
-//= require i18n.js
-//= require i18n/translations
-
-//= require rails-timeago
-//= require rails-timeago-all

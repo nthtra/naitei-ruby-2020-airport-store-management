@@ -12,13 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2020_09_09_025639) do
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "contracts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "contracts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "store_id", null: false
     t.bigint "status_id", default: 1, null: false
     t.datetime "start_date"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["store_id"], name: "index_contracts_on_store_id"
   end
 
-  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "unit_id", null: false
     t.string "name"
     t.string "password_digest"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["unit_id"], name: "index_employees_on_unit_id"
   end
 
-  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "content"
     t.integer "sender_id"
     t.integer "receiver_id"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["contract_id"], name: "index_notifications_on_contract_id"
   end
 
-  create_table "slots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "slots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "terminal_id", null: false
     t.string "name"
     t.integer "area"
@@ -73,13 +73,13 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["terminal_id"], name: "index_slots_on_terminal_id"
   end
 
-  create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "slot_id", null: false
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
-  create_table "terminals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "terminals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "employee_id", null: false
     t.string "name"
     t.integer "area"
@@ -106,13 +106,13 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["name"], name: "index_terminals_on_name", unique: true
   end
 
-  create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "company_name"

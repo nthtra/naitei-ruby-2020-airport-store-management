@@ -27,6 +27,5 @@ jobs:
         run: bundle exec rails_best_practices -e "db/schema.rb,db/migrate,vendor,app/models/application_record.rb,app/controllers/application_controller.rb,app/helpers"
       - name: Rpec
         run: |
-          DATABASE_USERNAME=root DATABASE_PASSWORD=root DATABASE_NAME_DEVELOPMENT=store_management_development DATABASE_NAME_TEST=store_management_test bundle exec rails db:setup RAILS_ENV=test
           DATABASE_USERNAME=root DATABASE_PASSWORD=root DATABASE_NAME_DEVELOPMENT=store_management_development DATABASE_NAME_TEST=store_management_test bundle exec rails db:create
           DATABASE_USERNAME=root DATABASE_PASSWORD=root DATABASE_NAME_DEVELOPMENT=store_management_development DATABASE_NAME_TEST=store_management_test bundle exec rspec --format documentation

@@ -394,6 +394,7 @@ vi:
       close: Đóng
       modal_title: Đăng ký thuê
       confirm_content: Bạn có chắc chắn muốn thuê cửa hàng này?
+      please_login: Đăng nhập để thuê
     contract_field:
       start_date: Ngày bắt đầu
       end_date: Ngày kết thúc
@@ -407,4 +408,4 @@ vi:
   notifications: 
     list_noti: 
       post_time: "%{time} trước"
-      message: Có một thông báo mới
+      message: "Có một thông báo mới"

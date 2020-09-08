@@ -20,16 +20,18 @@
         <% end %>
       <% end %>
       <div class="dropdown-menu dropdown-menu-right p-0">
-      <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
+        <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
         <%= link_to t(".vietnamese"), {locale: :vi}, class: "dropdown-item" %>
       </div>
     </li>
     <li class="nav-item dropdown">
       <div class="nav-link" data-toggle="dropdown" id="notification_button">
         <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge" id=<%= "notification_manager_#{current_employee.id}" %>><%= unread_noti_quantity %></span>
+        <% if unread_noti_quantity("Employee") > 0 %>
+          <span class="badge badge-warning navbar-badge" id=<%= "notification_manager_#{current_employee.id}" %>><%= unread_noti_quantity("Employee") %></span>
+        <% end %>
       </div>
-       <div class="d-none" id="notification_url">
+      <div class="d-none" id="notification_url">
         <%= notifications_path %>
       </div>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" id="notification_dropdown">

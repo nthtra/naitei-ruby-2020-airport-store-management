@@ -196,52 +196,58 @@
               <h5><%= t "slots.show.interested_in" %></h5>
               <p><%= t ".mission_content" %></p>
               <% if @slot.is_empty  %>
-                <div class="col-md-12">
-                  <%= form_for @store, url: slot_stores_path(@slot.id) do |f| %>
-                    <%= render "shared/error_messages", object: f.object %>
-                    <div class="form-row store_field">
-                      <div class="form-group col-md-12">
-                        <%= f.label :name , t(".name") %>
-                        <%= f.text_field :name, class: "form-control", placeholder: "Name", required: true %>
+                <% if logged_in? %>
+                  <div class="col-md-12">
+                    <%= form_for @store, url: slot_stores_path(@slot.id) do |f| %>
+                      <%= render "shared/error_messages", object: f.object %>
+                      <div class="form-row store_field">
+                        <div class="form-group col-md-12">
+                          <%= f.label :name , t(".name") %>
+                          <%= f.text_field :name, class: "form-control", placeholder: "Name", autofocus: true, required: true %>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-row store_field">
-                      <div class="form-group col-md-12">
-                        <%= f.label :description, t(".description") %>
-                        <%= f.text_area :description, class: "form-control", required: true %>
+                      <div class="form-row store_field">
+                        <div class="form-group col-md-12">
+                          <%= f.label :description, t(".description") %>
+                          <%= f.text_area :description, class: "form-control", autofocus: true, required: true %>
+                        </div>
                       </div>
-                    </div>
-                    <%= f.fields_for :contract do |builder| %>
-                      <%= render "contract_field", f: builder %>
-                    <% end %>
-                    <div class="category_dropdown">
-                      <%= f.label :category, t(".category"), class: "my-require" %>
-                      <%= f.collection_select :category_id , Category.all, :id, :name, {}, {class: "select optional form-control store_field" } %>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3 mb-5" id="button_dangky" data-toggle="modal" data-target="#exampleModal">
-                      <%= t ".hire_now" %>
-                    </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><%= t ".modal_title" %></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <%= t ".confirm_content" %>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t ".close" %></button>
-                            <%= f.submit t(".confirm"), class: "btn btn-primary" %>
+                      <%= f.fields_for :contract do |builder| %>
+                        <%= render "contract_field", f: builder %>
+                      <% end %>
+                      <div class="category_dropdown">
+                        <%= f.label :category, t(".category"), class: "my-require" %>
+                        <%= f.collection_select :category_id , Category.all, :id, :name, {}, {class: "select optional form-control store_field" } %>
+                      </div>
+                      <button type="button" class="btn btn-primary mt-3 mb-5" id="button_dangky" data-toggle="modal" data-target="#exampleModal">
+                        <%= t ".hire_now" %>
+                      </button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel"><%= t ".modal_title" %></h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <%= t ".confirm_content" %>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t ".close" %></button>
+                              <%= f.submit t(".confirm"), class: "btn btn-primary" %>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  <% end %>
-                </div>
+                    <% end %>
+                  </div>
+                <% else %>
+                  <button type="button" class="btn btn-primary mt-3 mb-5" id="button_dangky" data-toggle="modal" data-target="#exampleModal">
+                        <%=link_to t(".please_login"), login_path %>
+                  </button>
+                <% end %>
               <% end %>
               <p class="text__footer"><%= t ".rule" %><a href="#"><%= t ".rule_link" %></a></p>
             </div>

@@ -393,6 +393,7 @@ en:
       close: Close
       modal_title: Register to rent
       confirm_content: Are you sure you want to rent this store?
+      please_login: Please login for rent now
     contract_field:
       start_date: Start date
       end_date: End date
@@ -406,4 +407,4 @@ en:
   notifications: 
     list_noti: 
       post_time: "%{time} ago"
-      message: Have a message
+      message: A request from

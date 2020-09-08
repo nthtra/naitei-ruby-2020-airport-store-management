@@ -55,7 +55,7 @@ class StoresController < ApplicationController
 
   def send_notice
     employee_manager.each do |manager|
-      notification_quantity = Notification.user_receive_noti(manager.id)
+      notification_quantity = Notification.user_receive_noti(manager.id, "Employee")
                                           .unread_noti
                                           .count
       Notification.create(sender_id: current_user.id, receiver_id: manager.id,
@@ -63,7 +63,6 @@ class StoresController < ApplicationController
                           contract_id: @store.contract.id)
       ActionCable.server.broadcast "notification_channel",
                                    {to: "notification_manager_#{manager.id}",
-                                    count: "notification_manager_count_#{manager.id}",
                                     notification_quantity: notification_quantity + 1}
     end
   end

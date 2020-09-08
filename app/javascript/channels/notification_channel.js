@@ -6,7 +6,6 @@ consumer.subscriptions.create("NotificationChannel", {
   },
 
   disconnected() {
-
   },
 
   received(data) {
@@ -16,8 +15,8 @@ consumer.subscriptions.create("NotificationChannel", {
       toastr.info(I18n.t("notifications.list_noti.message"))
     }
 
-    if ($(`#${data.count}`)[0]) {
-      $(`#${data.count}`)[0].innerHTML = data.notification_quantity
-    }
+    // if ($(`#${data.count}`)[0]) {
+    //   $(`#${data.count}`)[0].innerHTML = data.notification_quantity
+    // }
   }
 });

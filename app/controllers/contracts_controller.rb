@@ -19,10 +19,8 @@ class ContractsController < ApplicationController
     elsif params[:status_id].to_i == Settings.status.deny
       show_flash_deny_contract
     end
-    respond_to do |format|
-      format.html{redirect_to @contract}
-      format.js
-    end
+    format_response
+    send_noti
   end
 
   private
@@ -46,6 +44,21 @@ class ContractsController < ApplicationController
       flash.now[:error] = t ".update_database_false"
     when :deny_successfully
       flash.now[:success] = t ".deny_successfully"
+    end
+  end
+
+  def send_noti
+    notification_quantity = Notification.user_receive_noti(@contract.store.user.id, "User").unread_noti.count
+    Notification.create(sender_id: current_employee.id, receiver_id: @contract.store.user.id,
+                 sender_type: "Employee", receiver_type: "User", contract_id: @contract.id)
+    ActionCable.server.broadcast "notification_channel", {to: "notification_user_#{@contract.store.user.id}",
+                                                          notification_quantity: notification_quantity + 1}
+  end
+
+  def format_response
+    respond_to do |format|
+      format.html{redirect_to @contract}
+      format.js
     end
   end
 end
