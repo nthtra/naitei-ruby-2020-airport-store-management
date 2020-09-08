@@ -216,24 +216,29 @@ vi:
       register_failed: Đăng ký thất bại!
     destroy:
       destroy_success: Huỷ yêu cầu thành công!
-  employee_sessions:
-    new:
-      title: Nhân viên đăng nhập
-      languages: Ngôn ngữ
-      employee: Nhân viên
-      log_in_to_start_your_session: Đăng nhập để bắt đầu phiên
-      email: Email
-      password: Mật khẩu
-      remember_me: Nhớ đăng nhập
-      log_in: Đăng nhập
-      or_log_in_with: Đăng nhập với
-      i_forgot_my_password: Quên mật khẩu
-    create:
-      invalid_email_password_combination: Email không hợp lệ hoặc sai mật khẩu
-      logged_in_successfully: Đăng nhập thành công
-      can_not_access: Không thể truy cập
-    destroy:
-      logged_out: Đã đăng xuất
+  devise:
+    sessions:
+      employee:
+        signed_in: Đăng nhập thành công
+        signed_out: Đăng xuất thành công
+        invalid: Email không hợp lệ hoặc sai mật khẩu
+      new:
+        title: Nhân viên đăng nhập
+        languages: Ngôn ngữ
+        employee: Nhân viên
+        log_in_to_start_your_session: Đăng nhập để bắt đầu phiên
+        email: Email
+        password: Mật khẩu
+        remember_me: Nhớ đăng nhập
+        log_in: Đăng nhập
+        or_log_in_with: Đăng nhập với
+        i_forgot_my_password: Quên mật khẩu
+      create:
+        invalid_email_password_combination: Email không hợp lệ hoặc sai mật khẩu
+        logged_in_successfully: Đăng nhập thành công
+        can_not_access: Không thể truy cập
+      destroy:
+        logged_out: Đã đăng xuất
   employees:
     show:
       profile: Hồ sơ

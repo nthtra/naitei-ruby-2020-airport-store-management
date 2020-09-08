@@ -219,24 +219,25 @@ en:
       register_failed: Register failed!
     destroy:
       destroy_success: Cancel request success!
-  employee_sessions:
-    new:
-      title: Employee log in
-      languages: Languages
-      manager: Manager
-      log_in_to_start_your_session: Log in to start your session
-      email: Email
-      password: Password
-      remember_me: Remember Me
-      log_in: Log in
-      or_log_in_with: Log in with
-      i_forgot_my_password: I forgot my password
-    create:
-      invalid_email_password_combination: Invalid email/password combination
-      logged_in_successfully: Logged in successfully
-      can_not_access: Can not access
-    destroy:
-      logged_out: Logged out
+  devise:
+    sessions:
+      new:
+        title: Employee log in
+        languages: Languages
+        manager: Manager
+        log_in_to_start_your_session: Log in to start your session
+        email: Email
+        password: Password
+        remember_me: Remember Me
+        log_in: Log in
+        or_log_in_with: Log in with
+        i_forgot_my_password: I forgot my password
+      create:
+        invalid_email_password_combination: Invalid email/password combination
+        logged_in_successfully: Logged in successfully
+        can_not_access: Can not access
+      destroy:
+        logged_out: Logged out
   employees:
     show:
       profile: Profile

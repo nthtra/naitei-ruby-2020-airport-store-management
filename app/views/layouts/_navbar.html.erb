@@ -89,7 +89,7 @@
             <%= t ".logout" %>
           <% end %>
         <% end %>
-        <% if employee_logged_in? %>
+        <% if employee_signed_in? %>
           <div class="dropdown-divider"></div>
           <%= link_to current_employee, class: "dropdown-item dropdown-footer" do %>
             <i class="fas fa-user"></i>

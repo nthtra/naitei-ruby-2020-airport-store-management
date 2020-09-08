@@ -35,21 +35,5 @@ RSpec.describe Employee, type: :model do
         expect(employee_fail.valid?).to eq false
       end
     end
-
-    context "validates email uniqueness" do
-      it "should uniqueness email" do
-        subject { FactoryBot.create :employee, role_id: role.id, unit_id: unit.id }
-        should validate_uniqueness_of(:email)
-      end
-    end
-
-    context "validates password" do
-      it "should has secure password" do
-        should have_secure_password
-      end
-      it "should has secure password" do
-        should validate_length_of(:password)
-      end
-    end
   end
 end

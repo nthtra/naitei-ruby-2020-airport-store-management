@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_015832) do
+ActiveRecord::Schema.define(version: 2020_09_07_064021) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -34,11 +34,16 @@ ActiveRecord::Schema.define(version: 2020_08_14_015832) do
     t.bigint "unit_id", null: false
     t.bigint "role_id", null: false
     t.string "name"
-    t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.index ["email"], name: "index_employees_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_employees_on_role_id"
     t.index ["unit_id"], name: "index_employees_on_unit_id"
   end
