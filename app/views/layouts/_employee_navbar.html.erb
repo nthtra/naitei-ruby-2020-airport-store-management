@@ -45,14 +45,14 @@
         <i class="fas fa-ellipsis-v"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <% if employee_logged_in? %>
+        <% if employee_signed_in? %>
           <div class="dropdown-divider"></div>
           <%= link_to current_employee, class: "dropdown-item dropdown-footer" do %>
             <i class="fas fa-user"></i>
             <%= t ".profile" %>
           <% end %>
           <div class="dropdown-divider"></div>
-          <%= link_to employees_logout_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
+          <%= link_to destroy_employee_session_path, method: :delete, class: "dropdown-item dropdown-footer" do %>
             <i class="fas fa-sign-out-alt"></i>
             <%= t ".logout" %>
           <% end %>

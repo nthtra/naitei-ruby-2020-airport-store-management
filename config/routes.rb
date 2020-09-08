@@ -13,9 +13,9 @@ Rails.application.routes.draw do
     end
     get "stores/:id/destroy", to: "stores#destroy", as: "destroy_store"
     resources :terminals, only: :show
-    get "/employees/login", to: "employee_sessions#new"
-    post "/employees/login", to: "employee_sessions#create"
-    delete "/employees/logout", to: "employee_sessions#destroy"
+
+    devise_for :employees, controllers: { sessions: "employees/sessions" }
+
     resources :employees, only: :show
     resources :contracts, only: %i(index show update)
     resources :slots, only: %i(show index)

@@ -7,7 +7,7 @@
     <%= render "layouts/rails_default" %>
   </head>
   <% unless disable_layout? %>
-    <% if employee_logged_in? %>
+    <% if employee_signed_in? %>
       <body class="sidebar-mini sidebar-collapse">
         <div class="wrapper">
             <%= render "layouts/employee_navbar" %>
@@ -20,7 +20,7 @@
         </div>
       </body>
     <% else %>
-      <body id="app" class>
+      <body id="app">
         <div class>
           <%= render "layouts/user_navbar" %>
           <div class="">

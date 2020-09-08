@@ -1,8 +1,6 @@
 class SlotsController < ApplicationController
-  # before_action :find_employee
-
   def show
-    @slot = Slot.find_by(id: params[:id])
+    @slot = Slot.find_by id: params[:id]
     @store = Store.new
     @store.build_contract
   end

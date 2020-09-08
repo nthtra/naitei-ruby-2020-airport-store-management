@@ -6,6 +6,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views"
 gem "bootstrap-datepicker-rails"
 gem "config"
+gem "devise"
 gem "faker"
 gem "figaro"
 gem "font-awesome-sass", "~> 5.13.0"

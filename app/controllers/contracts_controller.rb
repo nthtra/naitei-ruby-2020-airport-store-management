@@ -1,5 +1,5 @@
 class ContractsController < ApplicationController
-  before_action :find_employee
+  before_action :authenticate_employee!
 
   def index
     @q = Contract.ransack params[:q]
@@ -25,14 +25,6 @@ class ContractsController < ApplicationController
   end
 
   private
-
-  def find_employee
-    @employee = Employee.find_by id: session[:employee_id]
-    return if @employee
-
-    flash[:error] = t ".employee_not_found"
-    redirect_to employees_login_path
-  end
 
   def show_flash_approve_contract
     @result = ApproveContractService.new(@contract.id).perform

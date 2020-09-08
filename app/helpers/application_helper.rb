@@ -9,9 +9,9 @@ module ApplicationHelper
   end
 
   def employee_layout?
-    current_page?(employees_login_path) ||
-      controller.controller_name.eql?("employee_sessions") &&
-        controller.action_name.eql?("create")
+    current_page?(new_employee_session_path) ||
+      controller.controller_name.eql?("sessions") &&
+        controller.action_name.eql?("new")
   end
 
   def toastr_flash

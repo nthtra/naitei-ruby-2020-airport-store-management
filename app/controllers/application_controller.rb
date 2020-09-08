@@ -1,17 +1,9 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-  include EmployeeSessionsHelper
   include ContractsHelper
   add_flash_types :success, :danger, :warning
 
   before_action :set_locale
-
-  def logged_in_employee
-    return if employee_logged_in?
-
-    flash[:error] = t ".please_log_in"
-    redirect_to employees_login_path
-  end
 
   private
 
@@ -38,13 +30,5 @@ class ApplicationController < ActionController::Base
     store_location
     flash[:error] = t "users.new.login"
     redirect_to login_url
-  end
-
-  def find_employee
-    @employee = Employee.find_by id: params[:id]
-    return if @employee
-
-    flash[:error] = t ".employee_not_found"
-    redirect_to root_path
   end
 end
