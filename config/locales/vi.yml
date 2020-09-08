@@ -39,7 +39,7 @@ vi:
       search: Tìm kiếm
       notifications: Thông báo
       minutes: phút trước
-      messages: tin nhắn
+      messages: "Có yêu cầu từ "
       see_all_notifications: Xem tất cả thông báo
       profile: Hồ sơ
       settings: Cài đặt
@@ -47,6 +47,7 @@ vi:
       login: Đăng nhập
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
+      post_time: "%{time} trước"
     user_navbar:
       logo: Sân bay
       profile: Hồ sơ
@@ -403,3 +404,7 @@ vi:
       previous: "‹ Trước"
       next: "Tiếp ›"
       truncate: "…"
+  notifications: 
+    list_noti: 
+      post_time: "%{time} trước"
+      message: Có một thông báo mới

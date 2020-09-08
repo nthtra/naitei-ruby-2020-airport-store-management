@@ -1,7 +1,7 @@
 class Contract < ApplicationRecord
   belongs_to :store
   belongs_to :status
-
+  has_many :notifications, dependent: :destroy
   delegate :name, to: :status, prefix: :status
   delegate :name, :description, to: :store, prefix: :store
   delegate :name, :user_name, :user_email, :user_company_name,

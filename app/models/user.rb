@@ -2,6 +2,17 @@ class User < ApplicationRecord
   PERMITTED_PARAMS = %i(name email company_name identity_number phone_number
                         password password_confirmation).freeze
   has_many :stores, dependent: :nullify
+  has_many :passive_notifications, class_name: Notification.name,
+    foreign_key: :sender_id,
+    dependent: :destroy
+  has_many :active_notifications, class_name: Notification.name,
+    foreign_key: :receiver_id,
+    dependent: :destroy
+  has_many :notifications, through: :passive_notifications,
+    source: :receiver, source_type: "User"
+  has_many :sent_notifications, through: :active_notifications,
+    source: :sender, source_type: "User"
+
   validates :name, presence: true,
             length: {maximum: Settings.validations.user.name.max_length}
   validates :email, presence: true,

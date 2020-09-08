@@ -1,0 +1,3 @@
+<% if params[:click] %>
+  $('#notifications_dropdown').replaceWith('<%= j render(partial: "notifications/list_noti", notifications: @notifications, layout: false) %>')
+<% end %>

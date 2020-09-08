@@ -113,4 +113,6 @@ Contract.create(store_id: 8, status_id: 3, start_date: "8:00 2020/09/16", end_da
 
 Contract.create(store_id: 9, status_id: 4, start_date: "8:30 2020/10/20", end_date: "8:45 2021/10/20")
 
-Contract.create(store_id: 10, status_id: 4, start_date: "8:00 2020/11/16", end_date: "8:45 2021/12/20")
+Contract.create(store_id: 10, status_id: 4, start_date: "8:00 2020/06/20", end_date: "8:45 2021/06/20")
+
+Notification.create(sender_id: 1, receiver_id: 1, sender_type: "User", receiver_type: "Employee", content: "My notification", contract_id: 1)

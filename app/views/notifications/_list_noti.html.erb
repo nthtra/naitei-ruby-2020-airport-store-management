@@ -1,0 +1,23 @@
+<span class="dropdown-header" id=<%= "notification_manager_count_#{current_employee.id}" %>><%= unread_noti_quantity %> <%= t ".notifications" %></span>
+  <div class="dropdown-divider"></div>
+  <div id="remove_list">
+  <% notifications.each do |noti| %>
+    <% if noti.read == true  %>
+      <%= link_to notification_url(noti.id), class: "dropdown-item", id: "noti_#{noti.id}", method: :put do %>
+        <i class="fas fa-envelope mr-2"></i>
+        <%= t ".messages" %>
+        <%= noti.sender.name %>
+        <p></p>
+        <%= time_ago(noti.created_at) %>
+      <% end %>
+    <% else %>
+      <%= link_to notification_url(noti.id), class: "dropdown-item unread_noti", id: "noti_#{noti.id}", method: :put do %>
+        <i class="fas fa-envelope mr-2"></i>
+        <%= t ".messages" %>
+        <%= noti.sender.name %>
+        <p></p>
+        <%= time_ago(noti.created_at) %>
+      <% end %>
+    <% end  %>
+  <% end %>
+</div>
