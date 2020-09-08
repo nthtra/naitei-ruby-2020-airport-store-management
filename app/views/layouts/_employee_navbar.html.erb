@@ -20,24 +20,19 @@
         <% end %>
       <% end %>
       <div class="dropdown-menu dropdown-menu-right p-0">
-        <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
+      <%= link_to t(".english"), {locale: :en}, class: "dropdown-item" %>
         <%= link_to t(".vietnamese"), {locale: :vi}, class: "dropdown-item" %>
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
+      <div class="nav-link" data-toggle="dropdown" id="notification_button">
         <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge">15</span>
-      </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <span class="dropdown-item dropdown-header">15 <%= t ".notifications" %></span>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <i class="fas fa-envelope mr-2"></i> 4 <%= t ".messages" %>
-          <span class="float-right text-muted text-sm">3 <%= t ".minutes" %></span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer"><%= t ".see_all_notifications" %></a>
+        <span class="badge badge-warning navbar-badge" id=<%= "notification_manager_#{current_employee.id}" %>><%= unread_noti_quantity %></span>
+      </div>
+       <div class="d-none" id="notification_url">
+        <%= notifications_path %>
+      </div>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" id="notification_dropdown">
       </div>
     </li>
     <li class="nav-item dropdown">

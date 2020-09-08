@@ -24,4 +24,17 @@ module ApplicationHelper
       end
     javascript_tag flash_script.join("\n")
   end
+
+  def unread_noti_quantity
+    Notification.user_receive_noti(current_employee.id).unread_noti.count
+  end
+
+  def unread_noti
+    Notification.user_receive_noti(current_employee.id)
+                .unread_noti.noti_order_by_created_at_desc
+  end
+
+  def time_ago time
+    time_ago_in_words(time)
+  end
 end

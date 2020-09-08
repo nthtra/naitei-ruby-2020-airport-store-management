@@ -39,7 +39,7 @@ en:
       search: Search
       notifications: Notifications
       minutes: mins ago
-      messages: messages
+      messages: "Request from "
       see_all_notifications: See All Notifications
       profile: Profile
       settings: Settings
@@ -47,6 +47,7 @@ en:
       login: Login
       english: "English"
       vietnamese: "Vietnamese"
+      post_time: "%{time} ago"
     user_navbar:
       logo: Airport
       profile: Profile
@@ -402,3 +403,7 @@ en:
       previous: "‹ Pre"
       next: "Next ›"
       truncate: "…"
+  notifications: 
+    list_noti: 
+      post_time: "%{time} ago"
+      message: Have a message

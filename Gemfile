@@ -11,16 +11,17 @@ gem "devise"
 gem "faker"
 gem "figaro"
 gem "font-awesome-sass", "~> 5.13.0"
+gem "i18n-js"
 gem "kaminari"
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
+gem "rails-timeago", "~> 2.0"
 gem "ransack"
 gem "sass-rails", ">= 6"
 gem "toastr-rails"
 gem "webpacker", "~> 4.0"
-
 group :development do
   gem "irb", require: false
   gem "listen", "~> 3.2"

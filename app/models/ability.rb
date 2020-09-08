@@ -3,7 +3,6 @@ class Ability
 
   def initialize employee
     employee ||= Employee.new
-
     if employee.manager?
       can :manage, [Contract, Slot]
     elsif employee.admin?
