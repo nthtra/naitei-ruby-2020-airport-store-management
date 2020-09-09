@@ -245,6 +245,8 @@ en:
       please_log_in: Please log in
       employee_not_found: Employee not found
       can_not_access: Can not access
+    index:
+      employees: Employees
   contracts:
     index:
       home: Home

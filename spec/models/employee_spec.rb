@@ -4,16 +4,12 @@ RSpec.describe Employee, type: :model do
   
   let(:role) {FactoryBot.create :role}
   let(:unit) {FactoryBot.create :unit}
-  let!(:employee) {FactoryBot.create :employee, role_id: role.id, unit_id: unit.id}
+  let!(:employee) {FactoryBot.create :employee, unit_id: unit.id}
 
-  let!(:employee_true) {FactoryBot.build :employee, role_id: role.id, unit_id: unit.id}
-  let!(:employee_fail) {FactoryBot.build :employee, role_id: nil}
+  let!(:employee_true) {FactoryBot.build :employee, unit_id: unit.id}
+  let!(:employee_fail) {FactoryBot.build :employee, unit_id: nil}
 
   describe "Associations" do
-    it "should belongs to role" do
-      is_expected.to belong_to(:role)
-    end
-
     it "should has many terminals" do
       is_expected.to have_many(:terminals).dependent(:destroy)
     end

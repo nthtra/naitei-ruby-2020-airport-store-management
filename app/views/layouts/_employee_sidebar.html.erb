@@ -17,18 +17,28 @@
     </div>
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-item">
-          <%= link_to contracts_path, class: "nav-link" do %>
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p><%= t ".contracts" %></p>
-          <% end %>
-        </li>
+        <% if can? :read, Contract %>
+          <li class="nav-item">
+            <%= link_to contracts_path, class: "nav-link" do %>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p><%= t ".contracts" %></p>
+            <% end %>
+          </li>
+        <% end %>
         <li class="nav-item">
           <%= link_to slots_path, class: "nav-link" do %>
             <i class="nav-icon fas fa-th"></i>
             <p><%= t ".slots" %></p>
           <% end %>
         </li>
+        <% if can? :read, Employee %>
+          <li class="nav-item">
+            <%= link_to employees_path, class: "nav-link" do %>
+              <i class="nav-icon fas fa-user"></i>
+              <p><%= t ".employees" %></p>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </div>

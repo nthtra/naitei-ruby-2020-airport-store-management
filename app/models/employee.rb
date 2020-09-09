@@ -3,7 +3,9 @@ class Employee < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  belongs_to :role
+
+  enum role: {manager: 1, admin: 2, employee: 3}
+
   has_many :terminals, dependent: :destroy
   belongs_to :unit
 

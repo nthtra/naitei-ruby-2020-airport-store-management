@@ -5,6 +5,7 @@ gem "bcrypt"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views"
 gem "bootstrap-datepicker-rails"
+gem "cancancan"
 gem "config"
 gem "devise"
 gem "faker"
