@@ -37,6 +37,7 @@ info:
 paginate:
   contracts_per_page: 9
   slots_per_page: 9
+  employees_per_page: 9
 status:
   pending: 1
   approve: 2

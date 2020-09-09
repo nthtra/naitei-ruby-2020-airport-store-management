@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
     devise_for :employees, controllers: { sessions: "employees/sessions" }
 
-    resources :employees, only: :show
+    resources :employees, only: %i(show index)
     resources :contracts, only: %i(index show update)
     resources :slots, only: %i(show index)
   end
