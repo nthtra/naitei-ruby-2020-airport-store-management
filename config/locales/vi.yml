@@ -66,6 +66,18 @@ vi:
       references: Tham khảo
     application:
       store_management: Quản lý cửa hàng
+    search_slot_form:
+      placeholder: Tên sảnh hoặc slot
+      search: Tìm
+      clear: Xóa
+      price_from: Giá ($)
+      area_from: Diện tích (m2)
+      to: đến
+      rent: Đã thuê
+      empty: Còn trống
+      range0: 0 to 100
+      range1: 100 to 200
+      range2: 200 to 300
   shared:
     error_messages:
       alert: "Form chứa"
@@ -83,6 +95,9 @@ vi:
       vietnamese: "Tiếng Việt"
   static_pages:
     home:
+      no_result: Không có kết quả
+      per_month: $/tháng
+      search: Tìm kiếm
       title: "Home"
       rent: Đã thuê
       empty: Còn trống
@@ -163,6 +178,9 @@ vi:
       empty: Còn trống
       used: Đã được sử dụng
       rent: Đã thuê
+      no_result: Không có kết quả
+      search: Tìm kiếm
+      per_month: $/tháng
   stores:
     show:
       search: Tìm kiếm

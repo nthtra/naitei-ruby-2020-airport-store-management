@@ -32,7 +32,9 @@
       </div>
       <div class="main">
         <div class="main__left">
+          <%= render "layouts/search_slot_form", q: @qh %>
           <div class="products">
+            <% if @slots.size != 0 %>
               <% @slots.each do |slot| %>
                 <%= link_to slot do %>
                   <div class="product">
@@ -47,13 +49,25 @@
                         <span class="badge badge-info slot_status"><%= t ".rented" %></span>
                       <% end %>
                     </div>
-                    <p class="product__text"><%= slot.terminal.name %> </p>
+                    <p class="product__title">
+                      <%= slot.terminal.name %>
+                      <span class="badge badge-warning slot_status">
+                        <%= slot.area %>&#13217;
+                      </span>
+                      <span class="badge badge-primary slot_status">
+                        <%= slot.price %>&#x24;
+                      </span>
+                    </p>
                   </div>
                 <% end %>
               <% end %>
               <div class="mt-4">
                 <%= paginate @slots, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
               </div>
+            <% else %>
+              <h1 class="text-center"><%= t ".no_result" %></h1>
+              <hr>
+            <% end %>
             <div class="footer">
               <h2><%= t ".question" %> </h2>
               <p class="text__header"><%= t ".answer" %> </p>

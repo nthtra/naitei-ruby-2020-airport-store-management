@@ -33,7 +33,9 @@
         </div>
         <div class="main">
           <div class="main__left">
+            <%= render "layouts/search_slot_form", q: @qt%>
             <div class="products">
+              <% if @slots.size != 0 %>
                 <% @slots.each do |slot| %>
                   <%= link_to slot do %>
                     <div class="product" id="terminalItem">
@@ -48,19 +50,31 @@
                           <span class="badge badge-info slot_status"><%= t ".rented" %></span>
                         <% end %>
                       </div>
-                      <p class="product__text"><%= slot.terminal.name %> </p>
+                      <p class="product__title">
+                        <%= slot.terminal.name %>
+                        <span class="badge badge-warning slot_status">
+                          <%= slot.area %>&#13217;
+                        </span>
+                        <span class="badge badge-primary slot_status">
+                          <%= slot.price %>&#x24;
+                        </span>
+                      </p>
                     </div>
                   <% end %>
                 <% end %>
                 <div class="mt-4">
                   <%= paginate @slots, theme: "twitter-bootstrap-4", pagination_class: "pagination-sm",nav_class: "d-inline-b" %>
                 </div>
-                <div class="footer">
-                  <h2><%= t ".terminal_information" %> </h2>
-                  <p class="text__header"><%= t ".name" %>: <%= @terminal.name %></p>
-                  <span class="text__header"><%= t ".area" %>: <%= @terminal.area %> <span>m<sup>2</sup></span></p>
-                  <i class="fas fa-phone"><%= Settings.info.phone %> </i>
-                </div>
+              <% else %>
+                <h1 class="text-center"><%= t ".no_result" %></h1>
+                <hr>
+              <% end %>
+              <div class="footer">
+                <h2><%= t ".terminal_information" %> </h2>
+                <p class="text__header"><%= t ".name" %>: <%= @terminal.name %></p>
+                <span class="text__header"><%= t ".area" %>: <%= @terminal.area %> <span>m<sup>2</sup></span></p>
+                <i class="fas fa-phone"><%= Settings.info.phone %> </i>
+              </div>
             </div>
             <div class="text">
               <h2> <%= t ".description_title" %> </h2>
