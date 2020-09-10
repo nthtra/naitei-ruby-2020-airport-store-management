@@ -11,6 +11,7 @@ require('channels')
 require('jquery')
 require('./libs/adminlte.min.js')
 require('./libs/demo.js')
+require('./libs/contract.js')
 
 global.toastr = require("toastr")
 global.$ = require('jquery')
@@ -30,3 +31,10 @@ global.$ = require('jquery')
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
+
+//= require rails-timeago
+//= require rails-timeago-all

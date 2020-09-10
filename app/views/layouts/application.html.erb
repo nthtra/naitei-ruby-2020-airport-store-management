@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,6 +8,10 @@
   <% unless disable_layout? %>
     <% if employee_signed_in? %>
       <body class="sidebar-mini sidebar-collapse">
+      <span class="noti" id=<%= "notification_room_employee_#{current_employee.id}" %>></span>
+        <% if current_employee.manager? %>
+          <span class="noti" id=<%= "notification_room_manager" %>></span>
+        <% end %>
         <div class="wrapper">
             <%= render "layouts/employee_navbar" %>
             <%= render "layouts/employee_sidebar" %>
@@ -21,6 +24,7 @@
       </body>
     <% else %>
       <body id="app">
+        <span class="noti" id=<%= "notification_room_user_#{1}" %>></span>
         <div class>
           <%= render "layouts/user_navbar" %>
           <div class="">

@@ -19,5 +19,6 @@ Rails.application.routes.draw do
     resources :employees, only: %i(show index)
     resources :contracts, only: %i(index show update)
     resources :slots, only: %i(show index)
+    resources :notifications, only: %i(index update)
   end
 end
