@@ -1,0 +1,25 @@
+<div>
+  <br>
+  <%= search_form_for q, url: root_path, class: "form" do |f| %>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.text_field :name_or_terminal_name_cont, placeholder: t(".placeholder"), class: "form-control" %><br>
+          <%= f.select :is_empty_eq, [[t(".empty"), "true"], [t(".rent"), "false"]], {include_blank: t(".status")}, { :class => "form-control" } %>
+        </div>
+        <div class="col-md-6">
+          <%= f.select :area_between, [t(".range0"), t(".range1"), t(".range2")], {include_blank: t(".area_from")}, { :class => "form-control" } %><br>
+          <%= f.select :price_between, [t(".range0"), t(".range1"), t(".range2")], {include_blank: t(".price_from")}, { :class => "form-control" } %><br>
+          <div class="row input-group-append float-right">
+            <%= f.button :submit, class: "btn btn-primary" do %>
+              <% t ".search" %>
+            <% end %>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to t(".clear"), root_path, :class => "btn btn-secondary" %>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

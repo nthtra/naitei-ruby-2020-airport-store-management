@@ -2,10 +2,6 @@ User.create(name: "Nguyen Xuan Phuc", email: "user1@gmail.com",
   company_name: "ABC", identity_number: "123412345", phone_number: "0987987987",
   password: "123456", password_confirmation: "123456")
 
-Role.create(name: "Manager")
-
-Role.create(name: "Admin")
-
 Unit.create(name: "Store Management")
 
 Unit.create(name: "Flight Management")
@@ -39,37 +35,37 @@ Category.create(name: "Clothes")
 
 Category.create(name: "Present")
 
-Slot.create(terminal_id: 1, name: "Slot 1", area: 200, price: 200, is_empty: false)
+Slot.create(terminal_id: 1, name: "Slot 1", area: 150, price: 170, is_empty: false)
 
-Slot.create(terminal_id: 1, name: "Slot 2", area: 200, price: 200, is_empty: false)
+Slot.create(terminal_id: 1, name: "Slot 2", area: 100, price: 300, is_empty: false)
 
 Slot.create(terminal_id: 1, name: "Slot 3", area: 200, price: 250, is_empty: false)
 
-Slot.create(terminal_id: 1, name: "Slot 4", area: 200, price: 200)
+Slot.create(terminal_id: 1, name: "Slot 4", area: 50, price: 200)
 
-Slot.create(terminal_id: 2, name: "Slot 5", area: 200, price: 200, is_empty: false)
+Slot.create(terminal_id: 2, name: "Slot 5", area: 300, price: 275, is_empty: false)
 
-Slot.create(terminal_id: 2, name: "Slot 6", area: 200, price: 260, is_empty: false)
+Slot.create(terminal_id: 2, name: "Slot 6", area: 250, price: 300, is_empty: false)
 
-Slot.create(terminal_id: 2, name: "Slot 7", area: 200, price: 200, is_empty: false)
+Slot.create(terminal_id: 2, name: "Slot 7", area: 200, price: 250, is_empty: false)
 
-Slot.create(terminal_id: 2, name: "Slot 8", area: 200, price: 200, is_empty: true)
+Slot.create(terminal_id: 2, name: "Slot 8", area: 100, price: 50, is_empty: true)
 
 Slot.create(terminal_id: 3, name: "Slot 9", area: 200, price: 200, is_empty: false)
 
-Slot.create(terminal_id: 3, name: "Slot 10", area: 200, price: 200, is_empty: true)
+Slot.create(terminal_id: 3, name: "Slot 10", area: 50, price: 100, is_empty: true)
 
 Slot.create(terminal_id: 3, name: "Slot 11", area: 200, price: 200)
 
-Slot.create(terminal_id: 3, name: "Slot 12", area: 200, price: 200)
+Slot.create(terminal_id: 3, name: "Slot 12", area: 300, price: 250)
 
-Slot.create(terminal_id: 4, name: "Slot 13", area: 200, price: 200)
+Slot.create(terminal_id: 4, name: "Slot 13", area: 200, price: 125)
 
-Slot.create(terminal_id: 4, name: "Slot 14", area: 200, price: 200)
+Slot.create(terminal_id: 4, name: "Slot 14", area: 150, price: 75)
 
-Slot.create(terminal_id: 4, name: "Slot 15", area: 200, price: 200)
+Slot.create(terminal_id: 4, name: "Slot 15", area: 300, price: 135)
 
-Slot.create(terminal_id: 4, name: "Slot 16", area: 200, price: 200)
+Slot.create(terminal_id: 4, name: "Slot 16", area: 250, price: 90)
 
 Status.create(name: "Pending")
 

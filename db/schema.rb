@@ -47,12 +47,6 @@ ActiveRecord::Schema.define(version: 2020_09_09_025639) do
     t.index ["unit_id"], name: "index_employees_on_unit_id"
   end
 
-  create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "slots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "terminal_id", null: false
     t.string "name"

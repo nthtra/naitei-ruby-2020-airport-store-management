@@ -66,6 +66,18 @@ en:
       references: References
     application:
       store_management: Store Management
+    search_slot_form:
+      placeholder: Terminal/ Slot name
+      search: Search
+      clear: Clear
+      price_from: Price ($)
+      area_from: Area (m2)
+      to: to
+      rent: Rented
+      empty: Empty
+      range0: 0 to 100
+      range1: 100 to 200
+      range2: 200 to 300
   shared:
     error_messages:
       alert: "The form contains"
@@ -83,8 +95,11 @@ en:
       vietnamese: "Vietnamese"
   static_pages:
     home:
+      no_result: No result
+      per_month: $/month
+      search: Search
       title: "Home"
-      rent: Rent
+      rent: Rented
       empty: Empty
       address: Phu Minh Ward Soc Son  District Ha Noi city
       content_title: Viet Nam
@@ -164,7 +179,10 @@ en:
       status: Status
       empty: Empty
       used: Used
-      rent: Rent
+      rent: Rented
+      no_result: No result
+      search: Search
+      per_month: $/month
   stores:
     show:
       title: Store
